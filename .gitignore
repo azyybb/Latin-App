@@ -1,0 +1,10 @@
+# Eigener Lernstand, Build-Ergebnisse und Fotos gehören nicht ins Repository
+lernstand/
+originale/
+*.exe
+*.apk
+*.zip
+patches.txt
+OakenSolo/
+.claude/
+__pycache__/

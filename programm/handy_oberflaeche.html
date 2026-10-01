@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+<title>Latein Vokabeln</title>
+<meta name="theme-color" content="#2563eb">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232563eb'/%3E%3Ctext x='32' y='45' font-size='36' font-family='Georgia,serif' font-weight='700' text-anchor='middle' fill='white'%3ELV%3C/text%3E%3C/svg%3E">
+<style>
+:root {
+  --flaeche: #f6f7f9; --karte: #ffffff; --rand: #dfe3e8; --rand-stark: #c4cad1;
+  --text: #1f2328; --grau: #5b636c; --blau: #2563eb; --blau-hell: #eef3ff;
+  --gruen: #137333; --gruen-hell: #e6f4ea; --rot: #c5221f; --rot-hell: #fce8e6;
+  --leiste: 64px; --radius: 12px;
+  --mono: ui-monospace, "Roboto Mono", "Droid Sans Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --flaeche: #111418; --karte: #1b1f24; --rand: #2d333b; --rand-stark: #444c56;
+    --text: #e6edf3; --grau: #9aa4af; --blau: #6ea0ff; --blau-hell: #1c2940;
+    --gruen: #5cc47a; --gruen-hell: #16301f; --rot: #ff7b72; --rot-hell: #3a1d1b;
+  }
+}
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body { margin: 0; height: 100%; }
+body {
+  background: var(--flaeche); color: var(--text);
+  font: 1rem/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  overflow: hidden;
+}
+button, input, select { font: inherit; color: inherit; }
+[hidden] { display: none !important; }
+/* Beim Tippen braucht die Tastatur den Platz - die Reiterleiste darf weg */
+body.tippen #leiste { display: none; }
+body.tippen .view { bottom: 0; }
+input[type=search]::-webkit-search-cancel-button { -webkit-appearance: none; display: none; }
+
+/* ---------- Ansichten und Reiterleiste ---------- */
+.view {
+  position: absolute; left: 0; right: 0; top: 0;
+  bottom: calc(var(--leiste) + env(safe-area-inset-bottom));
+  overflow-y: auto; -webkit-overflow-scrolling: touch;
+  padding: 16px 16px 28px;
+}
+.innen { max-width: 760px; margin: 0 auto; }
+#leiste {
+  position: fixed; left: 0; right: 0; bottom: 0;
+  height: calc(var(--leiste) + env(safe-area-inset-bottom));
+  padding-bottom: env(safe-area-inset-bottom);
+  display: flex; background: var(--karte); border-top: 1px solid var(--rand);
+}
+#leiste button {
+  flex: 1; border: 0; background: none; color: var(--grau);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 2px; font-size: 0.71875rem; padding: 6px 0 4px; min-width: 0;
+}
+#leiste button svg { width: 24px; height: 24px; }
+#leiste button.an { color: var(--blau); font-weight: 600; }
+#leiste button .zahl {
+  position: absolute; top: -6px; left: 14px; background: var(--rot); color: #fff;
+  font-size: 0.65625rem; font-weight: 700; border-radius: 9px; padding: 0 5px; line-height: 17px;
+}
+#leiste button .symbol { position: relative; }
+
+/* ---------- Grundbausteine ---------- */
+h1 { font-size: 1.375rem; margin: 2px 0 4px; }
+.leise { color: var(--grau); font-size: 0.875rem; }
+.klein { font-size: 0.8125rem; }
+.feld, select.feld {
+  width: 100%; min-height: 48px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid var(--rand-stark); background: var(--karte); outline: none;
+}
+.feld:focus { border-color: var(--blau); box-shadow: 0 0 0 3px var(--blau-hell); }
+.knopf {
+  min-height: 48px; padding: 10px 18px; border-radius: 10px; border: 1px solid var(--rand-stark);
+  background: var(--karte); font-weight: 600; cursor: pointer;
+}
+.knopf.haupt { background: var(--blau); border-color: var(--blau); color: #fff; }
+.knopf.breit { width: 100%; }
+.knopf:disabled { opacity: .45; }
+.knopf:active:not(:disabled) { transform: scale(.98); }
+.zeile { display: flex; gap: 10px; align-items: center; }
+.zeile > .wachsen { flex: 1; min-width: 0; }
+.beschriftung { font-size: 0.875rem; font-weight: 600; color: var(--grau); margin: 18px 0 6px; }
+.karte {
+  background: var(--karte); border: 1px solid var(--rand); border-radius: var(--radius);
+  padding: 12px 14px;
+}
+.segmente { display: grid; gap: 6px; grid-template-columns: repeat(auto-fit, minmax(96px, 1fr)); }
+.segmente.zwei { grid-template-columns: 1fr 1fr; }
+.seg {
+  min-height: 44px; padding: 8px 10px; border-radius: 10px; border: 1px solid var(--rand-stark);
+  background: var(--karte); font-size: 0.9375rem;
+}
+#q-anzahl .seg { min-width: 0; padding: 8px 2px; }
+.seg.an { background: var(--blau-hell); border-color: var(--blau); color: var(--blau); font-weight: 600; }
+.fehlertext { color: var(--rot); font-size: 0.875rem; margin-top: 12px; min-height: 1em; }
+
+/* ---------- Suche ---------- */
+.kopfleiste {
+  position: sticky; top: -16px; z-index: 2; margin: -16px -16px 12px; padding: 16px 16px 10px;
+  background: var(--flaeche);
+}
+.suchfeld { position: relative; }
+.suchfeld .feld { padding-right: 46px; font-size: 1.125rem; }
+.suchfeld .weg {
+  position: absolute; right: 4px; top: 4px; width: 40px; height: 40px; border: 0;
+  background: none; color: var(--grau); font-size: 1.375rem;
+}
+.treffer div { white-space: pre-wrap; overflow-wrap: anywhere; }
+.treffer .abschnitt {
+  font-size: 0.78125rem; font-weight: 700; letter-spacing: .06em; color: var(--grau);
+  margin: 18px 0 4px;
+}
+.treffer .abschnitt:first-child { margin-top: 4px; }
+.treffer .titel { font-size: 1.125rem; font-weight: 700; color: var(--blau); margin-top: 10px; }
+.treffer .titel.tippbar { display: flex; align-items: baseline; gap: 8px; cursor: pointer; }
+.treffer .titel .chip {
+  flex: none; font-size: 0.75rem; font-weight: 600; padding: 1px 8px; border-radius: 99px;
+  background: var(--blau-hell); color: var(--blau); white-space: nowrap;
+}
+.treffer .bestimmung { font-weight: 700; color: var(--gruen); }
+.treffer .leise { font-size: 0.875rem; }
+.leerbild { text-align: center; padding: 40px 12px; color: var(--grau); }
+.leerbild .gross { font-size: 2.75rem; line-height: 1; margin-bottom: 10px; }
+.unterschrift { text-align: right; color: var(--rand-stark); font-size: 0.75rem; margin-top: 22px; }
+
+/* ---------- Quiz ---------- */
+.fortschritt { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.balken { height: 6px; background: var(--rand); border-radius: 3px; margin: 10px 0 18px; overflow: hidden; }
+.balken > div { height: 100%; width: 0; background: var(--blau); transition: width .25s; }
+.zaehler { font-size: 0.875rem; color: var(--grau); }
+.zaehler b { font-weight: 600; }
+#q-frage-text { font-size: 1.875rem; font-weight: 700; color: var(--blau); margin: 4px 0 2px;
+  overflow-wrap: anywhere; line-height: 1.2; }
+#q-antwort { font-size: 1.1875rem; margin-top: 12px; }
+#q-antwort.fertig { background: var(--flaeche); caret-color: transparent; }
+.rueck { margin-top: 14px; }
+.urteil { font-size: 1.3125rem; font-weight: 700; }
+.urteil.gut { color: var(--gruen); } .urteil.schlecht { color: var(--rot); }
+.rueck .loesung { font-size: 1.0625rem; margin-top: 4px; }
+.rueck .formen { margin-top: 4px; }
+.rueck .merker { color: var(--blau); font-size: 0.875rem; margin-top: 8px; }
+.link { background: none; border: 0; color: var(--blau); padding: 8px 0; font-weight: 600; }
+.ergebnis-zahl { font-size: 1.875rem; font-weight: 800; margin: 6px 0; }
+.liste { display: flex; flex-direction: column; gap: 8px; }
+.liste .karte { cursor: pointer; }
+.liste .karte:active { background: var(--blau-hell); }
+.paar { display: flex; justify-content: space-between; gap: 12px; }
+.paar .lat { font-weight: 700; }
+.paar .de { color: var(--grau); text-align: right; }
+
+/* ---------- Fehlerliste / Vokabeln ---------- */
+.vokabel .oben { display: flex; align-items: baseline; gap: 8px; }
+.vokabel .lat { font-weight: 700; font-size: 1.0625rem; }
+.vokabel .art { color: var(--grau); font-size: 0.8125rem; }
+.vokabel .rechts { margin-left: auto; color: var(--grau); font-size: 0.8125rem; white-space: nowrap; }
+.vokabel .de { margin-top: 2px; }
+.vokabel .fm { color: var(--grau); font-size: 0.84375rem; margin-top: 2px; }
+.punkte { color: var(--blau); letter-spacing: 2px; font-size: 0.9375rem; }
+
+/* ---------- Grammatik ---------- */
+.tafel { margin-top: 12px; padding: 0; overflow: hidden; }
+.tafel h3 { margin: 0; padding: 10px 14px 6px; font-size: 1rem; color: var(--blau); }
+.tafel h3.warnung { color: var(--rot); }
+.tafel pre {
+  margin: 0; padding: 4px 14px 12px; overflow-x: auto; font: 0.84375rem/1.5 var(--mono);
+}
+.seite { margin-top: 12px; overflow-x: auto; border-radius: var(--radius); border: 1px solid var(--rand);
+  background: var(--karte); }
+.seite img { display: block; width: 100%; height: auto; }
+.seite.gross img { width: 230%; max-width: none; }
+
+/* ---------- Blatt (Formen, Rückfragen) ---------- */
+#blatt { position: fixed; inset: 0; z-index: 10; background: rgba(0,0,0,.45);
+  display: flex; align-items: flex-end; justify-content: center; }
+#blatt .panel {
+  width: 100%; max-width: 760px; max-height: 88vh; overflow-y: auto; background: var(--karte);
+  border-radius: 18px 18px 0 0; padding: 8px 18px calc(18px + env(safe-area-inset-bottom));
+}
+#blatt .griff { width: 40px; height: 4px; border-radius: 2px; background: var(--rand-stark);
+  margin: 4px auto 12px; }
+#blatt h2 { font-size: 1.25rem; color: var(--blau); margin: 0 0 10px; }
+.formen-tab { width: 100%; border-collapse: collapse; font-size: 0.9375rem; }
+.formen-tab th { text-align: left; color: var(--grau); font-size: 0.8125rem; padding: 12px 0 4px;
+  border-bottom: 1px solid var(--rand); }
+.formen-tab td { padding: 5px 0; vertical-align: top; border-bottom: 1px solid var(--rand); }
+.formen-tab td:first-child { color: var(--grau); padding-right: 12px; white-space: nowrap; width: 1%; }
+.formen-tab td:last-child { font-family: var(--mono); overflow-wrap: anywhere; }
+.aktionen { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+.knopf.gefahr { color: var(--rot); }
+
+/* ---------- Laden / Fehler ---------- */
+#laden { position: fixed; inset: 0; z-index: 20; background: var(--flaeche);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px;
+  color: var(--grau); }
+.kreisel { width: 36px; height: 36px; border-radius: 50%; border: 4px solid var(--rand);
+  border-top-color: var(--blau); animation: drehen 0.9s linear infinite; }
+@keyframes drehen { to { transform: rotate(360deg); } }
+#absturz { position: fixed; inset: 0; z-index: 30; background: var(--flaeche); padding: 20px;
+  overflow: auto; }
+#absturz pre { white-space: pre-wrap; font: 0.75rem/1.4 var(--mono); }
+.warnband { background: var(--rot-hell); color: var(--rot); border-radius: 10px; padding: 10px 12px;
+  margin-bottom: 12px; font-size: 0.875rem; }
+.code { font: 700 1.5rem/1.2 var(--mono); letter-spacing: .08em; color: var(--blau); margin: 6px 0 8px;
+  user-select: all; }
+
+/* ---------- Großer Bildschirm (Website am PC): Seitenleiste statt Reiterleiste ---------- */
+@media (min-width: 900px) {
+  :root { --seite: 220px; }
+  .view { left: var(--seite); bottom: 0; padding: 28px 36px 40px; }
+  .innen { max-width: 1000px; }
+  .kopfleiste { top: -28px; margin: -28px -36px 16px; padding: 28px 36px 12px; }
+  #leiste {
+    top: 0; right: auto; width: var(--seite); height: auto; padding: 22px 12px;
+    flex-direction: column; gap: 4px; border-top: 0; border-right: 1px solid var(--rand);
+  }
+  #leiste::before { content: "Latein Vokabeln"; font-weight: 700; font-size: 1.125rem; padding: 0 12px 18px; }
+  #leiste button {
+    flex: none; flex-direction: row; justify-content: flex-start; gap: 12px;
+    font-size: 1rem; padding: 10px 12px; border-radius: 10px; cursor: pointer;
+  }
+  #leiste button:hover { background: var(--flaeche); }
+  #leiste button.an { background: var(--blau-hell); }
+  .seg, .liste .karte, .treffer .titel.tippbar, .link { cursor: pointer; }
+  .seg:hover, .knopf:hover:not(:disabled), .liste .karte:hover { border-color: var(--blau); }
+  .liste { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); }
+  #q-frage-text { font-size: 2.5rem; }
+  #blatt { align-items: center; padding: 24px; }
+  #blatt .panel { border-radius: 18px; max-height: 85vh; padding: 20px 26px 26px; }
+  #blatt .griff { display: none; }
+}
+/* Im Vollbild auf großen Monitoren wächst alles mit */
+@media (min-width: 1400px) and (min-height: 700px) { html { font-size: 18px; } }
+@media (min-width: 1900px) and (min-height: 900px) { html { font-size: 20px; } }
+@media (min-width: 2500px) and (min-height: 1200px) { html { font-size: 24px; } }
+</style>
+</head>
+<body>
+
+<!-- ======================= Suche ======================= -->
+<section class="view" id="v-suche">
+  <div class="innen">
+    <div class="kopfleiste">
+      <div class="suchfeld">
+        <input id="such-feld" class="feld" type="search" placeholder="Wort – lateinisch oder deutsch"
+               autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"
+               enterkeyhint="search">
+        <button class="weg" id="such-weg" type="button" aria-label="Leeren">×</button>
+      </div>
+    </div>
+    <div id="warnungen"></div>
+    <div class="treffer" id="such-ergebnis"></div>
+  </div>
+</section>
+
+<!-- ======================= Quiz ======================= -->
+<section class="view" id="v-quiz" hidden>
+  <div class="innen">
+    <!-- Einstellungen -->
+    <div id="q-einst">
+      <h1>Quiz einstellen</h1>
+      <div class="leise" id="q-lernstand"></div>
+
+      <div class="beschriftung">Lektionen</div>
+      <input id="q-lektionen" class="feld" value="alle" autocomplete="off" autocapitalize="off"
+             spellcheck="false">
+      <div class="leise klein" id="q-lektionen-hinweis" style="margin-top:4px"></div>
+
+      <div class="beschriftung">Wortart</div>
+      <select id="q-wortart" class="feld"></select>
+
+      <div class="beschriftung">Modus</div>
+      <div class="segmente zwei" id="q-modus"></div>
+
+      <div id="q-formen-block">
+        <div class="beschriftung">Formen bis</div>
+        <select id="q-bis" class="feld"></select>
+        <div class="beschriftung">Grammatik</div>
+        <select id="q-bereich" class="feld"></select>
+        <div class="beschriftung">Abfrage</div>
+        <div class="segmente" id="q-art"></div>
+      </div>
+
+      <div class="beschriftung">Fragen</div>
+      <div class="segmente" id="q-anzahl" style="grid-template-columns:repeat(7,1fr);gap:4px"></div>
+      <div class="leise klein" style="margin-top:4px">„alle“ fragt jede Vokabel der Auswahl genau einmal ab</div>
+
+      <div class="fehlertext" id="q-einst-fehler"></div>
+      <button class="knopf haupt breit" id="q-start" type="button" style="margin-top:10px">Quiz starten</button>
+    </div>
+
+    <!-- Frage -->
+    <div id="q-frage" hidden>
+      <div class="fortschritt">
+        <div class="zaehler" id="q-zaehler"></div>
+        <button class="knopf" id="q-beenden" type="button" style="min-height:38px;padding:6px 12px">Beenden</button>
+      </div>
+      <div class="balken"><div id="q-balken"></div></div>
+      <div class="leise" id="q-untertitel"></div>
+      <div id="q-frage-text"></div>
+      <div class="leise" id="q-zusatz"></div>
+      <input id="q-antwort" class="feld" autocomplete="off" autocapitalize="off" autocorrect="off"
+             spellcheck="false" enterkeyhint="done" placeholder="Deine Antwort">
+      <button class="knopf haupt breit" id="q-knopf" type="button" style="margin-top:10px">Prüfen</button>
+      <div class="rueck" id="q-rueck"></div>
+    </div>
+
+    <!-- Ergebnis -->
+    <div id="q-ende" hidden>
+      <h1>Ergebnis</h1>
+      <div class="ergebnis-zahl" id="q-ende-zahl"></div>
+      <div class="leise" id="q-ende-unter"></div>
+      <div class="beschriftung" id="q-ende-fehler-titel">Falsch beantwortet – antippen zum Nachschlagen</div>
+      <div class="liste" id="q-ende-fehler"></div>
+      <div class="zeile" style="margin-top:18px">
+        <button class="knopf haupt wachsen" id="q-nochmal" type="button">Nochmal</button>
+        <button class="knopf wachsen" id="q-zurueck" type="button">Einstellungen</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= Fehlervokabeln ======================= -->
+<section class="view" id="v-fehler" hidden>
+  <div class="innen">
+    <div class="zeile">
+      <h1 class="wachsen" id="f-titel">Meine Fehlervokabeln</h1>
+      <button class="knopf" id="f-konto" type="button" style="min-height:38px;padding:6px 12px" hidden>Lerncode</button>
+      <button class="knopf" id="f-archiv" type="button" style="min-height:38px;padding:6px 12px">Archiv</button>
+    </div>
+    <div class="leise" id="f-unter"></div>
+    <div id="f-ueben-block">
+      <div class="segmente" id="f-richtung" style="margin-top:14px"></div>
+      <button class="knopf haupt breit" id="f-ueben" type="button" style="margin-top:8px">Diese Vokabeln üben</button>
+    </div>
+    <div class="leise klein" style="margin:14px 0 8px">Antippen für Nachschlagen, Zurücksetzen oder Entfernen.</div>
+    <div class="liste" id="f-liste"></div>
+  </div>
+</section>
+
+<!-- ======================= Grammatik ======================= -->
+<section class="view" id="v-grammatik" hidden>
+  <div class="innen">
+    <div class="zeile">
+      <button class="knopf" id="g-zurueck" type="button" aria-label="Vorheriges Thema">◀</button>
+      <select id="g-wahl" class="feld wachsen"></select>
+      <button class="knopf" id="g-vor" type="button" aria-label="Nächstes Thema">▶</button>
+    </div>
+    <div class="segmente zwei" id="g-ansicht" style="margin-top:10px"></div>
+    <div class="leise klein" id="g-hinweis" style="margin-top:10px"></div>
+    <div id="g-inhalt"></div>
+  </div>
+</section>
+
+<!-- ======================= Alle Vokabeln ======================= -->
+<section class="view" id="v-vokabeln" hidden>
+  <div class="innen">
+    <div class="zeile">
+      <select id="v-lektion" class="feld" style="width:auto;flex:none"></select>
+      <input id="v-filter" class="feld wachsen" type="search" placeholder="Filtern…" autocomplete="off"
+             autocapitalize="off" autocorrect="off" spellcheck="false">
+    </div>
+    <div class="zeile" style="margin-top:8px">
+      <select id="v-sort" class="feld wachsen">
+        <option value="lektion">nach Lektion</option>
+        <option value="latein">nach Vokabel</option>
+        <option value="wortart">nach Wortart</option>
+        <option value="deutsch">nach Bedeutung</option>
+        <option value="formen">nach Formen</option>
+      </select>
+      <button class="knopf" id="v-richtung" type="button" aria-label="Reihenfolge umdrehen">▲</button>
+    </div>
+    <div class="leise klein" id="v-info" style="margin:10px 0 8px"></div>
+    <div class="liste" id="v-liste"></div>
+    <button class="knopf breit" id="v-mehr" type="button" style="margin-top:10px" hidden></button>
+  </div>
+</section>
+
+<!-- ======================= Reiterleiste ======================= -->
+<nav id="leiste">
+  <button type="button" data-v="suche" class="an">
+    <span class="symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></span>Suche</button>
+  <button type="button" data-v="quiz">
+    <span class="symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 12l3 3 5-6"/></svg></span>Quiz</button>
+  <button type="button" data-v="fehler">
+    <span class="symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4"/><path d="M5 4h11l-2 4 2 4H5"/></svg><span class="zahl" id="fehler-zahl" hidden></span></span>Fehler</button>
+  <button type="button" data-v="grammatik">
+    <span class="symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6c-2-1.5-5-2-8-2v14c3 0 6 .5 8 2 2-1.5 5-2 8-2V4c-3 0-6 .5-8 2z"/><path d="M12 6v14"/></svg></span>Grammatik</button>
+  <button type="button" data-v="vokabeln">
+    <span class="symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></svg></span>Vokabeln</button>
+</nav>
+
+<div id="blatt" hidden><div class="panel" id="blatt-panel"></div></div>
+<div id="laden"><div class="kreisel"></div><div>Vokabeln werden geladen …</div></div>
+<div id="absturz" hidden><h1 style="color:var(--rot)">Es ist ein Fehler aufgetreten</h1><pre id="absturz-text"></pre>
+  <button class="knopf" type="button" onclick="document.getElementById('absturz').hidden=true">Schließen</button></div>
+
+<script>
+"use strict";
+const $ = (id) => document.getElementById(id);
+function el(tag, cls, text) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text != null) e.textContent = text;
+  return e;
+}
+const speicher = {
+  holen(k, standard) {
+    try { const v = localStorage.getItem(k); return v == null ? standard : JSON.parse(v); }
+    catch (e) { return standard; }
+  },
+  setzen(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} },
+};
+
+async function api(name, daten) {
+  let antwort;
+  try {
+    antwort = await fetch("/api/" + name, {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(daten || {}),
+    });
+  } catch (e) {
+    zeigeAbsturz("Keine Verbindung zum Programm.\n\n" + e);
+    throw e;
+  }
+  let j;
+  try { j = await antwort.json(); } catch (e) { j = { absturz: "Leere Antwort (" + antwort.status + ")" }; }
+  if (j.absturz) { zeigeAbsturz(j.absturz); throw new Error(j.absturz); }
+  return j;
+}
+function zeigeAbsturz(text) { $("absturz-text").textContent = text; $("absturz").hidden = false; }
+
+function segmente(behaelter, eintraege, wert, beiWahl) {
+  behaelter.textContent = "";
+  behaelter.dataset.wert = wert;
+  for (const [w, text] of eintraege) {
+    const b = el("button", "seg" + (w === wert ? " an" : ""), text);
+    b.type = "button";
+    b.onclick = () => {
+      for (const x of behaelter.children) x.classList.remove("an");
+      b.classList.add("an");
+      behaelter.dataset.wert = w;
+      if (beiWahl) beiWahl(w);
+    };
+    behaelter.appendChild(b);
+  }
+}
+function optionen(select, eintraege, wert) {
+  select.textContent = "";
+  for (const [w, text] of eintraege) {
+    const o = el("option", null, text); o.value = w; select.appendChild(o);
+  }
+  if (wert != null) select.value = wert;
+}
+function spaeter(fn, ms) {
+  let t = null;
+  return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); };
+}
+
+// ------------------------------------------------------------------ Blatt
+function blattOeffnen(fuellen) {
+  const panel = $("blatt-panel");
+  panel.textContent = "";
+  panel.appendChild(el("div", "griff"));
+  fuellen(panel);
+  panel.scrollTop = 0;
+  $("blatt").hidden = false;
+}
+function blattZu() { $("blatt").hidden = true; }
+$("blatt").addEventListener("click", (e) => { if (e.target.id === "blatt") blattZu(); });
+document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("blatt").hidden) blattZu(); });
+
+function rueckfrage(titel, text, jaText, jaAktion) {
+  blattOeffnen((p) => {
+    p.appendChild(el("h2", null, titel));
+    p.appendChild(el("div", null, text));
+    const a = el("div", "aktionen");
+    const ja = el("button", "knopf gefahr breit", jaText); ja.type = "button";
+    ja.onclick = () => { blattZu(); jaAktion(); };
+    const nein = el("button", "knopf breit", "Abbrechen"); nein.type = "button";
+    nein.onclick = blattZu;
+    a.append(ja, nein);
+    p.appendChild(a);
+  });
+}
+
+// ------------------------------------------------------------------ Reiter
+let info = null, aktuell = "suche";
+const geladen = { grammatik: false, vokabeln: false };
+function reiter(name) {
+  for (const s of document.querySelectorAll(".view")) s.hidden = s.id !== "v-" + name;
+  for (const b of document.querySelectorAll("#leiste button")) b.classList.toggle("an", b.dataset.v === name);
+  aktuell = name;
+  blattZu();
+  if (name === "fehler") fehlerLaden();
+  if (name === "grammatik" && !geladen.grammatik) grammatikLaden(speicher.holen("thema", 0));
+  if (name === "vokabeln" && !geladen.vokabeln) vokabelnLaden();
+}
+for (const b of document.querySelectorAll("#leiste button")) b.onclick = () => reiter(b.dataset.v);
+
+function fehlerZahl(n) {
+  const z = $("fehler-zahl");
+  z.hidden = !n;
+  z.textContent = n > 99 ? "99+" : String(n);
+}
+
+// ------------------------------------------------------------------ Suche
+const suchFeld = $("such-feld");
+function sucheLeer() {
+  const e = $("such-ergebnis");
+  e.textContent = "";
+  const leer = el("div", "leerbild");
+  leer.appendChild(el("div", "gross", "🏛️"));
+  leer.appendChild(el("div", null, "Lateinisch (auch gebeugt: rogaverunt, altissimum) oder deutsch."));
+  leer.appendChild(el("div", "klein", "Mehrere Wörter gehen auch: castra posuerunt"));
+  if (info) leer.appendChild(el("div", "klein", info.fuss)).style.marginTop = "18px";
+  e.appendChild(leer);
+  e.appendChild(el("div", "unterschrift", "created by bj"));
+}
+let suchNummer = 0;
+async function suchen() {
+  const wort = suchFeld.value.trim();
+  if (!wort) { sucheLeer(); return; }
+  const nummer = ++suchNummer;
+  const r = await api("suche", { q: wort });
+  if (nummer !== suchNummer) return;            // inzwischen weitergetippt
+  const e = $("such-ergebnis");
+  e.textContent = "";
+  for (const s of r.stuecke) {
+    const d = el("div", s.k, s.t);
+    if (s.g != null) {
+      d.classList.add("tippbar");
+      d.textContent = "";
+      d.appendChild(el("span", null, s.t));
+      d.appendChild(el("span", "chip", "Formen ›"));
+      d.onclick = () => formenZeigen(s.g);
+    }
+    e.appendChild(d);
+  }
+  $("v-suche").scrollTop = 0;
+}
+const suchenBald = spaeter(suchen, 200);
+suchFeld.addEventListener("input", suchenBald);
+suchFeld.addEventListener("keydown", (e) => { if (e.key === "Enter") { suchen(); suchFeld.blur(); } });
+$("such-weg").onclick = () => { suchFeld.value = ""; sucheLeer(); suchFeld.focus(); };
+
+function nachschlagen(wort) {
+  reiter("suche");
+  suchFeld.value = wort;
+  suchen();
+}
+
+async function formenZeigen(gid) {
+  const r = await api("formen", { gid });
+  blattOeffnen((p) => {
+    const kopf = el("div", "zeile");
+    const h = el("h2", "wachsen", r.titel); h.style.margin = "0";
+    const zu = el("button", "knopf", "Schließen"); zu.type = "button"; zu.onclick = blattZu;
+    kopf.append(h, zu);
+    p.appendChild(kopf);
+    const t = el("table", "formen-tab");
+    for (const g of r.gruppen) {
+      const einzeilig = g.zeilen.length === 1 && !g.zeilen[0][0];
+      if (einzeilig) {
+        const tr = el("tr");
+        tr.append(el("td", null, g.label), el("td", null, g.zeilen[0][1]));
+        t.appendChild(tr);
+        continue;
+      }
+      const th = el("th", null, g.label); th.colSpan = 2;
+      const kopfzeile = el("tr"); kopfzeile.appendChild(th); t.appendChild(kopfzeile);
+      for (const [rest, formen] of g.zeilen) {
+        const tr = el("tr");
+        tr.append(el("td", null, rest), el("td", null, formen));
+        t.appendChild(tr);
+      }
+    }
+    p.appendChild(t);
+  });
+}
+
+// ------------------------------------------------------------------ Quiz
+let letzterStart = null;
+function quizEinstellungenAufbauen() {
+  const ls = info.lektionen;
+  $("q-lektionen-hinweis").textContent =
+    `z. B. 1-8 · 3,5 · alle   (vorhanden: ${ls[0]}–${ls[ls.length - 1]})`;
+  const gemerkt = speicher.holen("quiz", {});
+  $("q-lektionen").value = gemerkt.lektionen || "alle";
+  optionen($("q-wortart"), info.wortarten.map((w) => [w, w]), gemerkt.wortart);
+  if (!$("q-wortart").value) $("q-wortart").value = "alle";
+  segmente($("q-modus"), [["ld", "Latein → Deutsch"], ["dl", "Deutsch → Latein"],
+                          ["mix", "gemischt"], ["formen", "Formen-Quiz"]],
+           gemerkt.modus || "ld", modusGewechselt);
+  optionen($("q-bis"), [["passend", "passend zur Lektionsauswahl"],
+                        ["alle", "alle Formen (auch Konjunktiv usw.)"]]
+                        .concat(ls.map((n) => [String(n), "bis Lektion " + n])), gemerkt.bis);
+  if (!$("q-bis").value) $("q-bis").value = "passend";
+  optionen($("q-bereich"), info.bereiche.map((b) => [b, b]), gemerkt.bereich);
+  if (!$("q-bereich").value) $("q-bereich").selectedIndex = 0;
+  segmente($("q-art"), info.arten, gemerkt.art || "gemischt");
+  segmente($("q-anzahl"), ["alle", "5", "10", "20", "30", "50", "100"].map((a) => [a, a]),
+           gemerkt.anzahl || "10");
+  modusGewechselt($("q-modus").dataset.wert);
+}
+function modusGewechselt(modus) { $("q-formen-block").hidden = modus !== "formen"; }
+function quizEinstellungen() {
+  return {
+    lektionen: $("q-lektionen").value, wortart: $("q-wortart").value,
+    modus: $("q-modus").dataset.wert, bis: $("q-bis").value, bereich: $("q-bereich").value,
+    art: $("q-art").dataset.wert, anzahl: $("q-anzahl").dataset.wert,
+  };
+}
+async function quizStarten(art, daten) {
+  const z = await api(art, daten);
+  if (z.fehler) {
+    if (art === "quiz/start") { $("q-einst-fehler").textContent = z.fehler; return; }
+    rueckfrage("Fehlerliste", z.fehler, "OK", () => {});
+    return;
+  }
+  $("q-einst-fehler").textContent = "";
+  letzterStart = [art, daten];
+  reiter("quiz");
+  quizZeigen(z);
+}
+$("q-start").onclick = () => {
+  const e = quizEinstellungen();
+  speicher.setzen("quiz", e);
+  quizStarten("quiz/start", e);
+};
+
+function zaehlerText(z, nummer) {
+  return `Frage ${nummer} von ${z.gesamt}  ·  ★ ${z.perfekt}  ✓ ${z.richtig}  ✗ ${z.falsch}`;
+}
+let quizPhase = null;
+function quizZeigen(z) {
+  quizPhase = z.phase;
+  $("q-lernstand").textContent = z.lernstand;
+  $("q-einst").hidden = z.phase !== null;
+  $("q-frage").hidden = !(z.phase === "frage" || z.phase === "antwort");
+  $("q-ende").hidden = z.phase !== "ende";
+  $("v-quiz").scrollTop = 0;
+
+  if (z.phase === "frage" || z.phase === "antwort") {
+    const nummer = z.phase === "frage" ? z.nummer + 1 : z.nummer;
+    $("q-zaehler").textContent = zaehlerText(z, nummer);
+    $("q-balken").style.width = (z.gesamt ? (100 * z.nummer / z.gesamt) : 0) + "%";
+    $("q-untertitel").textContent = z.untertitel;
+    $("q-frage-text").textContent = z.frage;
+    $("q-zusatz").textContent = z.zusatz || "";
+    const feld = $("q-antwort"), rueck = $("q-rueck");
+    rueck.textContent = "";
+    if (z.phase === "frage") {
+      feld.classList.remove("fertig");
+      feld.value = "";
+      $("q-knopf").textContent = "Prüfen";
+      feld.focus();
+      frageSichtbar();
+    } else {
+      // Nicht readOnly: Android schließt dann die Tastatur (siehe q-knopf)
+      feld.classList.add("fertig");
+      feld.value = z.antwort;
+      feld.dataset.antwort = z.antwort;
+      const gut = z.bewertung !== "falsch";
+      rueck.appendChild(el("div", "urteil " + (gut ? "gut" : "schlecht"),
+        z.bewertung === "perfekt" ? "★  Perfekt" : z.bewertung === "richtig" ? "✓  Richtig" : "✗  Falsch"));
+      rueck.appendChild(el("div", "loesung", "Lösung:  " + z.loesung));
+      if (z.formen) rueck.appendChild(el("div", "formen", z.formen));
+      if (z.hinweis) rueck.appendChild(el("div", "leise", z.hinweis));
+      if (z.merker) rueck.appendChild(el("div", "merker", z.merker));
+      const l = el("button", "link", "In der Suche nachschlagen ›"); l.type = "button";
+      l.onclick = () => nachschlagen(z.nachschlagen);
+      rueck.appendChild(l);
+      $("q-knopf").textContent = "Weiter";
+      // Fokus bleibt im Feld: so bleibt die Tastatur offen, OK blättert weiter
+      feld.focus();
+      frageSichtbar();
+    }
+  } else if (z.phase === "ende") {
+    $("q-ende-zahl").textContent = `${z.punkte} von ${z.gestellt} richtig  (${z.prozent} %)`;
+    $("q-ende-zahl").style.color = z.prozent >= 80 ? "var(--gruen)" : z.prozent < 50 ? "var(--rot)" : "";
+    $("q-ende-unter").textContent =
+      `★ ${z.perfekt} perfekt  ·  ✓ ${z.richtig} richtig  ·  ✗ ${z.falsch} falsch\n` + z.insgesamt;
+    $("q-ende-unter").style.whiteSpace = "pre-line";
+    const liste = $("q-ende-fehler");
+    liste.textContent = "";
+    $("q-ende-fehler-titel").hidden = !z.fehler.length;
+    for (const f of z.fehler) {
+      const k = el("div", "karte paar");
+      k.append(el("span", "lat", f.latein), el("span", "de", f.deutsch));
+      k.onclick = () => nachschlagen(f.latein);
+      liste.appendChild(k);
+    }
+  }
+}
+// Die Tastatur verkleinert das Fenster, und der Browser rollt das Eingabefeld
+// ins Bild - die Frage darüber rutscht dabei oben hinaus.  Darum die Ansicht
+// so rollen, dass sie direkt mit der Frage beginnt.
+function frageSichtbar() {
+  if (aktuell !== "quiz" || !document.body.classList.contains("tippen")) return;
+  const ansicht = $("v-quiz"), hoehe = ansicht.clientHeight;
+  const unterkante = (e) => e.offsetTop + e.offsetHeight + 12;
+  if (quizPhase === "frage") {
+    // So wenig wie nötig: das Eingabefeld muss sichtbar sein, sonst bleibt
+    // alles darüber (auch die Vokabel) stehen.
+    ansicht.scrollTop = Math.max(0, unterkante($("q-antwort")) - hoehe);
+  } else if (quizPhase === "antwort") {
+    // Die Lösung zeigen, aber nie weiter rollen, als dass die Vokabel oben bleibt.
+    const loesung = document.querySelector("#q-rueck .loesung");
+    const bedarf = loesung ? unterkante(loesung) - hoehe : 0;
+    ansicht.scrollTop = Math.max(0, Math.min($("q-untertitel").offsetTop - 10, bedarf));
+  }
+}
+// Tastatur offen = ein Eingabefeld hat den Fokus UND das Fenster ist deutlich
+// niedriger als der Bildschirm.  Der Fokus allein reicht nicht (ein Feld kann
+// ihn ohne Tastatur haben, dann darf die Reiterleiste nicht fehlen).  Gegen die
+// Bildschirmhöhe gemessen stimmt es hochkant wie quer, auch nach dem Drehen.
+// Nur auf Touch-Geräten: am PC hat ein kleines Browserfenster nichts mit einer
+// Tastatur zu tun, die Leiste muss bleiben.
+const beruehrung = window.matchMedia("(pointer: coarse)").matches;
+function tastaturPruefen() {
+  if (!beruehrung) return;
+  const feld = document.activeElement && document.activeElement.tagName === "INPUT";
+  const bildschirm = Math.max(1, window.screen.height || window.innerHeight);
+  document.body.classList.toggle("tippen", feld && window.innerHeight < bildschirm * 0.7);
+}
+window.addEventListener("resize", () => {
+  tastaturPruefen();
+  setTimeout(frageSichtbar, 50);
+  setTimeout(frageSichtbar, 300);
+});
+document.addEventListener("focusin", tastaturPruefen);
+document.addEventListener("focusout", () => setTimeout(tastaturPruefen, 50));
+
+async function quizWeiter() {
+  if (quizPhase === "frage") quizZeigen(await api("quiz/pruefen", { antwort: $("q-antwort").value }));
+  else if (quizPhase === "antwort") quizZeigen(await api("quiz/weiter"));
+}
+$("q-knopf").onclick = quizWeiter;
+// Ein Tipp auf den Knopf würde dem Feld den Fokus nehmen - die Tastatur ginge
+// zu und bei der nächsten Frage wieder auf, und Android rollt dabei die Frage weg.
+$("q-knopf").addEventListener("pointerdown", (e) => {
+  if (document.activeElement === $("q-antwort")) e.preventDefault();
+});
+$("q-antwort").addEventListener("input", (e) => {
+  if (quizPhase === "antwort") e.target.value = e.target.dataset.antwort || "";
+});
+$("q-antwort").addEventListener("keydown", (e) => {
+  if (e.key === "Enter") { e.preventDefault(); quizWeiter(); }
+});
+document.addEventListener("keydown", (e) => {
+  if (aktuell !== "quiz" || quizPhase !== "antwort" || e.target === $("q-antwort")) return;
+  if (e.key === "Enter" || e.key === " ") {
+    if (e.target.tagName === "INPUT" || e.target.tagName === "SELECT") return;
+    e.preventDefault(); quizWeiter();
+  }
+});
+$("q-beenden").onclick = async () => quizZeigen(await api("quiz/beenden"));
+$("q-zurueck").onclick = async () => quizZeigen(await api("quiz/beenden"));
+$("q-nochmal").onclick = () => {
+  if (letzterStart) quizStarten(letzterStart[0], letzterStart[1]);
+};
+
+// ------------------------------------------------------------------ Fehlerliste
+let fehlerArchiv = false;
+async function fehlerLaden(fertig) {
+  const r = fertig || await api("fehler", { archiv: fehlerArchiv ? 1 : 0 });
+  fehlerZahl(r.offen);
+  $("f-titel").textContent = r.archiv ? "Geschaffte Vokabeln" : "Meine Fehlervokabeln";
+  $("f-archiv").textContent = r.archiv ? "Zur Übung" : "Archiv";
+  $("f-unter").textContent = r.archiv
+    ? `${r.geschafft} Vokabeln geschafft. Wer wieder darauf hereinfällt, kommt mit seiner Bilanz zurück in die Übung.`
+    : `${r.offen} in Übung · ${r.geschafft} geschafft · ${r.ziel}× richtig und eine Vokabel ist raus (falsch kostet einen Punkt)`;
+  $("f-ueben-block").hidden = r.archiv;
+  $("f-ueben").disabled = !r.zeilen.length;
+  const liste = $("f-liste");
+  liste.textContent = "";
+  if (!r.zeilen.length) {
+    liste.appendChild(el("div", "leerbild", r.archiv ? "Noch keine Vokabel geschafft." : "Noch nichts gesammelt."));
+    return;
+  }
+  for (const z of r.zeilen) {
+    const k = el("div", "karte vokabel");
+    const oben = el("div", "oben");
+    oben.append(el("span", "punkte", z.fortschritt), el("span", "lat", z.latein),
+                el("span", "rechts", `L${z.lektion} · ${z.falsch}✗ ${z.richtig}✓`));
+    k.append(oben, el("div", "de", z.deutsch));
+    k.onclick = () => fehlerAktionen(z);
+    liste.appendChild(k);
+  }
+}
+function fehlerAktionen(z) {
+  blattOeffnen((p) => {
+    p.appendChild(el("h2", null, z.latein));
+    p.appendChild(el("div", "leise", z.deutsch));
+    const a = el("div", "aktionen");
+    const knopf = (text, cls, aktion) => {
+      const b = el("button", "knopf breit " + cls, text); b.type = "button"; b.onclick = aktion; a.appendChild(b);
+    };
+    knopf("In der Suche nachschlagen", "", () => nachschlagen(z.latein));
+    knopf("Auf 0 zurücksetzen", "", async () => {
+      blattZu(); fehlerLaden(await api("fehler/zuruecksetzen", { k: z.k, archiv: fehlerArchiv ? 1 : 0 }));
+    });
+    knopf("Aus der Liste nehmen", "gefahr", () => rueckfrage(
+      "Aus der Liste nehmen",
+      `„${z.latein}“ ganz aus der Fehlerliste entfernen? Die Vokabel kommt erst wieder hinein, wenn du sie erneut falsch beantwortest.`,
+      "Entfernen",
+      async () => fehlerLaden(await api("fehler/entfernen", { k: z.k, archiv: fehlerArchiv ? 1 : 0 }))));
+    knopf("Abbrechen", "", blattZu);
+    p.appendChild(a);
+  });
+}
+$("f-archiv").onclick = () => { fehlerArchiv = !fehlerArchiv; fehlerLaden(); };
+
+// Nur auf der Website (web_server.py): Lernstand hängt am Lerncode des Browsers
+function kontoZeigen() {
+  blattOeffnen((p) => {
+    p.appendChild(el("h2", null, "Dein Lerncode"));
+    p.appendChild(el("div", "code", info.konto));
+    p.appendChild(el("div", "leise",
+      "Fehlerliste und Statistik gehören zu diesem Code. Gib ihn auf einem anderen Gerät " +
+      "(Handy oder PC) ein, um dort weiterzulernen – am besten aufschreiben."));
+    p.appendChild(el("div", "beschriftung", "Code von einem anderen Gerät übernehmen"));
+    const zeile = el("div", "zeile");
+    const feld = el("input", "feld wachsen");
+    feld.placeholder = "ABCD-EFGH-JKMN";
+    feld.autocomplete = "off"; feld.spellcheck = false;
+    feld.setAttribute("autocapitalize", "characters");
+    const los = el("button", "knopf haupt", "Übernehmen"); los.type = "button";
+    zeile.append(feld, los);
+    const fehler = el("div", "fehlertext");
+    p.append(zeile, fehler);
+    const uebernehmen = async () => {
+      const r = await api("konto/wechseln", { code: feld.value });
+      if (r.fehler) { fehler.textContent = r.fehler; return; }
+      location.reload();
+    };
+    los.onclick = uebernehmen;
+    feld.addEventListener("keydown", (e) => { if (e.key === "Enter") uebernehmen(); });
+    const a = el("div", "aktionen");
+    const zu = el("button", "knopf breit", "Schließen"); zu.type = "button"; zu.onclick = blattZu;
+    a.appendChild(zu);
+    p.appendChild(a);
+  });
+}
+$("f-konto").onclick = kontoZeigen;
+$("f-ueben").onclick = () => quizStarten("quiz/fehlerliste", { modus: $("f-richtung").dataset.wert });
+
+// ------------------------------------------------------------------ Grammatik
+let gramAnsicht = "tabellen", gramDaten = null;
+async function grammatikLaden(i) {
+  gramDaten = await api("grammatik", { i });
+  geladen.grammatik = true;
+  $("g-wahl").value = String(gramDaten.i);
+  speicher.setzen("thema", gramDaten.i);
+  if (!gramDaten.seiten.length) gramAnsicht = "tabellen";
+  grammatikZeigen();
+}
+function grammatikZeigen() {
+  const r = gramDaten;
+  segmente($("g-ansicht"), [["tabellen", "Tabellen"], ["seiten", "Buchseiten"]], gramAnsicht,
+           (w) => { gramAnsicht = w; grammatikZeigen(); });
+  $("g-ansicht").children[1].disabled = !r.seiten.length;
+  const inhalt = $("g-inhalt");
+  inhalt.textContent = "";
+  const hinweis = $("g-hinweis");
+  if (gramAnsicht === "seiten") {
+    hinweis.style.color = "";
+    hinweis.textContent = `${r.seiten.length} Seite${r.seiten.length !== 1 ? "n" : ""} aus dem Lehrbuch. Antippen vergrößert.`;
+    for (const url of r.seiten) {
+      const s = el("div", "seite");
+      const img = el("img"); img.src = url; img.alt = "Buchseite"; img.loading = "lazy";
+      s.appendChild(img);
+      s.onclick = () => s.classList.toggle("gross");
+      inhalt.appendChild(s);
+    }
+  } else {
+    hinweis.style.color = r.ungeprueft ? "var(--rot)" : "";
+    hinweis.textContent = r.hinweis + (r.seiten.length && !r.ungeprueft ? "  Für diese Lektion gibt es auch Buchseiten." : "");
+    if (!r.tafeln.length) inhalt.appendChild(el("div", "leerbild", "Zu diesem Thema gibt es keine Tabellen."));
+    for (const t of r.tafeln) {
+      const k = el("div", "karte tafel");
+      k.append(el("h3", t.warnung ? "warnung" : "", t.titel), el("pre", null, t.text));
+      inhalt.appendChild(k);
+    }
+  }
+  $("v-grammatik").scrollTop = 0;
+}
+$("g-wahl").onchange = () => grammatikLaden(Number($("g-wahl").value));
+$("g-zurueck").onclick = () => grammatikLaden(Math.max(0, gramDaten.i - 1));
+$("g-vor").onclick = () => grammatikLaden(Math.min(info.themen.length - 1, gramDaten.i + 1));
+
+// ------------------------------------------------------------------ Alle Vokabeln
+let vokAbsteigend = false, vokZeilen = [], vokGezeigt = 0;
+const VOK_SCHRITT = 150;
+async function vokabelnLaden() {
+  geladen.vokabeln = true;
+  const r = await api("vokabeln", {
+    lektion: $("v-lektion").value, filter: $("v-filter").value,
+    sort: $("v-sort").value, ab: vokAbsteigend ? 1 : 0,
+  });
+  vokZeilen = r.zeilen;
+  vokGezeigt = 0;
+  $("v-liste").textContent = "";
+  $("v-info").textContent = `${r.zeilen.length} von ${r.gesamt} Vokabeln · sortiert nach ${r.sortiert} · antippen zum Nachschlagen`;
+  vokabelnMehr();
+}
+function vokabelnMehr() {
+  const liste = $("v-liste");
+  const bis = Math.min(vokZeilen.length, vokGezeigt + VOK_SCHRITT);
+  for (; vokGezeigt < bis; vokGezeigt++) {
+    const z = vokZeilen[vokGezeigt];
+    const k = el("div", "karte vokabel");
+    const oben = el("div", "oben");
+    oben.append(el("span", "lat", z.latein), el("span", "art", z.wortart), el("span", "rechts", "Lektion " + z.lektion));
+    k.append(oben, el("div", "de", z.deutsch));
+    if (z.formen) k.appendChild(el("div", "fm", z.formen));
+    k.onclick = () => nachschlagen(z.roh);
+    liste.appendChild(k);
+  }
+  const rest = vokZeilen.length - vokGezeigt;
+  $("v-mehr").hidden = rest <= 0;
+  $("v-mehr").textContent = `Weitere ${Math.min(rest, VOK_SCHRITT)} anzeigen (${rest} übrig)`;
+}
+$("v-mehr").onclick = vokabelnMehr;
+$("v-lektion").onchange = vokabelnLaden;
+$("v-sort").onchange = vokabelnLaden;
+$("v-filter").addEventListener("input", spaeter(vokabelnLaden, 250));
+$("v-richtung").onclick = () => {
+  vokAbsteigend = !vokAbsteigend;
+  $("v-richtung").textContent = vokAbsteigend ? "▼" : "▲";
+  vokabelnLaden();
+};
+
+// ------------------------------------------------------------------ Start
+(async function start() {
+  info = await api("start");
+  $("laden").hidden = true;
+  $("f-konto").hidden = !info.konto;
+  const warn = $("warnungen");
+  for (const w of info.warnungen) warn.appendChild(el("div", "warnband", w));
+  optionen($("g-wahl"), info.themen.map((t, i) => [String(i), t]));
+  optionen($("v-lektion"), [["alle", "alle Lektionen"]].concat(info.lektionen.map((n) => [String(n), "Lektion " + n])));
+  quizEinstellungenAufbauen();
+  segmente($("f-richtung"), [["ld", "La → De"], ["dl", "De → La"], ["mix", "gemischt"]], "ld");
+  quizZeigen(info.quiz);
+  api("fehler").then((r) => fehlerZahl(r.offen));
+  sucheLeer();
+})();
+</script>
+</body>
+</html>

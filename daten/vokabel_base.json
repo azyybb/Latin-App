@@ -1,0 +1,8460 @@
+{
+ "lektionen": {
+  "1": [
+   {
+    "latein": "ecce",
+    "deutsch": "Schau! Schaut!",
+    "wortart": "Interjektion"
+   },
+   {
+    "latein": "ibi",
+    "deutsch": "dort",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "esse",
+    "deutsch": "sein, sich befinden",
+    "wortart": "Verb",
+    "formen": {
+     "infinitiv": "esse",
+     "praesens_3sg": "est",
+     "praesens_3pl": "sunt"
+    }
+   },
+   {
+    "latein": "servus",
+    "deutsch": "der Sklave, der Diener",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "servus",
+     "genitiv": "servī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "etiam",
+    "deutsch": "auch, sogar",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "et",
+    "deutsch": "und, auch",
+    "wortart": "Konjunktion"
+   },
+   {
+    "latein": "domina",
+    "deutsch": "die Herrin, die Dame",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "domina",
+     "genitiv": "dominae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "serva",
+    "deutsch": "die Sklavin, die Dienerin",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "serva",
+     "genitiv": "servae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "stare",
+    "deutsch": "stehen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "stō",
+     "infinitiv": "stāre"
+    }
+   },
+   {
+    "latein": "cogitare",
+    "deutsch": "denken, nachdenken, beabsichtigen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "cōgitō",
+     "infinitiv": "cōgitāre"
+    }
+   },
+   {
+    "latein": "clamare",
+    "deutsch": "laut rufen, schreien",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "clāmō",
+     "infinitiv": "clāmāre"
+    }
+   },
+   {
+    "latein": "iam",
+    "deutsch": "schon, bereits, nun",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "adesse",
+    "deutsch": "da sein, helfen",
+    "wortart": "Verb",
+    "formen": {
+     "infinitiv": "adesse",
+     "praesens_3sg": "adest",
+     "praesens_3pl": "adsunt"
+    }
+   },
+   {
+    "latein": "dominus",
+    "deutsch": "der Herr",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "dominus",
+     "genitiv": "dominī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "tum",
+    "deutsch": "da, dann, damals",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "venire",
+    "deutsch": "kommen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "veniō",
+     "infinitiv": "venīre"
+    }
+   },
+   {
+    "latein": "ridere",
+    "deutsch": "lachen, auslachen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "rīdeō",
+     "infinitiv": "rīdēre"
+    }
+   },
+   {
+    "latein": "postremo",
+    "deutsch": "schließlich",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "sed",
+    "deutsch": "aber, sondern",
+    "wortart": "Konjunktion"
+   },
+   {
+    "latein": "nondum",
+    "deutsch": "noch nicht",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "cur?",
+    "deutsch": "warum?",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "non",
+    "deutsch": "nicht",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "debere",
+    "deutsch": "müssen, sollen, schulden",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "dēbeō",
+     "infinitiv": "dēbēre"
+    }
+   },
+   {
+    "latein": "dubitare",
+    "deutsch": "zögern, zweifeln",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "dubitō",
+     "infinitiv": "dubitāre"
+    }
+   },
+   {
+    "latein": "gaudere",
+    "deutsch": "sich freuen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "gaudeō",
+     "infinitiv": "gaudēre"
+    }
+   },
+   {
+    "latein": "equus",
+    "deutsch": "das Pferd",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "equus",
+     "genitiv": "equī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "spectare",
+    "deutsch": "betrachten, anschauen, zuschauen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "spectō",
+     "infinitiv": "spectāre"
+    }
+   },
+   {
+    "latein": "audere",
+    "deutsch": "wagen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "audeō",
+     "infinitiv": "audēre"
+    }
+   },
+   {
+    "latein": "orare",
+    "deutsch": "bitten, beten, anbeten",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "ōrō",
+     "infinitiv": "ōrāre"
+    }
+   },
+   {
+    "latein": "tandem",
+    "deutsch": "endlich, schließlich",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "videre",
+    "deutsch": "sehen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "videō",
+     "infinitiv": "vidēre"
+    }
+   },
+   {
+    "latein": "populus",
+    "deutsch": "das Volk",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "populus",
+     "genitiv": "populī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "victoria",
+    "deutsch": "der Sieg",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "victōria",
+     "genitiv": "victōriae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "hae, hae",
+    "deutsch": "(spöttisches Lachen)",
+    "wortart": "Interjektion"
+   },
+   {
+    "latein": "itaque",
+    "deutsch": "deshalb",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "huc",
+    "deutsch": "hierher",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "medicus",
+    "deutsch": "der Arzt",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "medicus",
+     "genitiv": "medicī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "solum",
+    "deutsch": "nur",
+    "wortart": "Adverb"
+   }
+  ],
+  "2": [
+   {
+    "latein": "diu",
+    "deutsch": "lange, lange Zeit",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "exspectare",
+    "deutsch": "warten (auf), erwarten",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "exspectō",
+     "infinitiv": "exspectāre"
+    }
+   },
+   {
+    "latein": "per",
+    "deutsch": "durch",
+    "wortart": "Präposition",
+    "kasus": "Akkusativ"
+   },
+   {
+    "latein": "via",
+    "deutsch": "der Weg, die Straße",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "via",
+     "genitiv": "viae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "properare",
+    "deutsch": "eilen, sich beeilen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "properō",
+     "infinitiv": "properāre"
+    }
+   },
+   {
+    "latein": "semper",
+    "deutsch": "immer",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "post",
+    "deutsch": "hinter, nach",
+    "wortart": "Präposition",
+    "kasus": "Akkusativ"
+   },
+   {
+    "latein": "non iam",
+    "deutsch": "nicht mehr",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "nam",
+    "deutsch": "denn, nämlich",
+    "wortart": "Konjunktion"
+   },
+   {
+    "latein": "subito",
+    "deutsch": "plötzlich",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "undique",
+    "deutsch": "von allen Seiten, von überallher",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "turba",
+    "deutsch": "die Menge, die Menschenmenge",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "turba",
+     "genitiv": "turbae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "reperire",
+    "deutsch": "finden, wiederfinden",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "reperiō",
+     "infinitiv": "reperīre"
+    }
+   },
+   {
+    "latein": "ante",
+    "deutsch": "vor",
+    "wortart": "Präposition",
+    "kasus": "Akkusativ"
+   },
+   {
+    "latein": "taberna",
+    "deutsch": "das Gasthaus, der Laden",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "taberna",
+     "genitiv": "tabernae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "intrare",
+    "deutsch": "betreten, hineingehen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "intrō",
+     "infinitiv": "intrāre"
+    }
+   },
+   {
+    "latein": "porta",
+    "deutsch": "das Tor, die Tür",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "porta",
+     "genitiv": "portae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "aperire",
+    "deutsch": "öffnen, aufdecken",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "aperiō",
+     "infinitiv": "aperīre"
+    }
+   },
+   {
+    "latein": "mox",
+    "deutsch": "bald",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "servare",
+    "deutsch": "retten, bewahren, beobachten",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "servō",
+     "infinitiv": "servāre"
+    }
+   },
+   {
+    "latein": "fenestra",
+    "deutsch": "das Fenster",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "fenestra",
+     "genitiv": "fenestrae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "ad",
+    "deutsch": "zu, bei, nach, an",
+    "wortart": "Präposition",
+    "kasus": "Akkusativ"
+   },
+   {
+    "latein": "sedere",
+    "deutsch": "sitzen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "sedeō",
+     "infinitiv": "sedēre"
+    }
+   },
+   {
+    "latein": "audire",
+    "deutsch": "hören",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "audiō",
+     "infinitiv": "audīre"
+    }
+   },
+   {
+    "latein": "tu",
+    "deutsch": "du",
+    "wortart": "Pronomen"
+   },
+   {
+    "latein": "tenere",
+    "deutsch": "halten, festhalten, besitzen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "teneō",
+     "infinitiv": "tenēre"
+    }
+   },
+   {
+    "latein": "nunc",
+    "deutsch": "jetzt, nun",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "pecunia",
+    "deutsch": "das Geld, das Vermögen",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "pecūnia",
+     "genitiv": "pecūniae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "postulare",
+    "deutsch": "fordern, verlangen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "postulō",
+     "infinitiv": "postulāre"
+    }
+   },
+   {
+    "latein": "violare",
+    "deutsch": "verletzen, beleidigen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "violō",
+     "infinitiv": "violāre"
+    }
+   },
+   {
+    "latein": "satis",
+    "deutsch": "genug",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "valere",
+    "deutsch": "gesund sein, stark sein, Einfluss haben",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "valeō",
+     "infinitiv": "valēre"
+    }
+   },
+   {
+    "latein": "rogare",
+    "deutsch": "fragen, bitten",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "rogō",
+     "infinitiv": "rogāre"
+    }
+   },
+   {
+    "latein": "quid?",
+    "deutsch": "was?",
+    "wortart": "Pronomen"
+   },
+   {
+    "latein": "desiderare",
+    "deutsch": "vermissen, verlangen, sich sehnen nach",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "dēsiderō",
+     "infinitiv": "dēsiderāre"
+    }
+   },
+   {
+    "latein": "necare",
+    "deutsch": "töten",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "necō",
+     "infinitiv": "necāre"
+    }
+   },
+   {
+    "latein": "ego",
+    "deutsch": "ich",
+    "wortart": "Pronomen"
+   },
+   {
+    "latein": "amicus",
+    "deutsch": "der Freund",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "amīcus",
+     "genitiv": "amīcī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "ita",
+    "deutsch": "so",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "ubi?",
+    "deutsch": "wo?",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "primo",
+    "deutsch": "zuerst",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "dare",
+    "deutsch": "geben",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "dō",
+     "infinitiv": "dare"
+    }
+   },
+   {
+    "latein": "scire",
+    "deutsch": "wissen, kennen, verstehen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "sciō",
+     "infinitiv": "scīre"
+    }
+   }
+  ],
+  "3": [
+   {
+    "latein": "Salve! Salvete!",
+    "deutsch": "Sei gegrüßt! Seid gegrüßt!",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "narrare",
+    "deutsch": "erzählen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "narrō",
+     "infinitiv": "narrāre"
+    }
+   },
+   {
+    "latein": "puella",
+    "deutsch": "das Mädchen",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "puella",
+     "genitiv": "puellae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "statim",
+    "deutsch": "sofort",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "parare",
+    "deutsch": "(vor)bereiten, vorhaben, erwerben",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "parō",
+     "infinitiv": "parāre"
+    }
+   },
+   {
+    "latein": "iniuria",
+    "deutsch": "das Unrecht, die Beleidigung",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "iniūria",
+     "genitiv": "iniūriae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "sustinere",
+    "deutsch": "ertragen, standhalten",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "sustineō",
+     "infinitiv": "sustinēre"
+    }
+   },
+   {
+    "latein": "quemadmodum",
+    "deutsch": "wie, auf welche Weise",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "prohibere",
+    "deutsch": "abhalten, hindern, verhindern",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "prohibeō",
+     "infinitiv": "prohibēre"
+    }
+   },
+   {
+    "latein": "paulum",
+    "deutsch": "ein wenig",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "respondere",
+    "deutsch": "antworten",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "respondeō",
+     "infinitiv": "respondēre"
+    }
+   },
+   {
+    "latein": "certe",
+    "deutsch": "gewiss, sicherlich",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "indicare",
+    "deutsch": "anzeigen, melden",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "indicō",
+     "infinitiv": "indicāre"
+    }
+   },
+   {
+    "latein": "negare",
+    "deutsch": "leugnen, verneinen, verweigern",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "negō",
+     "infinitiv": "negāre"
+    }
+   },
+   {
+    "latein": "culpa",
+    "deutsch": "die Schuld",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "culpa",
+     "genitiv": "culpae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "probare",
+    "deutsch": "prüfen, beweisen, für gut befinden",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "probō",
+     "infinitiv": "probāre"
+    }
+   },
+   {
+    "latein": "bene",
+    "deutsch": "gut",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "Circus Maximus",
+    "deutsch": "der Circus Maximus (Rennbahn für Wagenrennen in Rom)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Circus Maximus",
+     "genitiv": "Circī Maximī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "una",
+    "deutsch": "zusammen, zugleich",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "providere",
+    "deutsch": "sorgen für (m. Dat.)",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "prōvideō",
+     "infinitiv": "prōvidēre"
+    },
+    "kasus": "Dativ"
+   },
+   {
+    "latein": "socius",
+    "deutsch": "der Gefährte, der Verbündete",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "socius",
+     "genitiv": "sociī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "vocare",
+    "deutsch": "rufen, nennen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "vocō",
+     "infinitiv": "vocāre"
+    }
+   },
+   {
+    "latein": "iterum",
+    "deutsch": "wieder(um), zum zweiten Mal",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "superare",
+    "deutsch": "besiegen, überwinden, übertreffen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "superō",
+     "infinitiv": "superāre"
+    }
+   },
+   {
+    "latein": "dum",
+    "deutsch": "während, solange, bis",
+    "wortart": "Subjunktion"
+   },
+   {
+    "latein": "temptare",
+    "deutsch": "versuchen, prüfen, angreifen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "temptō",
+     "infinitiv": "temptāre"
+    }
+   },
+   {
+    "latein": "cavere",
+    "deutsch": "vorsichtig sein, sich hüten (vor) (m. Akk.)",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "caveō",
+     "infinitiv": "cavēre"
+    },
+    "kasus": "Akkusativ"
+   },
+   {
+    "latein": "non debere",
+    "deutsch": "nicht dürfen, nicht müssen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "nōn dēbeō",
+     "infinitiv": "nōn dēbēre"
+    }
+   },
+   {
+    "latein": "sententia",
+    "deutsch": "die Meinung, der Satz, der Sinn",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "sententia",
+     "genitiv": "sententiae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "placere",
+    "deutsch": "gefallen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "placeō",
+     "infinitiv": "placēre"
+    }
+   },
+   {
+    "latein": "parere",
+    "deutsch": "gehorchen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "pāreō",
+     "infinitiv": "pārēre"
+    }
+   },
+   {
+    "latein": "paulo",
+    "deutsch": "(um) ein wenig",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "paulo post",
+    "deutsch": "wenig später, kurz darauf",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "gladius",
+    "deutsch": "das Schwert",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "gladius",
+     "genitiv": "gladiī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "animus",
+    "deutsch": "der Geist, der Mut, die Gesinnung",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "animus",
+     "genitiv": "animī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "deesse",
+    "deutsch": "fehlen, abwesend sein, nicht da sein",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "dēsum",
+     "infinitiv": "deesse"
+    }
+   },
+   {
+    "latein": "mandare",
+    "deutsch": "übergeben, einen Auftrag geben",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "mandō",
+     "infinitiv": "mandāre"
+    }
+   },
+   {
+    "latein": "poena",
+    "deutsch": "die Strafe",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "poena",
+     "genitiv": "poenae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "instare",
+    "deutsch": "bevorstehen, bedrängen, drohen (m. Dat.)",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "instō",
+     "infinitiv": "instāre"
+    },
+    "kasus": "Dativ"
+   },
+   {
+    "latein": "et ... et",
+    "deutsch": "sowohl ... als auch",
+    "wortart": "Konjunktion"
+   },
+   {
+    "latein": "gratia",
+    "deutsch": "der Dank",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "grātia",
+     "genitiv": "grātiae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "gratiam debere",
+    "deutsch": "Dank schulden",
+    "wortart": "Wendung"
+   }
+  ],
+  "4": [
+   {
+    "latein": "de",
+    "deutsch": "über; von, von ... her, von ... weg, von ... herab",
+    "wortart": "Präposition",
+    "kasus": "Ablativ"
+   },
+   {
+    "latein": "atque",
+    "deutsch": "und, und auch",
+    "wortart": "Konjunktion"
+   },
+   {
+    "latein": "cogitare de",
+    "deutsch": "denken an, nachdenken über (m. Abl.)",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "movere",
+    "deutsch": "bewegen, beeindrucken",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "moveō",
+     "infinitiv": "movēre"
+    }
+   },
+   {
+    "latein": "memoria",
+    "deutsch": "die Erinnerung, das Gedächtnis, die Zeit",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "memoria",
+     "genitiv": "memoriae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "nolle",
+    "deutsch": "nicht wollen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "nōlō",
+     "infinitiv": "nōlle"
+    }
+   },
+   {
+    "latein": "procul",
+    "deutsch": "von fern, weit weg",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "Diana",
+    "deutsch": "Diana (Göttin der Jagd und Schützerin der Tiere)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Diāna",
+     "genitiv": "Diānae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "dea",
+    "deutsch": "die Göttin",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "dea",
+     "genitiv": "deae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "cum",
+    "deutsch": "mit, zusammen mit",
+    "wortart": "Präposition",
+    "kasus": "Ablativ"
+   },
+   {
+    "latein": "amica",
+    "deutsch": "die Freundin",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "amīca",
+     "genitiv": "amīcae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "nescire",
+    "deutsch": "nicht wissen, nicht kennen, nicht verstehen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "nesciō",
+     "infinitiv": "nescīre"
+    }
+   },
+   {
+    "latein": "non nescire",
+    "deutsch": "genau wissen, genau kennen",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "amare",
+    "deutsch": "lieben",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "amō",
+     "infinitiv": "amāre"
+    }
+   },
+   {
+    "latein": "memoria tenere",
+    "deutsch": "im Gedächtnis behalten",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "timere",
+    "deutsch": "fürchten, Angst haben (vor)",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "timeō",
+     "infinitiv": "timēre"
+    }
+   },
+   {
+    "latein": "in (Abl.)",
+    "deutsch": "in, an, auf, bei (wo?)",
+    "wortart": "Präposition",
+    "kasus": "Ablativ"
+   },
+   {
+    "latein": "campus",
+    "deutsch": "das Feld, der freie Platz",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "campus",
+     "genitiv": "campī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "ira",
+    "deutsch": "der Zorn, die Wut",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "īra",
+     "genitiv": "īrae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "sentire",
+    "deutsch": "fühlen, meinen, wahrnehmen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "sentiō",
+     "infinitiv": "sentīre"
+    }
+   },
+   {
+    "latein": "ardere",
+    "deutsch": "brennen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "ārdeō",
+     "infinitiv": "ārdēre"
+    }
+   },
+   {
+    "latein": "appellare",
+    "deutsch": "rufen, anrufen, nennen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "appellō",
+     "infinitiv": "appellāre"
+    }
+   },
+   {
+    "latein": "velle",
+    "deutsch": "wollen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "volō",
+     "infinitiv": "velle"
+    }
+   },
+   {
+    "latein": "propter",
+    "deutsch": "wegen",
+    "wortart": "Präposition",
+    "kasus": "Akkusativ"
+   },
+   {
+    "latein": "tibi",
+    "deutsch": "dir, für dich",
+    "wortart": "Pronomen",
+    "kasus": "Dativ"
+   },
+   {
+    "latein": "agitare",
+    "deutsch": "treiben, betreiben, überlegen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "agitō",
+     "infinitiv": "agitāre"
+    }
+   },
+   {
+    "latein": "nonne?",
+    "deutsch": "(etwa) nicht?",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "terrere",
+    "deutsch": "erschrecken",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "terreō",
+     "infinitiv": "terrēre"
+    }
+   },
+   {
+    "latein": "fuga",
+    "deutsch": "die Flucht",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "fuga",
+     "genitiv": "fugae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "in (Akk.)",
+    "deutsch": "in (... hinein), nach (wohin?); gegen",
+    "wortart": "Präposition",
+    "kasus": "Akkusativ"
+   },
+   {
+    "latein": "silva",
+    "deutsch": "der Wald",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "silva",
+     "genitiv": "silvae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "oculus",
+    "deutsch": "das Auge",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "oculus",
+     "genitiv": "oculī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "tamen",
+    "deutsch": "dennoch, jedoch",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "enim",
+    "deutsch": "denn, nämlich (nachgestellt)",
+    "wortart": "Konjunktion"
+   },
+   {
+    "latein": "vitare",
+    "deutsch": "meiden, vermeiden",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "vītō",
+     "infinitiv": "vītāre"
+    }
+   },
+   {
+    "latein": "profecto",
+    "deutsch": "sicherlich, tatsächlich",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "mutare",
+    "deutsch": "ändern, verändern, verwandeln",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "mūtō",
+     "infinitiv": "mūtāre"
+    }
+   },
+   {
+    "latein": "e / ex",
+    "deutsch": "aus, von ... her",
+    "wortart": "Präposition",
+    "kasus": "Ablativ"
+   },
+   {
+    "latein": "at",
+    "deutsch": "aber, jedoch",
+    "wortart": "Konjunktion"
+   },
+   {
+    "latein": "circumvenire",
+    "deutsch": "umringen, umzingeln",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "circumveniō",
+     "infinitiv": "circumvenīre"
+    }
+   },
+   {
+    "latein": "prope",
+    "deutsch": "nahe, in der Nähe, beinahe",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "-que",
+    "deutsch": "und (angehängt)",
+    "wortart": "Konjunktion"
+   }
+  ],
+  "5": [
+   {
+    "latein": "Minerva",
+    "deutsch": "Minerva (die Göttin der Weisheit)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Minerva",
+     "genitiv": "Minervae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "Prometheus",
+    "deutsch": "Prometheus (Göttersohn, Schöpfer der Menschen)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Promētheus",
+     "genitiv": "Promētheī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "vita",
+    "deutsch": "das Leben",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "vīta",
+     "genitiv": "vītae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "donare",
+    "deutsch": "schenken",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "dōnō",
+     "infinitiv": "dōnāre"
+    }
+   },
+   {
+    "latein": "donum",
+    "deutsch": "das Geschenk",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "dōnum",
+     "genitiv": "dōnī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "creatura",
+    "deutsch": "das Geschöpf",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "creātūra",
+     "genitiv": "creātūrae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "ducere",
+    "deutsch": "führen, ziehen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "dūcō",
+     "infinitiv": "dūcere"
+    }
+   },
+   {
+    "latein": "terra",
+    "deutsch": "die Erde, das Land",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "terra",
+     "genitiv": "terrae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "caelum",
+    "deutsch": "der Himmel",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "caelum",
+     "genitiv": "caelī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "ostendere",
+    "deutsch": "zeigen, erklären",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "ostendō",
+     "infinitiv": "ostendere"
+    }
+   },
+   {
+    "latein": "natura",
+    "deutsch": "die Natur, das Wesen, die Beschaffenheit",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "nātūra",
+     "genitiv": "nātūrae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "cognoscere",
+    "deutsch": "erkennen, kennenlernen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "cōgnōscō",
+     "infinitiv": "cōgnōscere"
+    }
+   },
+   {
+    "latein": "deus",
+    "deutsch": "der Gott, die Gottheit",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "deus",
+     "genitiv": "deī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "neque",
+    "deutsch": "und nicht, auch nicht",
+    "wortart": "Konjunktion"
+   },
+   {
+    "latein": "Iuppiter",
+    "deutsch": "Jupiter (der höchste Gott der Römer)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Iuppiter",
+     "genitiv": "Iovis"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "dicere",
+    "deutsch": "sagen, sprechen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "dīcō",
+     "infinitiv": "dīcere"
+    }
+   },
+   {
+    "latein": "autem",
+    "deutsch": "aber, andererseits (nachgestellt)",
+    "wortart": "Konjunktion"
+   },
+   {
+    "latein": "quasi",
+    "deutsch": "gleichsam, wie",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "colere",
+    "deutsch": "verehren, bewirtschaften, pflegen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "colō",
+     "infinitiv": "colere"
+    }
+   },
+   {
+    "latein": "sacrum",
+    "deutsch": "das Opfer, das Heiligtum",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "sacrum",
+     "genitiv": "sacrī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "a / ab",
+    "deutsch": "von, von ... her",
+    "wortart": "Präposition",
+    "kasus": "Ablativ"
+   },
+   {
+    "latein": "dolus",
+    "deutsch": "die List, die Täuschung",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "dolus",
+     "genitiv": "dolī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "superbia",
+    "deutsch": "der Stolz, die Überheblichkeit",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "superbia",
+     "genitiv": "superbiae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "flamma",
+    "deutsch": "die Flamme, das Feuer",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "flamma",
+     "genitiv": "flammae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "adhuc",
+    "deutsch": "bis jetzt, (immer) noch",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "sine",
+    "deutsch": "ohne",
+    "wortart": "Präposition",
+    "kasus": "Ablativ"
+   },
+   {
+    "latein": "vivere",
+    "deutsch": "leben",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "vīvō",
+     "infinitiv": "vīvere"
+    }
+   },
+   {
+    "latein": "cogere",
+    "deutsch": "zwingen (etw. zu tun), (ver)sammeln",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "cōgō",
+     "infinitiv": "cōgere"
+    },
+    "kasus": "Infinitiv"
+   },
+   {
+    "latein": "imperium",
+    "deutsch": "der Befehl, die Herrschaft, das Reich",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "imperium",
+     "genitiv": "imperiī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "resistere",
+    "deutsch": "stehen bleiben, Widerstand leisten",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "resistō",
+     "infinitiv": "resistere"
+    }
+   },
+   {
+    "latein": "petere",
+    "deutsch": "bitten, verlangen, streben (nach), aufsuchen, angreifen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "petō",
+     "infinitiv": "petere"
+    }
+   },
+   {
+    "latein": "tangere",
+    "deutsch": "berühren",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "tangō",
+     "infinitiv": "tangere"
+    }
+   },
+   {
+    "latein": "accendere",
+    "deutsch": "anzünden, anfeuern",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "accendō",
+     "infinitiv": "accendere"
+    }
+   },
+   {
+    "latein": "postea",
+    "deutsch": "nachher, später",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "lingua",
+    "deutsch": "die Sprache",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "lingua",
+     "genitiv": "linguae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "copia",
+    "deutsch": "die Menge, der Vorrat",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "cōpia",
+     "genitiv": "cōpiae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "verbum",
+    "deutsch": "das Wort, die Äußerung",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "verbum",
+     "genitiv": "verbī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "opera",
+    "deutsch": "die Arbeit, die Mühe",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "opera",
+     "genitiv": "operae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "littera",
+    "deutsch": "der Buchstabe",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "littera",
+     "genitiv": "litterae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "legere",
+    "deutsch": "lesen, auswählen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "legō",
+     "infinitiv": "legere"
+    }
+   },
+   {
+    "latein": "scribere",
+    "deutsch": "schreiben, beschreiben",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "scrībō",
+     "infinitiv": "scrībere"
+    }
+   },
+   {
+    "latein": "invenire",
+    "deutsch": "finden, erfinden",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "inveniō",
+     "infinitiv": "invenīre"
+    }
+   },
+   {
+    "latein": "oppidum",
+    "deutsch": "die Stadt, die Kleinstadt",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "oppidum",
+     "genitiv": "oppidī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "constituere",
+    "deutsch": "aufstellen, gründen, festsetzen, beschließen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "cōnstituō",
+     "infinitiv": "cōnstituere"
+    }
+   },
+   {
+    "latein": "consilium",
+    "deutsch": "die Beratung, der Beschluss, der Plan, der Rat",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "cōnsilium",
+     "genitiv": "cōnsiliī"
+    },
+    "genus": "n",
+    "deklination": 2
+   }
+  ],
+  "6": [
+   {
+    "latein": "Mercurius",
+    "deutsch": "Merkur (der Götterbote, Gott des Handels, der Reise und der Diebe)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Mercurius",
+     "genitiv": "Mercuriī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "parvus",
+    "deutsch": "klein, gering",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "parvus",
+     "f": "parva",
+     "n": "parvum"
+    }
+   },
+   {
+    "latein": "contentus",
+    "deutsch": "zufrieden",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "contentus",
+     "f": "contenta",
+     "n": "contentum"
+    }
+   },
+   {
+    "latein": "una cum",
+    "deutsch": "zusammen mit (m. Abl.)",
+    "wortart": "Wendung",
+    "kasus": "Ablativ"
+   },
+   {
+    "latein": "magnus",
+    "deutsch": "groß, bedeutend",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "magnus",
+     "f": "magna",
+     "n": "magnum"
+    }
+   },
+   {
+    "latein": "accipere",
+    "deutsch": "erhalten, erfahren, annehmen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "accipiō",
+     "infinitiv": "accipere"
+    }
+   },
+   {
+    "latein": "gloria",
+    "deutsch": "der Ruhm, die Ehre",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "glōria",
+     "genitiv": "glōriae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "fama",
+    "deutsch": "der (gute/schlechte) Ruf, das Gerücht",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "fāma",
+     "genitiv": "fāmae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "cupere",
+    "deutsch": "wollen, wünschen, verlangen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "cupiō",
+     "infinitiv": "cupere"
+    }
+   },
+   {
+    "latein": "puer",
+    "deutsch": "der Junge",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "puer",
+     "genitiv": "puerī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "quis?",
+    "deutsch": "wer?",
+    "wortart": "Pronomen"
+   },
+   {
+    "latein": "me",
+    "deutsch": "mich",
+    "wortart": "Pronomen",
+    "kasus": "Akkusativ"
+   },
+   {
+    "latein": "num?",
+    "deutsch": "etwa?",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "mihi",
+    "deutsch": "mir, für mich",
+    "wortart": "Pronomen",
+    "kasus": "Dativ"
+   },
+   {
+    "latein": "templum",
+    "deutsch": "der Tempel",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "templum",
+     "genitiv": "templī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "ceteri",
+    "deutsch": "die übrigen",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "cēterī",
+     "f": "cēterae",
+     "n": "cētera"
+    }
+   },
+   {
+    "latein": "multus",
+    "deutsch": "viel",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "multus",
+     "f": "multa",
+     "n": "multum"
+    }
+   },
+   {
+    "latein": "quam",
+    "deutsch": "als, wie",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "miser",
+    "deutsch": "arm, erbärmlich, unglücklich",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "miser",
+     "f": "misera",
+     "n": "miserum"
+    }
+   },
+   {
+    "latein": "habere",
+    "deutsch": "haben, halten",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "habeō",
+     "infinitiv": "habēre"
+    }
+   },
+   {
+    "latein": "nullus",
+    "deutsch": "kein",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "nūllus",
+     "f": "nūlla",
+     "n": "nūllum"
+    }
+   },
+   {
+    "latein": "capere",
+    "deutsch": "nehmen, fassen, ergreifen, erobern",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "capiō",
+     "infinitiv": "capere"
+    }
+   },
+   {
+    "latein": "incipere",
+    "deutsch": "anfangen, beginnen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "incipiō",
+     "infinitiv": "incipere"
+    }
+   },
+   {
+    "latein": "Apollo",
+    "deutsch": "Apollon (der Gott des Lichts, der Künste und der Weissagung)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Apollō",
+     "genitiv": "Apollinis"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "te",
+    "deutsch": "dich",
+    "wortart": "Pronomen",
+    "kasus": "Akkusativ"
+   },
+   {
+    "latein": "docere",
+    "deutsch": "lehren, unterrichten (m. dopp. Akk.)",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "doceō",
+     "infinitiv": "docēre"
+    },
+    "kasus": "doppelter Akkusativ"
+   },
+   {
+    "latein": "-ne",
+    "deutsch": "(unübersetzt) Partikel im Fragesatz",
+    "wortart": "Partikel"
+   },
+   {
+    "latein": "Musa",
+    "deutsch": "die Muse (eine der neun Göttinnen der Künste)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Mūsa",
+     "genitiv": "Mūsae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "mirus",
+    "deutsch": "erstaunlich, sonderbar",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "mīrus",
+     "f": "mīra",
+     "n": "mīrum"
+    }
+   },
+   {
+    "latein": "modus",
+    "deutsch": "die Art, die Weise, das Maß",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "modus",
+     "genitiv": "modī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "meus",
+    "deutsch": "mein",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "meus",
+     "f": "mea",
+     "n": "meum"
+    }
+   },
+   {
+    "latein": "quoque",
+    "deutsch": "auch (nachgestellt)",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "quidem",
+    "deutsch": "freilich, gewiss, wenigstens, zwar",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "bonus",
+    "deutsch": "gut, tüchtig",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "bonus",
+     "f": "bona",
+     "n": "bonum"
+    }
+   },
+   {
+    "latein": "inter",
+    "deutsch": "unter, während, zwischen",
+    "wortart": "Präposition",
+    "kasus": "Akkusativ"
+   },
+   {
+    "latein": "apud",
+    "deutsch": "bei",
+    "wortart": "Präposition",
+    "kasus": "Akkusativ"
+   },
+   {
+    "latein": "superi",
+    "deutsch": "die Götter",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "superī",
+     "genitiv": "superōrum"
+    },
+    "genus": "m",
+    "deklination": 2,
+    "numerus": "Pl"
+   },
+   {
+    "latein": "non solum ... sed etiam",
+    "deutsch": "nicht nur ... sondern auch",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "liberi",
+    "deutsch": "die Kinder",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "līberī",
+     "genitiv": "līberōrum"
+    },
+    "genus": "m",
+    "deklination": 2,
+    "numerus": "Pl"
+   },
+   {
+    "latein": "femina",
+    "deutsch": "die Frau",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "fēmina",
+     "genitiv": "fēminae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "vir",
+    "deutsch": "der Mann",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "vir",
+     "genitiv": "virī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "laudare",
+    "deutsch": "loben",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "laudō",
+     "infinitiv": "laudāre"
+    }
+   },
+   {
+    "latein": "fortuna",
+    "deutsch": "das Glück, das Schicksal",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "fortūna",
+     "genitiv": "fortūnae"
+    },
+    "genus": "f",
+    "deklination": 1
+   }
+  ],
+  "7": [
+   {
+    "latein": "tacere",
+    "deutsch": "schweigen, verschweigen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "taceō",
+     "infinitiv": "tacēre"
+    }
+   },
+   {
+    "latein": "pulcher",
+    "deutsch": "schön",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "pulcher",
+     "f": "pulchra",
+     "n": "pulchrum"
+    }
+   },
+   {
+    "latein": "accedere",
+    "deutsch": "herbeikommen, hingehen, sich nähern",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "accēdō",
+     "infinitiv": "accēdere"
+    }
+   },
+   {
+    "latein": "abesse",
+    "deutsch": "abwesend sein, nicht da sein, fehlen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "absum",
+     "infinitiv": "abesse"
+    }
+   },
+   {
+    "latein": "posse",
+    "deutsch": "können",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "possum",
+     "infinitiv": "posse"
+    }
+   },
+   {
+    "latein": "si",
+    "deutsch": "wenn, falls",
+    "wortart": "Subjunktion"
+   },
+   {
+    "latein": "auxilium",
+    "deutsch": "die Hilfe",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "auxilium",
+     "genitiv": "auxiliī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "auxilio venire",
+    "deutsch": "zu Hilfe kommen",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "saepe",
+    "deutsch": "oft",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "fugere",
+    "deutsch": "fliehen (vor), entfliehen, meiden (m. Akk.)",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "fugiō",
+     "infinitiv": "fugere"
+    },
+    "kasus": "Akkusativ"
+   },
+   {
+    "latein": "libertas",
+    "deutsch": "die Freiheit",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "lībertās",
+     "genitiv": "lībertātis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "cibus",
+    "deutsch": "die Nahrung, die Speise, das Essen",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "cibus",
+     "genitiv": "cibī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "forum",
+    "deutsch": "das Forum, der Marktplatz, die Öffentlichkeit",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "forum",
+     "genitiv": "forī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "quaerere",
+    "deutsch": "fragen, suchen, erwerben wollen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "quaerō",
+     "infinitiv": "quaerere"
+    }
+   },
+   {
+    "latein": "celeritas",
+    "deutsch": "die Schnelligkeit",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "celeritās",
+     "genitiv": "celeritātis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "mercator",
+    "deutsch": "der Kaufmann, der Händler",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "mercātor",
+     "genitiv": "mercātōris"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "clamor",
+    "deutsch": "der Lärm, das Geschrei",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "clāmor",
+     "genitiv": "clāmōris"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "varius",
+    "deutsch": "bunt, verschieden, vielfältig",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "varius",
+     "f": "varia",
+     "n": "varium"
+    }
+   },
+   {
+    "latein": "vendere",
+    "deutsch": "verkaufen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "vēndō",
+     "infinitiv": "vendere"
+    }
+   },
+   {
+    "latein": "convenire",
+    "deutsch": "zusammenkommen, zusammenpassen, besuchen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "conveniō",
+     "infinitiv": "convenīre"
+    }
+   },
+   {
+    "latein": "emere",
+    "deutsch": "kaufen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "emō",
+     "infinitiv": "emere"
+    }
+   },
+   {
+    "latein": "multa",
+    "deutsch": "viel, vieles",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "multa",
+     "genitiv": "multōrum"
+    },
+    "genus": "n",
+    "deklination": 2,
+    "numerus": "Pl"
+   },
+   {
+    "latein": "volare",
+    "deutsch": "fliegen, eilen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "volō",
+     "infinitiv": "volāre"
+    }
+   },
+   {
+    "latein": "eripere",
+    "deutsch": "entreißen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "ēripiō",
+     "infinitiv": "ēripere"
+    }
+   },
+   {
+    "latein": "arbor",
+    "deutsch": "der Baum",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "arbor",
+     "genitiv": "arboris"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "altus",
+    "deutsch": "hoch, tief",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "altus",
+     "f": "alta",
+     "n": "altum"
+    }
+   },
+   {
+    "latein": "considere",
+    "deutsch": "sich setzen, sich niederlassen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "cōnsīdō",
+     "infinitiv": "cōnsīdere"
+    }
+   },
+   {
+    "latein": "studium",
+    "deutsch": "die Beschäftigung, das Engagement, das Interesse",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "studium",
+     "genitiv": "studiī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "periculum",
+    "deutsch": "die Gefahr",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "perīculum",
+     "genitiv": "perīculī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "simul",
+    "deutsch": "gleichzeitig, zugleich",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "labor",
+    "deutsch": "die Arbeit, die Mühe, die Anstrengung",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "labor",
+     "genitiv": "labōris"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "attingere",
+    "deutsch": "berühren",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "attingō",
+     "infinitiv": "attingere"
+    }
+   },
+   {
+    "latein": "umerus",
+    "deutsch": "die Schulter, der Oberarm",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "umerus",
+     "genitiv": "umerī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "igitur",
+    "deutsch": "also, folglich",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "solus",
+    "deutsch": "allein, einzig",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "sōlus",
+     "f": "sōla",
+     "n": "sōlum"
+    }
+   },
+   {
+    "latein": "laetus",
+    "deutsch": "froh, fröhlich",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "laetus",
+     "f": "laeta",
+     "n": "laetum"
+    }
+   },
+   {
+    "latein": "iactare",
+    "deutsch": "werfen, schleudern",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "iactō",
+     "infinitiv": "iactāre"
+    }
+   },
+   {
+    "latein": "animadvertere",
+    "deutsch": "bemerken",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "animadvertō",
+     "infinitiv": "animadvertere"
+    }
+   },
+   {
+    "latein": "an",
+    "deutsch": "oder (etwa)",
+    "wortart": "Konjunktion"
+   },
+   {
+    "latein": "amor",
+    "deutsch": "die Liebe",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "amor",
+     "genitiv": "amōris"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "repetere",
+    "deutsch": "wiederholen, (zurück)verlangen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "repetō",
+     "infinitiv": "repetere"
+    }
+   }
+  ],
+  "8": [
+   {
+    "latein": "quondam",
+    "deutsch": "einst, einmal, manchmal",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "amphitheatrum",
+    "deutsch": "das Amphitheater",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "amphitheātrum",
+     "genitiv": "amphitheātrī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "esse",
+    "deutsch": "sein, sich befinden",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "sum",
+     "infinitiv": "esse",
+     "perfekt": "fuī"
+    }
+   },
+   {
+    "latein": "adesse",
+    "deutsch": "da sein, helfen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "adsum",
+     "infinitiv": "adesse",
+     "perfekt": "adfuī"
+    }
+   },
+   {
+    "latein": "ludus",
+    "deutsch": "das Spiel, die Schule",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "lūdus",
+     "genitiv": "lūdī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "egregius",
+    "deutsch": "ausgezeichnet, hervorragend",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "ēgregius",
+     "f": "ēgregia",
+     "n": "ēgregium"
+    }
+   },
+   {
+    "latein": "velle",
+    "deutsch": "wollen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "volō",
+     "infinitiv": "velle",
+     "perfekt": "voluī"
+    }
+   },
+   {
+    "latein": "nolle",
+    "deutsch": "nicht wollen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "nōlō",
+     "infinitiv": "nōlle",
+     "perfekt": "nōluī"
+    }
+   },
+   {
+    "latein": "cum",
+    "deutsch": "als (plötzlich), (zu der Zeit) als, (immer) wenn",
+    "wortart": "Subjunktion"
+   },
+   {
+    "latein": "Pompeiani",
+    "deutsch": "die Pompejaner, die Einwohner von Pompeji",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Pompēiānī",
+     "genitiv": "Pompēiānōrum"
+    },
+    "genus": "m",
+    "deklination": 2,
+    "numerus": "Pl"
+   },
+   {
+    "latein": "gladiator",
+    "deutsch": "der Gladiator",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "gladiātor",
+     "genitiv": "gladiātōris"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "arena",
+    "deutsch": "der Sand, die Arena, der Kampfplatz",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "arēna",
+     "genitiv": "arēnae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "vox",
+    "deutsch": "die Stimme, die Äußerung, der Laut",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "vōx",
+     "genitiv": "vōcis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "magna voce",
+    "deutsch": "laut, mit lauter Stimme",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "quia",
+    "deutsch": "weil",
+    "wortart": "Subjunktion"
+   },
+   {
+    "latein": "optimus",
+    "deutsch": "der beste, sehr gut",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "optimus",
+     "f": "optima",
+     "n": "optimum"
+    }
+   },
+   {
+    "latein": "putare",
+    "deutsch": "glauben, meinen; m. dopp. Akk. halten für",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "putō",
+     "infinitiv": "putāre",
+     "perfekt": "putāvī"
+    },
+    "kasus": "doppelter Akkusativ"
+   },
+   {
+    "latein": "pugnare",
+    "deutsch": "kämpfen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "pugnō",
+     "infinitiv": "pugnāre",
+     "perfekt": "pugnāvī"
+    }
+   },
+   {
+    "latein": "leo",
+    "deutsch": "der Löwe",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "leō",
+     "genitiv": "leōnis"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "paucus",
+    "deutsch": "wenige",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "paucī",
+     "f": "paucae",
+     "n": "pauca"
+    }
+   },
+   {
+    "latein": "unus",
+    "deutsch": "einer, ein einziger",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "ūnus",
+     "f": "ūna",
+     "n": "ūnum"
+    }
+   },
+   {
+    "latein": "unus e / ex",
+    "deutsch": "einer von (m. Abl.)",
+    "wortart": "Wendung",
+    "kasus": "Ablativ"
+   },
+   {
+    "latein": "malus",
+    "deutsch": "schlecht, schlimm, böse",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "malus",
+     "f": "mala",
+     "n": "malum"
+    }
+   },
+   {
+    "latein": "nihil",
+    "deutsch": "nichts",
+    "wortart": "Pronomen"
+   },
+   {
+    "latein": "pugna",
+    "deutsch": "der Kampf",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "pugna",
+     "genitiv": "pugnae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "immo",
+    "deutsch": "im Gegenteil, ja sogar",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "studere",
+    "deutsch": "sich beschäftigen (mit), sich bemühen (um), streben nach (m. Dat.)",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "studeō",
+     "infinitiv": "studēre",
+     "perfekt": "studuī"
+    },
+    "kasus": "Dativ"
+   },
+   {
+    "latein": "desinere",
+    "deutsch": "aufhören",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "dēsinō",
+     "infinitiv": "dēsinere"
+    }
+   },
+   {
+    "latein": "nisi",
+    "deutsch": "wenn nicht",
+    "wortart": "Subjunktion"
+   },
+   {
+    "latein": "facere",
+    "deutsch": "machen, tun, handeln",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "faciō",
+     "infinitiv": "facere"
+    }
+   },
+   {
+    "latein": "quamquam",
+    "deutsch": "obwohl",
+    "wortart": "Subjunktion"
+   },
+   {
+    "latein": "pax",
+    "deutsch": "der Frieden",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "pāx",
+     "genitiv": "pācis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "cunctus",
+    "deutsch": "alle (zusammen)",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "cūnctī",
+     "f": "cūnctae",
+     "n": "cūncta"
+    }
+   },
+   {
+    "latein": "posse",
+    "deutsch": "können",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "possum",
+     "infinitiv": "posse",
+     "perfekt": "potuī"
+    }
+   },
+   {
+    "latein": "alius",
+    "deutsch": "ein anderer",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "alius",
+     "f": "alia",
+     "n": "aliud"
+    }
+   },
+   {
+    "latein": "saxum",
+    "deutsch": "der Fels, der Stein",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "saxum",
+     "genitiv": "saxī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "nonnullus",
+    "deutsch": "einige, manche",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "nōnnūllī",
+     "f": "nōnnūllae",
+     "n": "nōnnūlla"
+    }
+   },
+   {
+    "latein": "deinde",
+    "deutsch": "dann, darauf",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "arma",
+    "deutsch": "die Waffen, das Gerät",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "arma",
+     "genitiv": "armōrum"
+    },
+    "genus": "n",
+    "deklination": 2,
+    "numerus": "Pl"
+   },
+   {
+    "latein": "secum",
+    "deutsch": "mit sich, bei sich",
+    "wortart": "Pronomen"
+   },
+   {
+    "latein": "parcere",
+    "deutsch": "schonen, verschonen (m. Dat.)",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "parcō",
+     "infinitiv": "parcere"
+    },
+    "kasus": "Dativ"
+   },
+   {
+    "latein": "postquam",
+    "deutsch": "nachdem, als (m. Perf.)",
+    "wortart": "Subjunktion"
+   },
+   {
+    "latein": "eripere",
+    "deutsch": "entreißen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "ēripiō",
+     "infinitiv": "ēripere",
+     "perfekt": "ēripuī"
+    }
+   },
+   {
+    "latein": "denique",
+    "deutsch": "schließlich, zuletzt",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "iacere",
+    "deutsch": "liegen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "iaceō",
+     "infinitiv": "iacēre",
+     "perfekt": "iacuī"
+    }
+   },
+   {
+    "latein": "vos",
+    "deutsch": "ihr",
+    "wortart": "Pronomen"
+   },
+   {
+    "latein": "petere",
+    "deutsch": "bitten, verlangen, streben (nach), aufsuchen, angreifen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "petō",
+     "infinitiv": "petere",
+     "perfekt": "petīvī"
+    }
+   },
+   {
+    "latein": "nobis",
+    "deutsch": "uns, für uns",
+    "wortart": "Pronomen",
+    "kasus": "Dativ"
+   },
+   {
+    "latein": "deesse",
+    "deutsch": "abwesend sein, fehlen, nicht da sein",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "dēsum",
+     "infinitiv": "deesse",
+     "perfekt": "dēfuī"
+    }
+   }
+  ],
+  "9": [
+   {
+    "latein": "facere",
+    "deutsch": "machen, tun, handeln",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "faciō",
+     "infinitiv": "facere",
+     "perfekt": "fēcī"
+    }
+   },
+   {
+    "latein": "sentire",
+    "deutsch": "fühlen, meinen, wahrnehmen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "sentiō",
+     "infinitiv": "sentīre",
+     "perfekt": "sēnsī"
+    }
+   },
+   {
+    "latein": "parens",
+    "deutsch": "der Vater, die Mutter; Pl. die Eltern",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "parēns",
+     "genitiv": "parentis"
+    },
+    "genus": "m/f",
+    "deklination": 3
+   },
+   {
+    "latein": "currere",
+    "deutsch": "laufen, eilen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "currō",
+     "infinitiv": "currere",
+     "perfekt": "cucurrī"
+    }
+   },
+   {
+    "latein": "pater",
+    "deutsch": "der Vater",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "pater",
+     "genitiv": "patris"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "mater",
+    "deutsch": "die Mutter",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "māter",
+     "genitiv": "mātris"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "Campania",
+    "deutsch": "Kampanien (Landschaft in Mittelitalien)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Campānia",
+     "genitiv": "Campāniae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "accidere",
+    "deutsch": "geschehen, sich ereignen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "accidō",
+     "infinitiv": "accidere",
+     "perfekt": "accidī"
+    }
+   },
+   {
+    "latein": "tectum",
+    "deutsch": "das Dach, das Haus",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "tēctum",
+     "genitiv": "tēctī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "homo",
+    "deutsch": "der Mensch",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "homō",
+     "genitiv": "hominis"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "animadvertere",
+    "deutsch": "bemerken",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "animadvertō",
+     "infinitiv": "animadvertere",
+     "perfekt": "animadvertī"
+    }
+   },
+   {
+    "latein": "Vesuvius",
+    "deutsch": "der Vesuv (Vulkan in Kampanien)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Vesuvius",
+     "genitiv": "Vesuviī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "mons",
+    "deutsch": "der Berg",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "mōns",
+     "genitiv": "montis",
+     "genitiv_pl": "-ium"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "videre",
+    "deutsch": "sehen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "videō",
+     "infinitiv": "vidēre",
+     "perfekt": "vīdī"
+    }
+   },
+   {
+    "latein": "cadere",
+    "deutsch": "fallen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "cadō",
+     "infinitiv": "cadere",
+     "perfekt": "cecidī"
+    }
+   },
+   {
+    "latein": "rursus",
+    "deutsch": "wieder",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "occurrere",
+    "deutsch": "begegnen, entgegentreten",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "occurrō",
+     "infinitiv": "occurrere",
+     "perfekt": "occurrī"
+    }
+   },
+   {
+    "latein": "timor",
+    "deutsch": "die Angst, die Furcht",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "timor",
+     "genitiv": "timōris"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "mors",
+    "deutsch": "der Tod",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "mors",
+     "genitiv": "mortis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "urbs",
+    "deutsch": "die Stadt",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "urbs",
+     "genitiv": "urbis",
+     "genitiv_pl": "-ium"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "dicere",
+    "deutsch": "sagen, sprechen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "dīcō",
+     "infinitiv": "dīcere",
+     "perfekt": "dīxī"
+    }
+   },
+   {
+    "latein": "ergo",
+    "deutsch": "also, deshalb",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "capere",
+    "deutsch": "nehmen, fassen, ergreifen, erobern",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "capiō",
+     "infinitiv": "capere",
+     "perfekt": "cēpī"
+    }
+   },
+   {
+    "latein": "consilium capere",
+    "deutsch": "einen Plan (Entschluss) fassen",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "discedere",
+    "deutsch": "weggehen, auseinandergehen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "discēdō",
+     "infinitiv": "discēdere",
+     "perfekt": "discessī"
+    }
+   },
+   {
+    "latein": "familia",
+    "deutsch": "die Familie, die Hausgemeinschaft",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "familia",
+     "genitiv": "familiae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "monere",
+    "deutsch": "mahnen, ermahnen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "moneō",
+     "infinitiv": "monēre",
+     "perfekt": "monuī"
+    }
+   },
+   {
+    "latein": "nobiscum",
+    "deutsch": "mit uns",
+    "wortart": "Pronomen"
+   },
+   {
+    "latein": "multitudo",
+    "deutsch": "die Menge, die große Zahl",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "multitūdō",
+     "genitiv": "multitūdinis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "manere",
+    "deutsch": "bleiben, warten (auf) (m. Akk.)",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "maneō",
+     "infinitiv": "manēre",
+     "perfekt": "mānsī"
+    },
+    "kasus": "Akkusativ"
+   },
+   {
+    "latein": "alius ... alius",
+    "deutsch": "der eine ... der andere",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "ops",
+    "deutsch": "die Hilfe, die Kraft",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "ops",
+     "genitiv": "opis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "flere",
+    "deutsch": "weinen, beweinen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "fleō",
+     "infinitiv": "flēre",
+     "perfekt": "flēvī"
+    }
+   },
+   {
+    "latein": "nos (Nom.)",
+    "deutsch": "wir",
+    "wortart": "Pronomen",
+    "kasus": "Nominativ"
+   },
+   {
+    "latein": "fugere",
+    "deutsch": "fliehen (vor), entfliehen, meiden (m. Akk.)",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "fugiō",
+     "infinitiv": "fugere",
+     "perfekt": "fūgī"
+    },
+    "kasus": "Akkusativ"
+   },
+   {
+    "latein": "nos (Akk.)",
+    "deutsch": "uns",
+    "wortart": "Pronomen",
+    "kasus": "Akkusativ"
+   },
+   {
+    "latein": "ducere",
+    "deutsch": "führen, ziehen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "dūcō",
+     "infinitiv": "dūcere",
+     "perfekt": "dūxī"
+    }
+   },
+   {
+    "latein": "tenebrae",
+    "deutsch": "die Dunkelheit, die Finsternis",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "tenebrae",
+     "genitiv": "tenebrārum"
+    },
+    "genus": "f",
+    "deklination": 1,
+    "numerus": "Pl"
+   },
+   {
+    "latein": "vix",
+    "deutsch": "kaum, (nur) mit Mühe",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "reperire",
+    "deutsch": "finden, wiederfinden",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "reperiō",
+     "infinitiv": "reperīre",
+     "perfekt": "repperī"
+    }
+   },
+   {
+    "latein": "accipere",
+    "deutsch": "erhalten, erfahren, annehmen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "accipiō",
+     "infinitiv": "accipere",
+     "perfekt": "accēpī"
+    }
+   },
+   {
+    "latein": "pars",
+    "deutsch": "der Teil, die Seite",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "pars",
+     "genitiv": "partis",
+     "genitiv_pl": "-ium"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "perdere",
+    "deutsch": "verlieren, verschwenden, vernichten",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "perdō",
+     "infinitiv": "perdere",
+     "perfekt": "perdidī"
+    }
+   },
+   {
+    "latein": "parcere",
+    "deutsch": "schonen, verschonen (m. Dat.)",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "parcō",
+     "infinitiv": "parcere",
+     "perfekt": "pepercī"
+    },
+    "kasus": "Dativ"
+   },
+   {
+    "latein": "inde",
+    "deutsch": "von dort, darauf, deshalb",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "contendere",
+    "deutsch": "eilen, sich anstrengen, kämpfen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "contendō",
+     "infinitiv": "contendere",
+     "perfekt": "contendī"
+    }
+   },
+   {
+    "latein": "relinquere",
+    "deutsch": "verlassen, zurücklassen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "relinquō",
+     "infinitiv": "relinquere",
+     "perfekt": "relīquī"
+    }
+   },
+   {
+    "latein": "vincere",
+    "deutsch": "siegen, besiegen, übertreffen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "vincō",
+     "infinitiv": "vincere",
+     "perfekt": "vīcī"
+    }
+   }
+  ],
+  "10": [
+   {
+    "latein": "Romulus",
+    "deutsch": "Romulus (der sagenhafte Gründer Roms)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Rōmulus",
+     "genitiv": "Rōmulī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "copiae",
+    "deutsch": "die Truppen",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "cōpiae",
+     "genitiv": "cōpiārum"
+    },
+    "genus": "f",
+    "deklination": 1,
+    "numerus": "Pl"
+   },
+   {
+    "latein": "Romanus",
+    "deutsch": "römisch; Subst. der Römer",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "Rōmānus",
+     "f": "Rōmāna",
+     "n": "Rōmānum"
+    }
+   },
+   {
+    "latein": "ager",
+    "deutsch": "der Acker, das Feld, das Gebiet",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "ager",
+     "genitiv": "agrī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "iubere",
+    "deutsch": "anordnen, befehlen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "iubeō",
+     "infinitiv": "iubēre",
+     "perfekt": "iussī"
+    }
+   },
+   {
+    "latein": "nox",
+    "deutsch": "die Nacht",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "nox",
+     "genitiv": "noctis",
+     "genitiv_pl": "-ium"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "venire",
+    "deutsch": "kommen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "veniō",
+     "infinitiv": "venīre",
+     "perfekt": "vēnī"
+    }
+   },
+   {
+    "latein": "rex",
+    "deutsch": "der König",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "rēx",
+     "genitiv": "rēgis"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "noster",
+    "deutsch": "unser",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "noster",
+     "f": "nostra",
+     "n": "nostrum"
+    }
+   },
+   {
+    "latein": "accedere",
+    "deutsch": "herbeikommen, sich nähern",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "accēdō",
+     "infinitiv": "accēdere",
+     "perfekt": "accessī"
+    }
+   },
+   {
+    "latein": "consistere",
+    "deutsch": "stehen bleiben, sich aufstellen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "cōnsistō",
+     "infinitiv": "cōnsistere",
+     "perfekt": "cōnstitī"
+    }
+   },
+   {
+    "latein": "is, ea, id",
+    "deutsch": "dieser, diese, dieses; er, sie, es",
+    "wortart": "Pronomen",
+    "formen": {
+     "m": "is",
+     "f": "ea",
+     "n": "id"
+    }
+   },
+   {
+    "latein": "locus",
+    "deutsch": "der Ort, der Platz, die Stelle",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "locus",
+     "genitiv": "locī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "eo loco",
+    "deutsch": "an der (dieser) Stelle",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "nemo",
+    "deutsch": "niemand",
+    "wortart": "Pronomen",
+    "formen": {
+     "nominativ": "nēmō",
+     "genitiv": "nēminis"
+    }
+   },
+   {
+    "latein": "causa",
+    "deutsch": "die Sache, der Grund; der Prozess",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "causa",
+     "genitiv": "causae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "causam perdere",
+    "deutsch": "den Prozess verlieren",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "poenam accipere",
+    "deutsch": "eine Strafe erhalten",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "plerique",
+    "deutsch": "die meisten, sehr viele",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "plērīque",
+     "f": "plēraeque",
+     "n": "plēraque"
+    }
+   },
+   {
+    "latein": "pro",
+    "deutsch": "vor; anstelle von, für",
+    "wortart": "Präposition",
+    "kasus": "Ablativ"
+   },
+   {
+    "latein": "factum",
+    "deutsch": "die Handlung, die Tat, die Tatsache",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "factum",
+     "genitiv": "factī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "ante",
+    "deutsch": "vorher",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "sedere",
+    "deutsch": "sitzen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "sedeō",
+     "infinitiv": "sedēre",
+     "perfekt": "sēdī"
+    }
+   },
+   {
+    "latein": "hic",
+    "deutsch": "hier",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "ducere",
+    "deutsch": "führen, ziehen; m. dopp. Akk. halten für",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "dūcō",
+     "infinitiv": "dūcere",
+     "perfekt": "dūxī"
+    },
+    "kasus": "doppelter Akkusativ"
+   },
+   {
+    "latein": "committere",
+    "deutsch": "anvertrauen, begehen, veranstalten",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "committō",
+     "infinitiv": "committere",
+     "perfekt": "commīsī"
+    }
+   },
+   {
+    "latein": "Remus",
+    "deutsch": "Remus (der Zwillingsbruder des Romulus)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Remus",
+     "genitiv": "Remī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "frater",
+    "deutsch": "der Bruder",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "frāter",
+     "genitiv": "frātris"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "interficere",
+    "deutsch": "töten, vernichten",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "interficiō",
+     "infinitiv": "interficere",
+     "perfekt": "interfēcī"
+    }
+   },
+   {
+    "latein": "Roma",
+    "deutsch": "Rom",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Rōma",
+     "genitiv": "Rōmae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "constituere",
+    "deutsch": "aufstellen, gründen, festsetzen, beschließen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "cōnstituō",
+     "infinitiv": "cōnstituere",
+     "perfekt": "cōnstituī"
+    }
+   },
+   {
+    "latein": "Sabinus",
+    "deutsch": "sabinisch; Subst. der Sabiner",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "Sabīnus",
+     "f": "Sabīna",
+     "n": "Sabīnum"
+    }
+   },
+   {
+    "latein": "filia",
+    "deutsch": "die Tochter",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "fīlia",
+     "genitiv": "fīliae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "insidiae",
+    "deutsch": "die Falle, das Attentat, die Hinterlist",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "insidiae",
+     "genitiv": "insidiārum"
+    },
+    "genus": "f",
+    "deklination": 1,
+    "numerus": "Pl"
+   },
+   {
+    "latein": "suspicio",
+    "deutsch": "der Verdacht, die Vermutung",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "suspīciō",
+     "genitiv": "suspīciōnis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "Romam",
+    "deutsch": "nach Rom (wohin?)",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "quoniam",
+    "deutsch": "da ja, weil ja",
+    "wortart": "Subjunktion"
+   },
+   {
+    "latein": "credere",
+    "deutsch": "glauben, anvertrauen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "crēdō",
+     "infinitiv": "crēdere",
+     "perfekt": "crēdidī"
+    }
+   },
+   {
+    "latein": "annus",
+    "deutsch": "das Jahr",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "annus",
+     "genitiv": "annī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "novus",
+    "deutsch": "neu, ungewöhnlich",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "novus",
+     "f": "nova",
+     "n": "novum"
+    }
+   },
+   {
+    "latein": "dolor",
+    "deutsch": "der Schmerz",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "dolor",
+     "genitiv": "dolōris"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "praeterea",
+    "deutsch": "außerdem",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "invenire",
+    "deutsch": "finden, erfinden",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "inveniō",
+     "infinitiv": "invenīre",
+     "perfekt": "invēnī"
+    }
+   },
+   {
+    "latein": "Mars",
+    "deutsch": "Mars (der römische Kriegsgott)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Mārs",
+     "genitiv": "Mārtis"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "mittere",
+    "deutsch": "schicken, werfen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "mittō",
+     "infinitiv": "mittere",
+     "perfekt": "mīsī"
+    }
+   },
+   {
+    "latein": "filius",
+    "deutsch": "der Sohn",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "fīlius",
+     "genitiv": "fīliī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "recte",
+    "deutsch": "richtig, zu Recht",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "civitas",
+    "deutsch": "die Gemeinde, der Staat",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "cīvitās",
+     "genitiv": "cīvitātis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "imperare",
+    "deutsch": "befehlen, herrschen (über) (m. Dat.)",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "imperō",
+     "infinitiv": "imperāre",
+     "perfekt": "imperāvī"
+    },
+    "kasus": "Dativ"
+   },
+   {
+    "latein": "moenia",
+    "deutsch": "die Mauern, die Stadtmauern",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "moenia",
+     "genitiv": "moenium"
+    },
+    "genus": "n",
+    "deklination": 3,
+    "numerus": "Pl"
+   },
+   {
+    "latein": "ridere",
+    "deutsch": "lachen, auslachen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "rīdeō",
+     "infinitiv": "rīdēre",
+     "perfekt": "rīsī"
+    }
+   },
+   {
+    "latein": "servitus",
+    "deutsch": "die Sklaverei",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "servitūs",
+     "genitiv": "servitūtis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "coniunx",
+    "deutsch": "der Gatte, die Gattin, der Ehemann, die Ehefrau",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "coniunx",
+     "genitiv": "coniugis"
+    },
+    "genus": "m/f",
+    "deklination": 3
+   }
+  ],
+  "11": [
+   {
+    "latein": "cura",
+    "deutsch": "die Sorge, die Pflege",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "cūra",
+     "genitiv": "cūrae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "premere",
+    "deutsch": "drücken, unterdrücken, bedrängen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "premō",
+     "infinitiv": "premere",
+     "perfekt": "pressī"
+    }
+   },
+   {
+    "latein": "qui, quae, quod",
+    "deutsch": "welcher, welche, welches; der, die, das",
+    "wortart": "Pronomen",
+    "formen": {
+     "m": "quī",
+     "f": "quae",
+     "n": "quod"
+    }
+   },
+   {
+    "latein": "ea, quae",
+    "deutsch": "das, was (Sg.)",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "futurus",
+    "deutsch": "künftig, zukünftig",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "futūrus",
+     "f": "futūra",
+     "n": "futūrum"
+    }
+   },
+   {
+    "latein": "beatus",
+    "deutsch": "glücklich, reich",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "beātus",
+     "f": "beāta",
+     "n": "beātum"
+    }
+   },
+   {
+    "latein": "clarus",
+    "deutsch": "klar, hell, berühmt",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "clārus",
+     "f": "clāra",
+     "n": "clārum"
+    }
+   },
+   {
+    "latein": "virtus",
+    "deutsch": "die Tapferkeit, die Tüchtigkeit, die Leistung",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "virtūs",
+     "genitiv": "virtūtis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "exemplum",
+    "deutsch": "das Beispiel, das Vorbild",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "exemplum",
+     "genitiv": "exemplī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "summus",
+    "deutsch": "der höchste, oberste, letzte",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "summus",
+     "f": "summa",
+     "n": "summum"
+    }
+   },
+   {
+    "latein": "amplus",
+    "deutsch": "bedeutend, groß, weit",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "amplus",
+     "f": "ampla",
+     "n": "amplum"
+    }
+   },
+   {
+    "latein": "statua",
+    "deutsch": "die Statue, das Standbild",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "statua",
+     "genitiv": "statuae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "Cloelia",
+    "deutsch": "Cloelia (Heldin der röm. Frühzeit)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Cloelia",
+     "genitiv": "Cloeliae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "Porsenna",
+    "deutsch": "Lars Porsenna (etruskischer König)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Porsenna",
+     "genitiv": "Porsennae"
+    },
+    "genus": "m",
+    "deklination": 1
+   },
+   {
+    "latein": "Etruscus",
+    "deutsch": "etruskisch; Subst. der Etrusker",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "Etrūscus",
+     "f": "Etrūsca",
+     "n": "Etrūscum"
+    }
+   },
+   {
+    "latein": "Ianiculum",
+    "deutsch": "der Janikulus (Hügel Roms)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Iāniculum",
+     "genitiv": "Iāniculī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "castra",
+    "deutsch": "das Lager",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "castra",
+     "genitiv": "castrōrum"
+    },
+    "genus": "n",
+    "deklination": 2,
+    "numerus": "Pl"
+   },
+   {
+    "latein": "ponere",
+    "deutsch": "(auf)stellen, (hin)legen, setzen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "pōnō",
+     "infinitiv": "pōnere",
+     "perfekt": "posuī"
+    }
+   },
+   {
+    "latein": "castra ponere",
+    "deutsch": "ein Lager aufschlagen",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "miles",
+    "deutsch": "der Soldat",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "mīles",
+     "genitiv": "mīlitis"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "patria",
+    "deutsch": "die Heimat",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "patria",
+     "genitiv": "patriae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "defendere",
+    "deutsch": "abwehren, verteidigen (vor/gegen) (ā m. Abl.)",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "dēfendō",
+     "infinitiv": "dēfendere",
+     "perfekt": "dēfendī"
+    },
+    "kasus": "Ablativ"
+   },
+   {
+    "latein": "ullus",
+    "deutsch": "irgendeiner, irgendeine, irgendein",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "ūllus",
+     "f": "ūlla",
+     "n": "ūllum",
+     "genitiv": "ūllīus"
+    }
+   },
+   {
+    "latein": "hostis",
+    "deutsch": "der Feind, der Landesfeind",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "hostis",
+     "genitiv": "hostis",
+     "genitiv_pl": "-ium"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "victor",
+    "deutsch": "der Sieger",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "victor",
+     "genitiv": "victōris"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "lex",
+    "deutsch": "das Gesetz, die Bedingung",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "lēx",
+     "genitiv": "lēgis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "obses",
+    "deutsch": "die Geisel",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "obses",
+     "genitiv": "obsidis"
+    },
+    "genus": "m/f",
+    "deklination": 3
+   },
+   {
+    "latein": "finis",
+    "deutsch": "das Ende, die Grenze, das Ziel, der Zweck; Pl. das Gebiet",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "fīnis",
+     "genitiv": "fīnis",
+     "genitiv_pl": "-ium"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "suus",
+    "deutsch": "sein, ihr",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "suus",
+     "f": "sua",
+     "n": "suum"
+    }
+   },
+   {
+    "latein": "virgo",
+    "deutsch": "das Mädchen, die junge Frau",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "virgō",
+     "genitiv": "virginis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "lacrima",
+    "deutsch": "die Träne",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "lacrima",
+     "genitiv": "lacrimae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "vester",
+    "deutsch": "euer",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "vester",
+     "f": "vestra",
+     "n": "vestrum"
+    }
+   },
+   {
+    "latein": "contra",
+    "deutsch": "gegen",
+    "wortart": "Präposition",
+    "kasus": "Akkusativ"
+   },
+   {
+    "latein": "agere",
+    "deutsch": "handeln, treiben, verhandeln",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "agō",
+     "infinitiv": "agere",
+     "perfekt": "ēgī"
+    }
+   },
+   {
+    "latein": "malum",
+    "deutsch": "das Leid, das Übel, das Unglück",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "malum",
+     "genitiv": "malī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "primus",
+    "deutsch": "der erste",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "prīmus",
+     "f": "prīma",
+     "n": "prīmum"
+    }
+   },
+   {
+    "latein": "lux",
+    "deutsch": "das Licht, das Tageslicht",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "lūx",
+     "genitiv": "lūcis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "prima luce",
+    "deutsch": "bei Tagesanbruch, bei Sonnenaufgang",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "cogere",
+    "deutsch": "zwingen (etw. zu tun), (ver)sammeln (m. Inf.)",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "cōgō",
+     "infinitiv": "cōgere",
+     "perfekt": "coēgī"
+    },
+    "kasus": "Infinitiv"
+   },
+   {
+    "latein": "inquam",
+    "deutsch": "sage ich, sagte ich",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "inquam",
+     "infinitiv": "inquit"
+    }
+   },
+   {
+    "latein": "primum",
+    "deutsch": "erstens, zuerst, zum ersten Mal",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "Tiberis",
+    "deutsch": "der Tiber (Fluss durch Rom)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Tiberis",
+     "genitiv": "Tiberis"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "praesidium",
+    "deutsch": "der Schutz, die Hilfe, der Wachposten, die Schutztruppe",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "praesidium",
+     "genitiv": "praesidiī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "numerus",
+    "deutsch": "die Zahl, die Menge",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "numerus",
+     "genitiv": "numerī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "aqua",
+    "deutsch": "das Wasser",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "aqua",
+     "genitiv": "aquae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "servare",
+    "deutsch": "retten vor, bewahren vor (ā m. Abl.)",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "servō",
+     "infinitiv": "servāre"
+    },
+    "kasus": "Ablativ"
+   },
+   {
+    "latein": "telum",
+    "deutsch": "die Waffe, das Geschoss",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "tēlum",
+     "genitiv": "tēlī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "tutus",
+    "deutsch": "sicher",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "tūtus",
+     "f": "tūta",
+     "n": "tūtum"
+    }
+   },
+   {
+    "latein": "pervenire",
+    "deutsch": "kommen zu/nach (ad/in m. Akk.)",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "perveniō",
+     "infinitiv": "pervenīre",
+     "perfekt": "pervēnī"
+    },
+    "kasus": "Akkusativ"
+   }
+  ],
+  "12": [
+   {
+    "latein": "imperator",
+    "deutsch": "der Feldherr, der Kaiser",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "imperātor",
+     "genitiv": "imperātōris"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "ire",
+    "deutsch": "gehen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "eō",
+     "infinitiv": "īre",
+     "perfekt": "iī"
+    }
+   },
+   {
+    "latein": "potestas",
+    "deutsch": "die Macht, die Gewalt, die Amtsgewalt",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "potestās",
+     "genitiv": "potestātis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "par",
+    "deutsch": "gleich, ebenbürtig",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "pār",
+     "f": "pār",
+     "n": "pār",
+     "genitiv": "paris"
+    }
+   },
+   {
+    "latein": "civis",
+    "deutsch": "der Bürger",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "cīvis",
+     "genitiv": "cīvis",
+     "genitiv_pl": "-ium"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "placet",
+    "deutsch": "es gefällt jdm., jd. beschließt (m. Dat.)",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "placet",
+     "infinitiv": "placēre",
+     "perfekt": "placuit"
+    },
+    "kasus": "Dativ"
+   },
+   {
+    "latein": "numquam",
+    "deutsch": "nie, niemals",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "adire",
+    "deutsch": "herantreten (an), hingehen (zu), aufsuchen, auf sich nehmen, angreifen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "adeō",
+     "infinitiv": "adīre",
+     "perfekt": "adiī"
+    }
+   },
+   {
+    "latein": "bellum",
+    "deutsch": "der Krieg",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "bellum",
+     "genitiv": "bellī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "gerere",
+    "deutsch": "führen, ausführen, tragen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "gerō",
+     "infinitiv": "gerere",
+     "perfekt": "gessī"
+    }
+   },
+   {
+    "latein": "facilis",
+    "deutsch": "leicht (zu tun)",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "facilis",
+     "f": "facilis",
+     "n": "facile"
+    }
+   },
+   {
+    "latein": "fortis",
+    "deutsch": "kräftig, tapfer",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "fortis",
+     "f": "fortis",
+     "n": "forte"
+    }
+   },
+   {
+    "latein": "auxilia",
+    "deutsch": "die Hilfstruppen",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "auxilia",
+     "genitiv": "auxiliōrum"
+    },
+    "genus": "n",
+    "deklination": 2,
+    "numerus": "Pl"
+   },
+   {
+    "latein": "ingens",
+    "deutsch": "gewaltig, riesig, ungeheuer",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "ingēns",
+     "f": "ingēns",
+     "n": "ingēns",
+     "genitiv": "ingentis"
+    }
+   },
+   {
+    "latein": "ratio",
+    "deutsch": "der Grund, die Vernunft, die Überlegung, die Art und Weise",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "ratiō",
+     "genitiv": "ratiōnis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "celer",
+    "deutsch": "schnell",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "celer",
+     "f": "celeris",
+     "n": "celere"
+    }
+   },
+   {
+    "latein": "haud",
+    "deutsch": "nicht",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "similis",
+    "deutsch": "ähnlich (m. Gen./Dat.)",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "similis",
+     "f": "similis",
+     "n": "simile"
+    }
+   },
+   {
+    "latein": "inire",
+    "deutsch": "hineingehen (in), beginnen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "ineō",
+     "infinitiv": "inīre",
+     "perfekt": "iniī"
+    }
+   },
+   {
+    "latein": "atque",
+    "deutsch": "wie, als (im Vergleich)",
+    "wortart": "Konjunktion"
+   },
+   {
+    "latein": "cognoscere",
+    "deutsch": "erkennen, kennenlernen; Perf. kennen, wissen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "cōgnōscō",
+     "infinitiv": "cōgnōscere",
+     "perfekt": "cōgnōvī"
+    }
+   },
+   {
+    "latein": "perire",
+    "deutsch": "umkommen, zugrunde gehen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "pereō",
+     "infinitiv": "perīre",
+     "perfekt": "periī"
+    }
+   },
+   {
+    "latein": "proelium",
+    "deutsch": "der Kampf, die Schlacht",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "proelium",
+     "genitiv": "proeliī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "gravis",
+    "deutsch": "schwer, bedeutend",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "gravis",
+     "f": "gravis",
+     "n": "grave"
+    }
+   },
+   {
+    "latein": "communis",
+    "deutsch": "gemeinsam, allgemein",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "commūnis",
+     "f": "commūnis",
+     "n": "commūne"
+    }
+   },
+   {
+    "latein": "hinc",
+    "deutsch": "von hier, hierauf",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "superior",
+    "deutsch": "der frühere, weiter oben gelegene",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "superior",
+     "f": "superior",
+     "n": "superius",
+     "genitiv": "superiōris"
+    }
+   },
+   {
+    "latein": "plurimus",
+    "deutsch": "die meisten, sehr viele",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "plūrimī",
+     "f": "plūrimae",
+     "n": "plūrima"
+    }
+   },
+   {
+    "latein": "reliquus",
+    "deutsch": "übrig, künftig",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "reliquus",
+     "f": "reliqua",
+     "n": "reliquum"
+    }
+   },
+   {
+    "latein": "vis",
+    "deutsch": "die Kraft, die Gewalt, die Menge",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "vīs",
+     "genitiv": "vīs"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "existimare",
+    "deutsch": "meinen, schätzen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "exīstimō",
+     "infinitiv": "exīstimāre",
+     "perfekt": "exīstimāvī"
+    }
+   },
+   {
+    "latein": "legio",
+    "deutsch": "die Legion (ca. 5.000–6.000 Soldaten)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "legiō",
+     "genitiv": "legiōnis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "adducere",
+    "deutsch": "heranführen, veranlassen, beeinflussen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "addūcō",
+     "infinitiv": "addūcere",
+     "perfekt": "addūxī"
+    }
+   },
+   {
+    "latein": "noscere",
+    "deutsch": "erkennen, kennenlernen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "nōscō",
+     "infinitiv": "nōscere",
+     "perfekt": "nōvī"
+    }
+   },
+   {
+    "latein": "abire",
+    "deutsch": "weggehen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "abeō",
+     "infinitiv": "abīre",
+     "perfekt": "abiī"
+    }
+   },
+   {
+    "latein": "redire",
+    "deutsch": "zurückgehen, zurückkehren",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "redeō",
+     "infinitiv": "redīre",
+     "perfekt": "rediī"
+    }
+   },
+   {
+    "latein": "paene",
+    "deutsch": "fast, beinahe",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "salus",
+    "deutsch": "die Gesundheit, die Rettung, das Glück, der Gruß",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "salūs",
+     "genitiv": "salūtis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "omnis",
+    "deutsch": "jeder, ganz; Pl. alle",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "omnis",
+     "f": "omnis",
+     "n": "omne"
+    }
+   },
+   {
+    "latein": "vires",
+    "deutsch": "die Kräfte, die Streitkräfte",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "vīrēs",
+     "genitiv": "vīrium"
+    },
+    "genus": "f",
+    "deklination": 3,
+    "numerus": "Pl"
+   },
+   {
+    "latein": "acer",
+    "deutsch": "energisch, heftig, scharf",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "ācer",
+     "f": "ācris",
+     "n": "ācre"
+    }
+   },
+   {
+    "latein": "respondere",
+    "deutsch": "antworten",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "respondeō",
+     "infinitiv": "respondēre",
+     "perfekt": "respondī"
+    }
+   },
+   {
+    "latein": "Hannibal",
+    "deutsch": "Hannibal (karthagischer Feldherr)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Hannibal",
+     "genitiv": "Hannibalis"
+    },
+    "genus": "m",
+    "deklination": 3
+   }
+  ],
+  "13": [
+   {
+    "latein": "Phaethon",
+    "deutsch": "Phaëthon (der Sohn des Sonnengottes)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Phaethōn",
+     "genitiv": "Phaethontis"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "ubi",
+    "deutsch": "sobald (m. Ind. Perf.)",
+    "wortart": "Subjunktion"
+   },
+   {
+    "latein": "aedes",
+    "deutsch": "der Tempel",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "aedēs",
+     "genitiv": "aedis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "aedes (Pl.)",
+    "deutsch": "das Haus",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "aedēs",
+     "genitiv": "aedium"
+    },
+    "genus": "f",
+    "deklination": 3,
+    "numerus": "Pl"
+   },
+   {
+    "latein": "sol",
+    "deutsch": "die Sonne",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "sōl",
+     "genitiv": "sōlis"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "Sol",
+    "deutsch": "Sol (der römische Sonnengott)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Sōl",
+     "genitiv": "Sōlis"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "mi fili",
+    "deutsch": "mein Sohn!",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "tristis",
+    "deutsch": "traurig, unfreundlich",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "tristis",
+     "f": "tristis",
+     "n": "triste"
+    }
+   },
+   {
+    "latein": "tam",
+    "deutsch": "so",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "iuvenis",
+    "deutsch": "der junge Mann; Adj. jung",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "iuvenis",
+     "genitiv": "iuvenis"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "spes",
+    "deutsch": "die Hoffnung, die Erwartung",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "spēs",
+     "genitiv": "speī"
+    },
+    "genus": "f",
+    "deklination": 5
+   },
+   {
+    "latein": "res",
+    "deutsch": "die Sache, das Ding, die Angelegenheit",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "rēs",
+     "genitiv": "reī"
+    },
+    "genus": "f",
+    "deklination": 5
+   },
+   {
+    "latein": "res publica",
+    "deutsch": "der Staat",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "rēs pūblica",
+     "genitiv": "reī pūblicae"
+    },
+    "genus": "f",
+    "deklination": 5
+   },
+   {
+    "latein": "fere",
+    "deutsch": "fast, beinahe, ungefähr",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "verus",
+    "deutsch": "echt, richtig, wahr",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "vērus",
+     "f": "vēra",
+     "n": "vērum"
+    }
+   },
+   {
+    "latein": "neque ... neque",
+    "deutsch": "weder ... noch",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "honor",
+    "deutsch": "die Ehre, das Ehrenamt",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "honor",
+     "genitiv": "honōris"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "invidia",
+    "deutsch": "der Neid, der Hass",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "invidia",
+     "genitiv": "invidiae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "confirmare",
+    "deutsch": "stärken, ermutigen, bekräftigen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "cōnfīrmō",
+     "infinitiv": "cōnfīrmāre",
+     "perfekt": "cōnfīrmāvī"
+    }
+   },
+   {
+    "latein": "signum",
+    "deutsch": "das Zeichen, das Merkmal, der Beweis",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "signum",
+     "genitiv": "signī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "certus",
+    "deutsch": "sicher",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "certus",
+     "f": "certa",
+     "n": "certum"
+    }
+   },
+   {
+    "latein": "magnitudo",
+    "deutsch": "die Größe",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "magnitūdō",
+     "genitiv": "magnitūdinis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "auctoritas",
+    "deutsch": "das Ansehen, der Einfluss, die Macht",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "auctōritās",
+     "genitiv": "auctōritātis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "tuus",
+    "deutsch": "dein",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "tuus",
+     "f": "tua",
+     "n": "tuum"
+    }
+   },
+   {
+    "latein": "ne ... quidem",
+    "deutsch": "nicht einmal",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "opes",
+    "deutsch": "die Macht, die Mittel, der Reichtum",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "opēs",
+     "genitiv": "opum"
+    },
+    "genus": "f",
+    "deklination": 3,
+    "numerus": "Pl"
+   },
+   {
+    "latein": "fides",
+    "deutsch": "der Glaube, die Treue, das Vertrauen, die Zuverlässigkeit",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "fidēs",
+     "genitiv": "fideī"
+    },
+    "genus": "f",
+    "deklination": 5
+   },
+   {
+    "latein": "fidem dare",
+    "deutsch": "sein Wort geben, Glauben schenken",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "regio",
+    "deutsch": "das Gebiet, die Gegend",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "regiō",
+     "genitiv": "regiōnis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "regere",
+    "deutsch": "beherrschen, leiten, lenken",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "regō",
+     "infinitiv": "regere",
+     "perfekt": "rēxī"
+    }
+   },
+   {
+    "latein": "tradere",
+    "deutsch": "übergeben, überliefern",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "trādō",
+     "infinitiv": "trādere",
+     "perfekt": "trādidī"
+    }
+   },
+   {
+    "latein": "trahere",
+    "deutsch": "ziehen, schleppen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "trahō",
+     "infinitiv": "trahere",
+     "perfekt": "trāxī"
+    }
+   },
+   {
+    "latein": "tantum",
+    "deutsch": "nur (nachgestellt)",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "non modo ... sed etiam",
+    "deutsch": "nicht nur ... sondern auch",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "ignis",
+    "deutsch": "das Feuer",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "ignis",
+     "genitiv": "ignis"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "intellegere",
+    "deutsch": "merken, bemerken, verstehen, begreifen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "intellegō",
+     "infinitiv": "intellegere",
+     "perfekt": "intellēxī"
+    }
+   },
+   {
+    "latein": "mens",
+    "deutsch": "der Geist, der Sinn, der Verstand, die Meinung",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "mēns",
+     "genitiv": "mentis",
+     "genitiv_pl": "-ium"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "vero",
+    "deutsch": "aber, in der Tat, wirklich",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "dare",
+    "deutsch": "geben",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "dō",
+     "infinitiv": "dare",
+     "perfekt": "dedī"
+    }
+   },
+   {
+    "latein": "fidem servare",
+    "deutsch": "sein Wort halten",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "sidus",
+    "deutsch": "der Stern, das Sternbild; Pl. der Himmel",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "sīdus",
+     "genitiv": "sīderis"
+    },
+    "genus": "n",
+    "deklination": 3
+   },
+   {
+    "latein": "licet",
+    "deutsch": "es ist erlaubt, es ist möglich",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "licet",
+     "infinitiv": "licēre",
+     "perfekt": "licuit"
+    }
+   },
+   {
+    "latein": "dies",
+    "deutsch": "der Tag",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "diēs",
+     "genitiv": "diēī"
+    },
+    "genus": "m",
+    "deklination": 5
+   }
+  ],
+  "14": [
+   {
+    "latein": "Graecus",
+    "deutsch": "griechisch; Subst. der Grieche",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "Graecus",
+     "f": "Graeca",
+     "n": "Graecum"
+    }
+   },
+   {
+    "latein": "Troia",
+    "deutsch": "Troja (Stadt in Kleinasien)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Trōia",
+     "genitiv": "Trōiae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "capere",
+    "deutsch": "nehmen, fassen, ergreifen, erobern",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "capiō",
+     "infinitiv": "capere",
+     "perfekt": "cēpī",
+     "ppp": "captum"
+    }
+   },
+   {
+    "latein": "perdere",
+    "deutsch": "verlieren, verschwenden, vernichten",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "perdō",
+     "infinitiv": "perdere",
+     "perfekt": "perdidī",
+     "ppp": "perditum"
+    }
+   },
+   {
+    "latein": "Aeneas",
+    "deutsch": "Äneas (Stammvater der Römer)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Aenēās",
+     "genitiv": "Aenēae"
+    },
+    "genus": "m",
+    "deklination": 1
+   },
+   {
+    "latein": "Iulus",
+    "deutsch": "Julus (der Sohn des Äneas)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Iūlus",
+     "genitiv": "Iūlī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "ac",
+    "deutsch": "und, und auch; im Vergleich wie, als",
+    "wortart": "Konjunktion"
+   },
+   {
+    "latein": "Anchises",
+    "deutsch": "Anchises (der Vater des Äneas)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Anchīsēs",
+     "genitiv": "Anchīsae"
+    },
+    "genus": "m",
+    "deklination": 1
+   },
+   {
+    "latein": "uxor",
+    "deutsch": "die Ehefrau, die Gattin",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "uxor",
+     "genitiv": "uxōris"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "litus",
+    "deutsch": "die Küste, der Strand",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "litus",
+     "genitiv": "litoris"
+    },
+    "genus": "n",
+    "deklination": 3
+   },
+   {
+    "latein": "aequor",
+    "deutsch": "das Meer, die Ebene, die Fläche",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "aequor",
+     "genitiv": "aequoris"
+    },
+    "genus": "n",
+    "deklination": 3
+   },
+   {
+    "latein": "suscipere",
+    "deutsch": "auf sich nehmen, unternehmen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "suscipiō",
+     "infinitiv": "suscipere",
+     "perfekt": "suscēpī",
+     "ppp": "susceptum"
+    }
+   },
+   {
+    "latein": "amittere",
+    "deutsch": "verlieren",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "āmittō",
+     "infinitiv": "āmittere",
+     "perfekt": "āmīsī",
+     "ppp": "āmissum"
+    }
+   },
+   {
+    "latein": "iter",
+    "deutsch": "die Reise, der Weg, der Marsch",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "iter",
+     "genitiv": "itineris"
+    },
+    "genus": "n",
+    "deklination": 3
+   },
+   {
+    "latein": "longus",
+    "deutsch": "lang, weit",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "longus",
+     "f": "longa",
+     "n": "longum"
+    }
+   },
+   {
+    "latein": "invenire",
+    "deutsch": "finden, erfinden",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "inveniō",
+     "infinitiv": "invenīre",
+     "perfekt": "invēnī",
+     "ppp": "inventum"
+    }
+   },
+   {
+    "latein": "quod",
+    "deutsch": "dass, weil",
+    "wortart": "Subjunktion"
+   },
+   {
+    "latein": "classis",
+    "deutsch": "die Flotte, die Abteilung",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "classis",
+     "genitiv": "classis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "Troianus",
+    "deutsch": "trojanisch; Subst. der Trojaner",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "Trōiānus",
+     "f": "Trōiāna",
+     "n": "Trōiānum"
+    }
+   },
+   {
+    "latein": "ora",
+    "deutsch": "die Küste",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "ōra",
+     "genitiv": "ōrae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "Italia",
+    "deutsch": "Italien",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Italia",
+     "genitiv": "Italiae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "prohibere",
+    "deutsch": "abhalten, hindern, verhindern",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "prohibeō",
+     "infinitiv": "prohibēre",
+     "perfekt": "prohibuī",
+     "ppp": "prohibitum"
+    }
+   },
+   {
+    "latein": "Iuno",
+    "deutsch": "Juno (die Ehefrau des Jupiter)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Iūnō",
+     "genitiv": "Iūnōnis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "facere",
+    "deutsch": "machen, tun, handeln",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "faciō",
+     "infinitiv": "facere",
+     "perfekt": "fēcī",
+     "ppp": "factum"
+    }
+   },
+   {
+    "latein": "terrere",
+    "deutsch": "erschrecken",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "terreō",
+     "infinitiv": "terrēre",
+     "perfekt": "terruī",
+     "ppp": "territum"
+    }
+   },
+   {
+    "latein": "navis",
+    "deutsch": "das Schiff",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "nāvis",
+     "genitiv": "nāvis",
+     "genitiv_pl": "-ium"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "ventus",
+    "deutsch": "der Wind",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "ventus",
+     "genitiv": "ventī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "vehemens",
+    "deutsch": "energisch, heftig",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "vehemēns",
+     "f": "vehemēns",
+     "n": "vehemēns",
+     "genitiv": "vehementis"
+    }
+   },
+   {
+    "latein": "unde?",
+    "deutsch": "woher?",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "unda",
+    "deutsch": "die Welle",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "unda",
+     "genitiv": "undae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "quo?",
+    "deutsch": "wohin?",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "ducere",
+    "deutsch": "führen, ziehen; m. dopp. Akk. halten für",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "dūcō",
+     "infinitiv": "dūcere",
+     "perfekt": "dūxī",
+     "ppp": "ductum"
+    },
+    "kasus": "doppelter Akkusativ"
+   },
+   {
+    "latein": "fatum",
+    "deutsch": "das Schicksal, der Götterspruch",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "fātum",
+     "genitiv": "fātī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "constituere",
+    "deutsch": "aufstellen, gründen, festsetzen, beschließen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "cōnstituō",
+     "infinitiv": "cōnstituere",
+     "perfekt": "cōnstituī",
+     "ppp": "cōnstitūtum"
+    }
+   },
+   {
+    "latein": "quando?",
+    "deutsch": "wann?",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "cogere",
+    "deutsch": "zwingen (etw. zu tun), (ver)sammeln (m. Inf.)",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "cōgō",
+     "infinitiv": "cōgere",
+     "perfekt": "coēgī",
+     "ppp": "coāctum"
+    },
+    "kasus": "Infinitiv"
+   },
+   {
+    "latein": "scelus",
+    "deutsch": "das Verbrechen",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "scelus",
+     "genitiv": "sceleris"
+    },
+    "genus": "n",
+    "deklination": 3
+   },
+   {
+    "latein": "dux",
+    "deutsch": "der Anführer, die Anführerin",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "dux",
+     "genitiv": "ducis"
+    },
+    "genus": "m/f",
+    "deklination": 3
+   },
+   {
+    "latein": "committere",
+    "deutsch": "anvertrauen, begehen, veranstalten",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "committō",
+     "infinitiv": "committere",
+     "perfekt": "commīsī",
+     "ppp": "commissum"
+    }
+   },
+   {
+    "latein": "novisse / nosse",
+    "deutsch": "kennen, wissen",
+    "wortart": "Verb",
+    "formen": {
+     "infinitiv": "nōvisse / nōsse",
+     "perfekt": "nōvī"
+    }
+   },
+   {
+    "latein": "pius",
+    "deutsch": "fromm, gerecht, pflichtbewusst",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "pius",
+     "f": "pia",
+     "n": "pium"
+    }
+   },
+   {
+    "latein": "colere",
+    "deutsch": "verehren, bewirtschaften, pflegen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "colō",
+     "infinitiv": "colere",
+     "perfekt": "coluī",
+     "ppp": "cultum"
+    }
+   },
+   {
+    "latein": "officium",
+    "deutsch": "der Dienst, die Pflicht",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "officium",
+     "genitiv": "officiī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "tempus",
+    "deutsch": "die Zeit, die günstige Zeit, die Umstände",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "tempus",
+     "genitiv": "temporis"
+    },
+    "genus": "n",
+    "deklination": 3
+   },
+   {
+    "latein": "opus",
+    "deutsch": "das Werk, die Arbeit, die Tat",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "opus",
+     "genitiv": "operis"
+    },
+    "genus": "n",
+    "deklination": 3
+   },
+   {
+    "latein": "vincere",
+    "deutsch": "siegen, besiegen, übertreffen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "vincō",
+     "infinitiv": "vincere",
+     "perfekt": "vīcī",
+     "ppp": "victum"
+    }
+   },
+   {
+    "latein": "posteri",
+    "deutsch": "die Nachkommen",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "posterī",
+     "genitiv": "posterōrum"
+    },
+    "genus": "m",
+    "deklination": 2,
+    "numerus": "Pl"
+   },
+   {
+    "latein": "condere",
+    "deutsch": "gründen, erbauen, verbergen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "condō",
+     "infinitiv": "condere",
+     "perfekt": "condidī",
+     "ppp": "conditum"
+    }
+   },
+   {
+    "latein": "gens",
+    "deutsch": "der Stamm, die Familie, das Volk",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "gēns",
+     "genitiv": "gentis",
+     "genitiv_pl": "-ium"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "orbis",
+    "deutsch": "der Kreis, der Erdkreis, die Welt",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "orbis",
+     "genitiv": "orbis"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "orbis terrarum",
+    "deutsch": "der Erdkreis, die Welt",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "orbis terrārum",
+     "genitiv": "orbis terrārum"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "genus",
+    "deutsch": "das Geschlecht, die Art, die Abstammung",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "genus",
+     "genitiv": "generis"
+    },
+    "genus": "n",
+    "deklination": 3
+   },
+   {
+    "latein": "finem facere",
+    "deutsch": "(einer Sache) ein Ende setzen, ein Ende machen (m. Gen.)",
+    "wortart": "Wendung",
+    "kasus": "Genitiv"
+   },
+   {
+    "latein": "aetas",
+    "deutsch": "die Zeit, das Zeitalter, die Lebenszeit",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "aetās",
+     "genitiv": "aetātis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "nomen",
+    "deutsch": "der Name",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "nōmen",
+     "genitiv": "nōminis"
+    },
+    "genus": "n",
+    "deklination": 3
+   },
+   {
+    "latein": "princeps",
+    "deutsch": "der erste, der führende Mann, der Kaiser",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "prīnceps",
+     "genitiv": "prīncipis"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "Augustus",
+    "deutsch": "Augustus (erster römischer Kaiser)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Augustus",
+     "genitiv": "Augustī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "sic",
+    "deutsch": "so",
+    "wortart": "Adverb"
+   }
+  ],
+  "15": [
+   {
+    "latein": "Iuppiter",
+    "deutsch": "Jupiter (der höchste Gott der Römer)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Iuppiter",
+     "genitiv": "Iovis"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "commovere",
+    "deutsch": "bewegen, veranlassen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "commoveō",
+     "infinitiv": "commovēre",
+     "perfekt": "commōvī",
+     "ppp": "commōtum"
+    }
+   },
+   {
+    "latein": "cupere",
+    "deutsch": "wollen, wünschen, verlangen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "cupiō",
+     "infinitiv": "cupere",
+     "perfekt": "cupīvī",
+     "ppp": "cupītum"
+    }
+   },
+   {
+    "latein": "duo",
+    "deutsch": "zwei",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "duo",
+     "f": "duae",
+     "n": "duo"
+    }
+   },
+   {
+    "latein": "mare",
+    "deutsch": "das Meer",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "mare",
+     "genitiv": "maris",
+     "genitiv_pl": "-ium"
+    },
+    "genus": "n",
+    "deklination": 3
+   },
+   {
+    "latein": "mittere",
+    "deutsch": "schicken, werfen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "mittō",
+     "infinitiv": "mittere",
+     "perfekt": "mīsī",
+     "ppp": "missum"
+    }
+   },
+   {
+    "latein": "petere",
+    "deutsch": "bitten, verlangen, streben (nach), aufsuchen, angreifen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "petō",
+     "infinitiv": "petere",
+     "perfekt": "petīvī",
+     "ppp": "petītum"
+    }
+   },
+   {
+    "latein": "ut",
+    "deutsch": "sobald, sooft",
+    "wortart": "Subjunktion"
+   },
+   {
+    "latein": "pectus",
+    "deutsch": "die Brust, das Herz",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "pectus",
+     "genitiv": "pectoris"
+    },
+    "genus": "n",
+    "deklination": 3
+   },
+   {
+    "latein": "tangere",
+    "deutsch": "berühren",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "tangō",
+     "infinitiv": "tangere",
+     "perfekt": "tetigī",
+     "ppp": "tāctum"
+    }
+   },
+   {
+    "latein": "vivus",
+    "deutsch": "lebend, lebendig",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "vīvus",
+     "f": "vīva",
+     "n": "vīvum"
+    }
+   },
+   {
+    "latein": "mortuus",
+    "deutsch": "tot, gestorben",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "mortuus",
+     "f": "mortua",
+     "n": "mortuum"
+    }
+   },
+   {
+    "latein": "conspicere",
+    "deutsch": "erblicken",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "cōnspiciō",
+     "infinitiv": "cōnspicere",
+     "perfekt": "cōnspexī",
+     "ppp": "cōnspectum"
+    }
+   },
+   {
+    "latein": "talis",
+    "deutsch": "derartig, ein solcher, so (beschaffen)",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "tālis",
+     "f": "tālis",
+     "n": "tāle"
+    }
+   },
+   {
+    "latein": "recipere",
+    "deutsch": "aufnehmen, wiederbekommen, zurücknehmen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "recipiō",
+     "infinitiv": "recipere",
+     "perfekt": "recēpī",
+     "ppp": "receptum"
+    }
+   },
+   {
+    "latein": "adulescens",
+    "deutsch": "jung; Subst. der junge Mann",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "adulēscēns",
+     "f": "adulēscēns",
+     "n": "adulēscēns",
+     "genitiv": "adulēscentis"
+    }
+   },
+   {
+    "latein": "mulier",
+    "deutsch": "die Frau",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "mulier",
+     "genitiv": "mulieris"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "comparare",
+    "deutsch": "vergleichen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "comparō",
+     "infinitiv": "comparāre",
+     "perfekt": "comparāvī",
+     "ppp": "comparātum"
+    }
+   },
+   {
+    "latein": "vestis",
+    "deutsch": "das Kleid, die Kleidung; Pl. die Kleider",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "vestis",
+     "genitiv": "vestis",
+     "genitiv_pl": "-ium"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "ornare",
+    "deutsch": "schmücken, ausstatten",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "ōrnō",
+     "infinitiv": "ōrnāre",
+     "perfekt": "ōrnāvī",
+     "ppp": "ōrnātum"
+    }
+   },
+   {
+    "latein": "fallere",
+    "deutsch": "täuschen, betrügen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "fallō",
+     "infinitiv": "fallere",
+     "perfekt": "fefellī"
+    }
+   },
+   {
+    "latein": "reddere",
+    "deutsch": "zurückgeben, geben; m. dopp. Akk. machen zu",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "reddō",
+     "infinitiv": "reddere",
+     "perfekt": "reddidī",
+     "ppp": "redditum"
+    }
+   },
+   {
+    "latein": "equidem",
+    "deutsch": "(ich) allerdings, freilich",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "minime",
+    "deutsch": "am wenigsten, überhaupt nicht",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "accipere",
+    "deutsch": "erhalten, erfahren, annehmen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "accipiō",
+     "infinitiv": "accipere",
+     "perfekt": "accēpī",
+     "ppp": "acceptum"
+    }
+   },
+   {
+    "latein": "umquam",
+    "deutsch": "jemals, irgendwann einmal",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "honestus",
+    "deutsch": "ehrenhaft, angesehen",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "honestus",
+     "f": "honesta",
+     "n": "honestum"
+    }
+   },
+   {
+    "latein": "vitam agere",
+    "deutsch": "ein Leben führen, leben",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "laus",
+    "deutsch": "das Lob, der Ruhm",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "laus",
+     "genitiv": "laudis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "munus",
+    "deutsch": "die Aufgabe, das Geschenk",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "mūnus",
+     "genitiv": "mūneris"
+    },
+    "genus": "n",
+    "deklination": 3
+   },
+   {
+    "latein": "eo",
+    "deutsch": "dorthin; deswegen",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "Hercules",
+    "deutsch": "Herkules (der berühmteste Held der griechischen Sagenwelt)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Herculēs",
+     "genitiv": "Herculis"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "augere",
+    "deutsch": "vergrößern, vermehren",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "augeō",
+     "infinitiv": "augēre",
+     "perfekt": "auxī",
+     "ppp": "auctum"
+    }
+   },
+   {
+    "latein": "movere",
+    "deutsch": "bewegen, beeindrucken",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "moveō",
+     "infinitiv": "movēre",
+     "perfekt": "mōvī",
+     "ppp": "mōtum"
+    }
+   },
+   {
+    "latein": "turpis",
+    "deutsch": "schlecht, hässlich, schändlich",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "turpis",
+     "f": "turpis",
+     "n": "turpe"
+    }
+   },
+   {
+    "latein": "nobilis",
+    "deutsch": "adelig, vornehm, berühmt",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "nōbilis",
+     "f": "nōbilis",
+     "n": "nōbile"
+    }
+   },
+   {
+    "latein": "imponere",
+    "deutsch": "auferlegen, einsetzen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "impōnō",
+     "infinitiv": "impōnere",
+     "perfekt": "imposuī",
+     "ppp": "impositum"
+    }
+   },
+   {
+    "latein": "Augias",
+    "deutsch": "Augias (mythischer König)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Augīās",
+     "genitiv": "Augīae"
+    },
+    "genus": "m",
+    "deklination": 1
+   },
+   {
+    "latein": "complere",
+    "deutsch": "anfüllen, auffüllen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "compleō",
+     "infinitiv": "complēre",
+     "perfekt": "complēvī",
+     "ppp": "complētum"
+    }
+   },
+   {
+    "latein": "pessimus",
+    "deutsch": "der schlechteste, sehr schlimm",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "pessimus",
+     "f": "pessima",
+     "n": "pessimum"
+    }
+   },
+   {
+    "latein": "opprimere",
+    "deutsch": "bedrohen, niederwerfen, unterdrücken",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "opprimō",
+     "infinitiv": "opprimere",
+     "perfekt": "oppressī",
+     "ppp": "oppressum"
+    }
+   },
+   {
+    "latein": "corpus",
+    "deutsch": "der Körper, der Leichnam",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "corpus",
+     "genitiv": "corporis"
+    },
+    "genus": "n",
+    "deklination": 3
+   },
+   {
+    "latein": "conficere",
+    "deutsch": "erledigen, fertig machen, vollbringen, beenden",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "cōnficiō",
+     "infinitiv": "cōnficere",
+     "perfekt": "cōnfēcī",
+     "ppp": "cōnfectum"
+    }
+   },
+   {
+    "latein": "flumen",
+    "deutsch": "der Fluss",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "flūmen",
+     "genitiv": "flūminis"
+    },
+    "genus": "n",
+    "deklination": 3
+   },
+   {
+    "latein": "beneficium",
+    "deutsch": "die Wohltat",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "beneficium",
+     "genitiv": "beneficiī"
+    },
+    "genus": "n",
+    "deklination": 2
+   }
+  ],
+  "16": [
+   {
+    "latein": "Cornelia",
+    "deutsch": "Cornelia (Mutter der Gracchen)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Cornēlia",
+     "genitiv": "Cornēliae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "ingenium",
+    "deutsch": "die Begabung, das Talent, der Verstand",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "ingenium",
+     "genitiv": "ingeniī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "dignus",
+    "deutsch": "würdig, wert (einer Sache) (m. Abl.)",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "dīgnus",
+     "f": "dīgna",
+     "n": "dīgnum"
+    }
+   },
+   {
+    "latein": "magistratus",
+    "deutsch": "das Amt, der Beamte",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "magistrātus",
+     "genitiv": "magistrātūs"
+    },
+    "genus": "m",
+    "deklination": 4
+   },
+   {
+    "latein": "ferre",
+    "deutsch": "bringen, tragen, ertragen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "ferō",
+     "infinitiv": "ferre",
+     "perfekt": "tulī",
+     "ppp": "lātum"
+    }
+   },
+   {
+    "latein": "consul",
+    "deutsch": "der Konsul",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "cōnsul",
+     "genitiv": "cōnsulis"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "docere",
+    "deutsch": "lehren, unterrichten",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "doceō",
+     "infinitiv": "docēre",
+     "perfekt": "docuī",
+     "ppp": "doctum"
+    }
+   },
+   {
+    "latein": "usus",
+    "deutsch": "der Nutzen, die Benutzung, die Ausübung",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "ūsus",
+     "genitiv": "ūsūs"
+    },
+    "genus": "m",
+    "deklination": 4
+   },
+   {
+    "latein": "Gaius Gracchus",
+    "deutsch": "Gaius Gracchus (röm. Politiker)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Gāius Gracchus",
+     "genitiv": "Gāī Gracchī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "Tiberius Gracchus",
+    "deutsch": "Tiberius Gracchus (röm. Politiker, älterer Bruder des Gaius Gracchus)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Tiberius Gracchus",
+     "genitiv": "Tiberiī Gracchī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "casus",
+    "deutsch": "der Fall, der Zufall",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "cāsus",
+     "genitiv": "cāsūs"
+    },
+    "genus": "m",
+    "deklination": 4
+   },
+   {
+    "latein": "interficere",
+    "deutsch": "töten, vernichten",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "interficiō",
+     "infinitiv": "interficere",
+     "perfekt": "interfēcī",
+     "ppp": "interfectum"
+    }
+   },
+   {
+    "latein": "senator",
+    "deutsch": "der Senator",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "senātor",
+     "genitiv": "senātōris"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "metuere",
+    "deutsch": "fürchten, sich fürchten",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "metuō",
+     "infinitiv": "metuere",
+     "perfekt": "metuī"
+    }
+   },
+   {
+    "latein": "complures",
+    "deutsch": "mehrere",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "complūrēs",
+     "f": "complūrēs",
+     "n": "complūra"
+    }
+   },
+   {
+    "latein": "mos",
+    "deutsch": "die Sitte, der Brauch; Pl. der Charakter",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "mōs",
+     "genitiv": "mōris"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "maiores",
+    "deutsch": "die Vorfahren, die Ahnen",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "māiōrēs",
+     "genitiv": "māiōrum"
+    },
+    "genus": "m",
+    "deklination": 3,
+    "numerus": "Pl"
+   },
+   {
+    "latein": "mos maiorum",
+    "deutsch": "die Sitte der Vorfahren",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "neglegere",
+    "deutsch": "nicht beachten, vernachlässigen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "neglegō",
+     "infinitiv": "neglegere",
+     "perfekt": "neglēxī",
+     "ppp": "neglēctum"
+    }
+   },
+   {
+    "latein": "regnum",
+    "deutsch": "die Herrschaft, die Königsherrschaft, das Reich",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "rēgnum",
+     "genitiv": "rēgnī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "demum",
+    "deutsch": "endlich, zuletzt",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "relinquere",
+    "deutsch": "verlassen, zurücklassen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "relinquō",
+     "infinitiv": "relinquere",
+     "perfekt": "relīquī",
+     "ppp": "relictum"
+    }
+   },
+   {
+    "latein": "male",
+    "deutsch": "schlecht, schlimm",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "adducere",
+    "deutsch": "heranführen, veranlassen, beeinflussen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "addūcō",
+     "infinitiv": "addūcere",
+     "perfekt": "addūxī",
+     "ppp": "adductum"
+    }
+   },
+   {
+    "latein": "plebs",
+    "deutsch": "das (einfache) Volk",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "plēbs",
+     "genitiv": "plēbis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "aes",
+    "deutsch": "das Erz, das Geld",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "aes",
+     "genitiv": "aeris"
+    },
+    "genus": "n",
+    "deklination": 3
+   },
+   {
+    "latein": "alienus",
+    "deutsch": "fremd",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "aliēnus",
+     "f": "aliēna",
+     "n": "aliēnum"
+    }
+   },
+   {
+    "latein": "aes alienum",
+    "deutsch": "die Schulden",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "aes aliēnum",
+     "genitiv": "aeris aliēnī"
+    },
+    "genus": "n",
+    "deklination": 3
+   },
+   {
+    "latein": "premere",
+    "deutsch": "drücken, unterdrücken, bedrängen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "premō",
+     "infinitiv": "premere",
+     "perfekt": "pressī",
+     "ppp": "pressum"
+    }
+   },
+   {
+    "latein": "nuntius",
+    "deutsch": "der Bote, die Nachricht",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "nūntius",
+     "genitiv": "nūntiī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "afferre",
+    "deutsch": "bringen, herbeibringen, melden",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "afferō",
+     "infinitiv": "afferre",
+     "perfekt": "attulī",
+     "ppp": "allātum"
+    }
+   },
+   {
+    "latein": "facinus",
+    "deutsch": "die Handlung, die Untat",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "facinus",
+     "genitiv": "facinoris"
+    },
+    "genus": "n",
+    "deklination": 3
+   },
+   {
+    "latein": "gemitus",
+    "deutsch": "das Seufzen, das Klagen, die Traurigkeit",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "gemitus",
+     "genitiv": "gemitūs"
+    },
+    "genus": "m",
+    "deklination": 4
+   },
+   {
+    "latein": "exercitus",
+    "deutsch": "das Heer",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "exercitus",
+     "genitiv": "exercitūs"
+    },
+    "genus": "m",
+    "deklination": 4
+   },
+   {
+    "latein": "perferre",
+    "deutsch": "bringen, überbringen, ertragen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "perferō",
+     "infinitiv": "perferre",
+     "perfekt": "pertulī",
+     "ppp": "perlātum"
+    }
+   },
+   {
+    "latein": "auferre",
+    "deutsch": "wegbringen, rauben",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "auferō",
+     "infinitiv": "auferre",
+     "perfekt": "abstulī",
+     "ppp": "ablātum"
+    }
+   },
+   {
+    "latein": "sumptus",
+    "deutsch": "der Aufwand, die Kosten",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "sūmptus",
+     "genitiv": "sūmptūs"
+    },
+    "genus": "m",
+    "deklination": 4
+   },
+   {
+    "latein": "conferre",
+    "deutsch": "zusammentragen, vergleichen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "cōnferō",
+     "infinitiv": "cōnferre",
+     "perfekt": "contulī",
+     "ppp": "collātum"
+    }
+   },
+   {
+    "latein": "nec",
+    "deutsch": "und nicht, auch nicht",
+    "wortart": "Konjunktion"
+   },
+   {
+    "latein": "maximus",
+    "deutsch": "der größte, sehr groß",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "maximus",
+     "f": "maxima",
+     "n": "maximum"
+    }
+   },
+   {
+    "latein": "statuere",
+    "deutsch": "aufstellen, beschließen, festsetzen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "statuō",
+     "infinitiv": "statuere",
+     "perfekt": "statuī",
+     "ppp": "statūtum"
+    }
+   },
+   {
+    "latein": "incipere",
+    "deutsch": "anfangen, beginnen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "incipiō",
+     "infinitiv": "incipere",
+     "perfekt": "coepī",
+     "ppp": "inceptum"
+    }
+   },
+   {
+    "latein": "referre",
+    "deutsch": "bringen, zurückbringen, berichten",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "referō",
+     "infinitiv": "referre",
+     "perfekt": "rettulī",
+     "ppp": "relātum"
+    }
+   },
+   {
+    "latein": "senatus",
+    "deutsch": "der Senat, die Senatsversammlung",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "senātus",
+     "genitiv": "senātūs"
+    },
+    "genus": "m",
+    "deklination": 4
+   },
+   {
+    "latein": "aliter",
+    "deutsch": "anders, sonst",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "inferre",
+    "deutsch": "hineintragen, zufügen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "īnferō",
+     "infinitiv": "īnferre",
+     "perfekt": "intulī",
+     "ppp": "illātum"
+    }
+   },
+   {
+    "latein": "metus",
+    "deutsch": "die Angst, die Furcht",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "metus",
+     "genitiv": "metūs"
+    },
+    "genus": "m",
+    "deklination": 4
+   }
+  ],
+  "17": [
+   {
+    "latein": "Caesar",
+    "deutsch": "Gaius Julius Cäsar (röm. Politiker, Feldherr und Schriftsteller)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Caesar",
+     "genitiv": "Caesaris"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "domus",
+    "deutsch": "das Haus",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "domus",
+     "genitiv": "domūs"
+    },
+    "genus": "f",
+    "deklination": 4
+   },
+   {
+    "latein": "regius",
+    "deutsch": "königlich",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "rēgius",
+     "f": "rēgia",
+     "n": "rēgium"
+    }
+   },
+   {
+    "latein": "regia",
+    "deutsch": "das königliche Haus, der Palast",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "rēgia",
+     "genitiv": "rēgiae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "illic",
+    "deutsch": "dort",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "Aegyptus",
+    "deutsch": "Ägypten",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Aegyptus",
+     "genitiv": "Aegyptī"
+    },
+    "genus": "f",
+    "deklination": 2
+   },
+   {
+    "latein": "potens",
+    "deutsch": "mächtig, stark",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "potēns",
+     "f": "potēns",
+     "n": "potēns",
+     "genitiv": "potentis"
+    }
+   },
+   {
+    "latein": "constat",
+    "deutsch": "es steht fest, es ist bekannt (m. AcI)",
+    "wortart": "Verb",
+    "formen": {
+     "praesens_3sg": "cōnstat",
+     "infinitiv": "cōnstāre"
+    }
+   },
+   {
+    "latein": "usui esse",
+    "deutsch": "nützlich sein, von Nutzen sein (m. Dat.)",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "Cleopatra",
+    "deutsch": "Kleopatra VII. (letzte Königin Ägyptens)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Cleopatra",
+     "genitiv": "Cleopatrae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "hic, haec, hoc",
+    "deutsch": "dieser, diese, dieses (hier); folgender",
+    "wortart": "Pronomen",
+    "formen": {
+     "m": "hic",
+     "f": "haec",
+     "n": "hoc"
+    }
+   },
+   {
+    "latein": "obtinere",
+    "deutsch": "(in Besitz) haben, (besetzt) halten",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "obtineō",
+     "infinitiv": "obtinēre",
+     "perfekt": "obtinuī"
+    }
+   },
+   {
+    "latein": "vulgus",
+    "deutsch": "das (einfache) Volk, die Volksmasse, der Pöbel",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "vulgus",
+     "genitiv": "vulgī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "ut",
+    "deutsch": "wie",
+    "wortart": "Subjunktion"
+   },
+   {
+    "latein": "confidere",
+    "deutsch": "vertrauen, sich verlassen (auf) (m. Dat.)",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "cōnfīdō",
+     "infinitiv": "cōnfīdere"
+    }
+   },
+   {
+    "latein": "Pompeius",
+    "deutsch": "Gnaeus Pompejus Magnus (Gegner Cäsars)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Pompēius",
+     "genitiv": "Pompēī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "nuper",
+    "deutsch": "neulich, vor kurzem",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "ille, illa, illud",
+    "deutsch": "jener, jene, jenes; der (dort); damalig, berühmt",
+    "wortart": "Pronomen",
+    "formen": {
+     "m": "ille",
+     "f": "illa",
+     "n": "illud"
+    }
+   },
+   {
+    "latein": "soror",
+    "deutsch": "die Schwester",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "soror",
+     "genitiv": "sorōris"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "idoneus",
+    "deutsch": "geeignet, passend",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "idōneus",
+     "f": "idōnea",
+     "n": "idōneum"
+    }
+   },
+   {
+    "latein": "audacia",
+    "deutsch": "die Frechheit, die Kühnheit",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "audācia",
+     "genitiv": "audāciae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "cohors",
+    "deutsch": "die Kohorte (ca. 600 Mann)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "cohors",
+     "genitiv": "cohortis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "armatus",
+    "deutsch": "bewaffnet",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "armātus",
+     "f": "armāta",
+     "n": "armātum"
+    }
+   },
+   {
+    "latein": "praesidio esse",
+    "deutsch": "hilfreich sein, beschützen (m. Dat.)",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "tribunus",
+    "deutsch": "der Tribun, der Militärtribun",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "tribūnus",
+     "genitiv": "tribūnī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "aspicere",
+    "deutsch": "erblicken, ansehen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "aspiciō",
+     "infinitiv": "aspicere",
+     "perfekt": "aspexī",
+     "ppp": "aspectum"
+    }
+   },
+   {
+    "latein": "custos",
+    "deutsch": "der Wächter",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "custōs",
+     "genitiv": "custōdis"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "contendere",
+    "deutsch": "eilen, sich anstrengen, kämpfen, behaupten",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "contendō",
+     "infinitiv": "contendere",
+     "perfekt": "contendī"
+    }
+   },
+   {
+    "latein": "interim",
+    "deutsch": "inzwischen",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "pes",
+    "deutsch": "der Fuß",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "pēs",
+     "genitiv": "pedis"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "repente",
+    "deutsch": "plötzlich, unerwartet",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "volvere",
+    "deutsch": "rollen, wälzen, überlegen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "volvō",
+     "infinitiv": "volvere",
+     "perfekt": "volvī",
+     "ppp": "volūtum"
+    }
+   },
+   {
+    "latein": "cernere",
+    "deutsch": "sehen, bemerken",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "cernō",
+     "infinitiv": "cernere"
+    }
+   },
+   {
+    "latein": "dono dare",
+    "deutsch": "schenken, zum Geschenk machen",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "species",
+    "deutsch": "der Anblick, das Aussehen, der Schein",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "speciēs",
+     "genitiv": "speciēī"
+    },
+    "genus": "f",
+    "deklination": 5
+   },
+   {
+    "latein": "voluptas",
+    "deutsch": "die Lust, das Vergnügen",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "voluptās",
+     "genitiv": "voluptātis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "incendere",
+    "deutsch": "anzünden, in Brand stecken, entflammen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "incendō",
+     "infinitiv": "incendere",
+     "perfekt": "incendī",
+     "ppp": "incēnsum"
+    }
+   },
+   {
+    "latein": "poscere",
+    "deutsch": "fordern, verlangen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "pōscō",
+     "infinitiv": "pōscere",
+     "perfekt": "popōscī"
+    }
+   },
+   {
+    "latein": "resistere",
+    "deutsch": "Widerstand leisten, stehen bleiben",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "resistō",
+     "infinitiv": "resistere",
+     "perfekt": "restitī"
+    }
+   },
+   {
+    "latein": "posterus",
+    "deutsch": "folgend",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "posterus",
+     "f": "postera",
+     "n": "posterum"
+    }
+   },
+   {
+    "latein": "litterae",
+    "deutsch": "der Brief, die Literatur, die Wissenschaft",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "litterae",
+     "genitiv": "litterārum"
+    },
+    "genus": "f",
+    "deklination": 1,
+    "numerus": "Pl"
+   },
+   {
+    "latein": "publicus",
+    "deutsch": "öffentlich, staatlich",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "pūblicus",
+     "f": "pūblica",
+     "n": "pūblicum"
+    }
+   },
+   {
+    "latein": "edere",
+    "deutsch": "herausgeben, bekanntmachen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "ēdō",
+     "infinitiv": "ēdere",
+     "perfekt": "ēdidī",
+     "ppp": "ēditum"
+    }
+   },
+   {
+    "latein": "natus",
+    "deutsch": "der Sohn",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "nātus",
+     "genitiv": "nātī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "nata",
+    "deutsch": "die Tochter",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "nāta",
+     "genitiv": "nātae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "potentia",
+    "deutsch": "die Macht",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "potentia",
+     "genitiv": "potentiae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "tam ... quam",
+    "deutsch": "so ... wie",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "dulcis",
+    "deutsch": "süß, angenehm",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "dulcis",
+     "f": "dulcis",
+     "n": "dulce"
+    }
+   }
+  ],
+  "18": [
+   {
+    "latein": "vetus",
+    "deutsch": "alt",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "vetus",
+     "f": "vetus",
+     "n": "vetus",
+     "genitiv": "veteris"
+    }
+   },
+   {
+    "latein": "idem, eadem, idem",
+    "deutsch": "derselbe, der gleiche",
+    "wortart": "Pronomen",
+    "formen": {
+     "m": "īdem",
+     "f": "eadem",
+     "n": "idem"
+    }
+   },
+   {
+    "latein": "eodem loco",
+    "deutsch": "am selben Ort, am selben Platz",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "restituere",
+    "deutsch": "wiederherstellen, wieder errichten",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "restituō",
+     "infinitiv": "restituere",
+     "perfekt": "restituī",
+     "ppp": "restitūtum"
+    }
+   },
+   {
+    "latein": "murus",
+    "deutsch": "die Mauer",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "mūrus",
+     "genitiv": "mūrī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "munire",
+    "deutsch": "bauen, befestigen, schützen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "mūniō",
+     "infinitiv": "mūnīre",
+     "perfekt": "mūnīvī",
+     "ppp": "mūnītum"
+    }
+   },
+   {
+    "latein": "acies",
+    "deutsch": "die Schärfe, die Schlacht, das Heer",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "aciēs",
+     "genitiv": "aciēī"
+    },
+    "genus": "f",
+    "deklination": 5
+   },
+   {
+    "latein": "caedes",
+    "deutsch": "der Mord, das Blutbad",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "caedēs",
+     "genitiv": "caedis",
+     "genitiv_pl": "-ium"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "intra",
+    "deutsch": "innerhalb von (wo? wohin?)",
+    "wortart": "Präposition",
+    "kasus": "Akkusativ"
+   },
+   {
+    "latein": "se recipere",
+    "deutsch": "sich zurückziehen",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "censere",
+    "deutsch": "meinen, einschätzen, seine Stimme abgeben für (m. Akk.)",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "cēnseō",
+     "infinitiv": "cēnsēre",
+     "perfekt": "cēnsuī",
+     "ppp": "cēnsum"
+    }
+   },
+   {
+    "latein": "tegere",
+    "deutsch": "bedecken, schützen, verbergen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "tegō",
+     "infinitiv": "tegere",
+     "perfekt": "tēxī",
+     "ppp": "tēctum"
+    }
+   },
+   {
+    "latein": "sacer",
+    "deutsch": "heilig, geweiht (m. Gen./Dat.)",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "sacer",
+     "f": "sacra",
+     "n": "sacrum"
+    }
+   },
+   {
+    "latein": "exstinguere",
+    "deutsch": "auslöschen, vernichten",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "exstinguō",
+     "infinitiv": "exstinguere",
+     "perfekt": "exstīnxī",
+     "ppp": "exstīnctum"
+    }
+   },
+   {
+    "latein": "Titus",
+    "deutsch": "Titus (Sohn des röm. Kaisers Vespasians)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Titus",
+     "genitiv": "Titī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "circum",
+    "deutsch": "rings um, um ... herum",
+    "wortart": "Präposition",
+    "kasus": "Akkusativ"
+   },
+   {
+    "latein": "collocare",
+    "deutsch": "aufstellen, unterbringen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "collocō",
+     "infinitiv": "collocāre",
+     "perfekt": "collocāvī"
+    }
+   },
+   {
+    "latein": "religio",
+    "deutsch": "der Glaube, die (Gottes-)Verehrung, die Frömmigkeit, die Gewissenhaftigkeit",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "religiō",
+     "genitiv": "religiōnis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "curae esse",
+    "deutsch": "jdm. Sorge bereiten (m. Dat.)",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "consulere",
+    "deutsch": "jdn. um Rat fragen (m. Akk.)",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "cōnsulō",
+     "infinitiv": "cōnsulere",
+     "perfekt": "cōnsuluī",
+     "ppp": "cōnsultum"
+    }
+   },
+   {
+    "latein": "cupiditas",
+    "deutsch": "das Verlangen (nach), die Leidenschaft (m. Gen.)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "cupiditās",
+     "genitiv": "cupiditātis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "saevus",
+    "deutsch": "schrecklich, wild, wütend",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "saevus",
+     "f": "saeva",
+     "n": "saevum"
+    }
+   },
+   {
+    "latein": "praebere",
+    "deutsch": "geben, hinhalten",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "praebeō",
+     "infinitiv": "praebēre",
+     "perfekt": "praebuī"
+    }
+   },
+   {
+    "latein": "se praebere",
+    "deutsch": "sich zeigen",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "iste, ista, istud",
+    "deutsch": "dieser, diese, dieses (da)",
+    "wortart": "Pronomen",
+    "formen": {
+     "m": "iste",
+     "f": "ista",
+     "n": "istud"
+    }
+   },
+   {
+    "latein": "barbarus",
+    "deutsch": "ausländisch, unzivilisiert; Subst. der Barbar",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "barbarus",
+     "f": "barbara",
+     "n": "barbarum"
+    }
+   },
+   {
+    "latein": "excipere",
+    "deutsch": "aufnehmen, eine Ausnahme machen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "excipiō",
+     "infinitiv": "excipere",
+     "perfekt": "excēpī",
+     "ppp": "exceptum"
+    }
+   },
+   {
+    "latein": "dedere",
+    "deutsch": "ausliefern, übergeben",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "dēdō",
+     "infinitiv": "dēdere",
+     "perfekt": "dēdidī",
+     "ppp": "dēditum"
+    }
+   },
+   {
+    "latein": "claudere",
+    "deutsch": "schließen, abschließen, einschließen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "claudō",
+     "infinitiv": "claudere",
+     "perfekt": "clausī",
+     "ppp": "clausum"
+    }
+   },
+   {
+    "latein": "proponere",
+    "deutsch": "darlegen, vorschlagen, in Aussicht stellen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "prōpōnō",
+     "infinitiv": "prōpōnere",
+     "perfekt": "prōposuī",
+     "ppp": "prōpositum"
+    }
+   },
+   {
+    "latein": "etsi",
+    "deutsch": "auch wenn, obwohl",
+    "wortart": "Subjunktion"
+   },
+   {
+    "latein": "incendium",
+    "deutsch": "der Brand, das Feuer",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "incendium",
+     "genitiv": "incendiī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "durus",
+    "deutsch": "hart, hartherzig",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "dūrus",
+     "f": "dūra",
+     "n": "dūrum"
+    }
+   },
+   {
+    "latein": "consulere in",
+    "deutsch": "vorgehen gegen (m. Akk.)",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "sane",
+    "deutsch": "allerdings, gewiss, überhaupt, meinetwegen",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "nihil nisi",
+    "deutsch": "nichts als, nur",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "arx",
+    "deutsch": "die Burg",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "arx",
+     "genitiv": "arcis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "oportet",
+    "deutsch": "es gehört sich, es ist nötig (m. Inf.)",
+    "wortart": "Verb",
+    "formen": {
+     "praesens_3sg": "oportet",
+     "infinitiv": "oportēre"
+    }
+   },
+   {
+    "latein": "condicio",
+    "deutsch": "die Bedingung, die Verabredung, die Lage",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "condiciō",
+     "genitiv": "condiciōnis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "munitio",
+    "deutsch": "der Bau, die Befestigung",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "mūnitiō",
+     "genitiv": "mūnitiōnis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "cedere",
+    "deutsch": "gehen, nachgeben, zurückweichen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "cēdō",
+     "infinitiv": "cēdere",
+     "perfekt": "cessī",
+     "ppp": "cessum"
+    }
+   },
+   {
+    "latein": "crimen",
+    "deutsch": "das Verbrechen, der Vorwurf",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "crīmen",
+     "genitiv": "crīminis"
+    },
+    "genus": "n",
+    "deklination": 3
+   },
+   {
+    "latein": "occidere",
+    "deutsch": "(zu Boden) fallen, umkommen, untergehen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "occidō",
+     "infinitiv": "occidere",
+     "perfekt": "occidī"
+    }
+   }
+  ],
+  "19": [
+   {
+    "latein": "nuntiare",
+    "deutsch": "melden",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "nūntiō",
+     "infinitiv": "nūntiāre",
+     "perfekt": "nūntiāvī",
+     "ppp": "nūntiātum"
+    }
+   },
+   {
+    "latein": "provincia",
+    "deutsch": "die Provinz",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "prōvincia",
+     "genitiv": "prōvinciae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "immortalis",
+    "deutsch": "unsterblich",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "immortālis",
+     "f": "immortālis",
+     "n": "immortāle"
+    }
+   },
+   {
+    "latein": "antiquus",
+    "deutsch": "alt, altertümlich",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "antīquus",
+     "f": "antīqua",
+     "n": "antīquum"
+    }
+   },
+   {
+    "latein": "omittere",
+    "deutsch": "aufgeben, beiseite lassen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "omittō",
+     "infinitiv": "omittere",
+     "perfekt": "omīsī",
+     "ppp": "omissum"
+    }
+   },
+   {
+    "latein": "comperire",
+    "deutsch": "(genau) erfahren",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "comperiō",
+     "infinitiv": "comperīre",
+     "perfekt": "comperī",
+     "ppp": "compertum"
+    }
+   },
+   {
+    "latein": "Christianus",
+    "deutsch": "christlich; Subst. der Christ",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "Chrīstiānus",
+     "f": "Chrīstiāna",
+     "n": "Chrīstiānum"
+    }
+   },
+   {
+    "latein": "occupare",
+    "deutsch": "besetzen, einnehmen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "occupō",
+     "infinitiv": "occupāre",
+     "perfekt": "occupāvī",
+     "ppp": "occupātum"
+    }
+   },
+   {
+    "latein": "cognoscere",
+    "deutsch": "erkennen, kennenlernen; Perf. kennen, wissen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "cōgnōscō",
+     "infinitiv": "cōgnōscere",
+     "perfekt": "cōgnōvī",
+     "ppp": "cognitum"
+    }
+   },
+   {
+    "latein": "vinculum",
+    "deutsch": "das Band, der Strick, die Fessel; Pl. das Gefängnis",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "vinculum",
+     "genitiv": "vinculī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "conicere",
+    "deutsch": "(zusammen)werfen, vermuten",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "coniciō",
+     "infinitiv": "conicere",
+     "perfekt": "coniēcī",
+     "ppp": "coniectum"
+    }
+   },
+   {
+    "latein": "in vincula conicere",
+    "deutsch": "ins Gefängnis werfen, fesseln",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "cum",
+    "deutsch": "als, nachdem, weil, obwohl, während (dagegen)",
+    "wortart": "Subjunktion"
+   },
+   {
+    "latein": "supplicium",
+    "deutsch": "die Hinrichtung, die Strafe; das flehentliche Bitten",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "supplicium",
+     "genitiv": "suppliciī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "deficere",
+    "deutsch": "abfallen (von), fehlen, verlassen (ā m. Abl.)",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "dēficiō",
+     "infinitiv": "dēficere",
+     "perfekt": "dēfēcī",
+     "ppp": "dēfectum"
+    }
+   },
+   {
+    "latein": "aestimare",
+    "deutsch": "meinen, bewerten, beurteilen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "aestimō",
+     "infinitiv": "aestimāre",
+     "perfekt": "aestimāvī",
+     "ppp": "aestimātum"
+    }
+   },
+   {
+    "latein": "ius",
+    "deutsch": "das Recht",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "iūs",
+     "genitiv": "iūris"
+    },
+    "genus": "n",
+    "deklination": 3
+   },
+   {
+    "latein": "iure",
+    "deutsch": "zurecht, mit Recht",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "animadvertere",
+    "deutsch": "bemerken",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "animadvertō",
+     "infinitiv": "animadvertere",
+     "perfekt": "animadvertī",
+     "ppp": "animadversum"
+    }
+   },
+   {
+    "latein": "animadvertere in",
+    "deutsch": "vorgehen gegen (m. Akk.)",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "interea",
+    "deutsch": "inzwischen, unterdessen",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "epistula",
+    "deutsch": "der Brief",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "epistula",
+     "genitiv": "epistulae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "auctor",
+    "deutsch": "der Urheber, der Schriftsteller, der Gründer",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "auctor",
+     "genitiv": "auctōris"
+    },
+    "genus": "m",
+    "deklination": 3
+   },
+   {
+    "latein": "prodere",
+    "deutsch": "überliefern, verraten",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "prōdō",
+     "infinitiv": "prōdere",
+     "perfekt": "prōdidī",
+     "ppp": "prōditum"
+    }
+   },
+   {
+    "latein": "continere",
+    "deutsch": "festhalten, enthalten",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "contineō",
+     "infinitiv": "continēre",
+     "perfekt": "continuī",
+     "ppp": "contentum"
+    }
+   },
+   {
+    "latein": "simulacrum",
+    "deutsch": "das Bild, das Bildnis",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "simulācrum",
+     "genitiv": "simulācrī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "numen",
+    "deutsch": "die Gottheit, der göttliche Wille",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "nūmen",
+     "genitiv": "nūminis"
+    },
+    "genus": "n",
+    "deklination": 3
+   },
+   {
+    "latein": "mora",
+    "deutsch": "der Aufenthalt, die Verzögerung",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "mora",
+     "genitiv": "morae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "scilicet",
+    "deutsch": "natürlich, selbstverständlich",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "sua sponte",
+    "deutsch": "freiwillig, von selbst",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "falsus",
+    "deutsch": "falsch",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "falsus",
+     "f": "falsa",
+     "n": "falsum"
+    }
+   },
+   {
+    "latein": "spatium",
+    "deutsch": "der Raum, die Strecke, die Zeit, der Zeitraum",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "spatium",
+     "genitiv": "spatiī"
+    },
+    "genus": "n",
+    "deklination": 2
+   },
+   {
+    "latein": "item",
+    "deutsch": "ebenso, gleichfalls",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "improbus",
+    "deutsch": "schlecht, böse, unanständig",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "improbus",
+     "f": "improba",
+     "n": "improbum"
+    }
+   },
+   {
+    "latein": "ostendere",
+    "deutsch": "zeigen, erklären",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "ostendō",
+     "infinitiv": "ostendere",
+     "perfekt": "ostendī"
+    }
+   },
+   {
+    "latein": "dimittere",
+    "deutsch": "aufgeben, entlassen, wegschicken",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "dīmittō",
+     "infinitiv": "dīmittere",
+     "perfekt": "dīmīsī",
+     "ppp": "dīmissum"
+    }
+   },
+   {
+    "latein": "voluntas",
+    "deutsch": "der Wille, die Absicht, die Zustimmung",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "voluntās",
+     "genitiv": "voluntātis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "iudicare",
+    "deutsch": "urteilen, beurteilen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "iūdicō",
+     "infinitiv": "iūdicāre",
+     "perfekt": "iūdicāvī",
+     "ppp": "iūdicātum"
+    }
+   },
+   {
+    "latein": "iustus",
+    "deutsch": "gerecht",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "iūstus",
+     "f": "iūsta",
+     "n": "iūstum"
+    }
+   },
+   {
+    "latein": "nimis / nimium",
+    "deutsch": "zu, allzu, zu sehr",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "mollis",
+    "deutsch": "weich, angenehm, freundlich",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "mollis",
+     "f": "mollis",
+     "n": "molle"
+    }
+   },
+   {
+    "latein": "quare",
+    "deutsch": "weshalb, deshalb",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "sicut",
+    "deutsch": "(so) wie",
+    "wortart": "Subjunktion"
+   },
+   {
+    "latein": "praecipere",
+    "deutsch": "lehren, belehren, vorschreiben",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "praecipiō",
+     "infinitiv": "praecipere",
+     "perfekt": "praecēpī",
+     "ppp": "praeceptum"
+    }
+   },
+   {
+    "latein": "vale! valete!",
+    "deutsch": "Leb wohl! Lebt wohl!",
+    "wortart": "Wendung"
+   }
+  ],
+  "20": [
+   {
+    "latein": "tunc",
+    "deutsch": "damals, dann",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "caput",
+    "deutsch": "der Kopf, die Hauptstadt",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "caput",
+     "genitiv": "capitis"
+    },
+    "genus": "n",
+    "deklination": 3
+   },
+   {
+    "latein": "Alexander",
+    "deutsch": "Alexander der Große (König von Makedonien)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Alexander",
+     "genitiv": "Alexandrī"
+    },
+    "genus": "m",
+    "deklination": 2
+   },
+   {
+    "latein": "forte",
+    "deutsch": "zufällig",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "currus",
+    "deutsch": "der Wagen",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "currus",
+     "genitiv": "currūs"
+    },
+    "genus": "m",
+    "deklination": 4
+   },
+   {
+    "latein": "ponere",
+    "deutsch": "(auf)stellen, (hin)legen, setzen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "pōnō",
+     "infinitiv": "pōnere",
+     "perfekt": "posuī",
+     "ppp": "positum"
+    }
+   },
+   {
+    "latein": "istic",
+    "deutsch": "da, dort",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "visere",
+    "deutsch": "besichtigen, besuchen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "vīsō",
+     "infinitiv": "vīsere",
+     "perfekt": "vīsī",
+     "ppp": "vīsum"
+    }
+   },
+   {
+    "latein": "ut",
+    "deutsch": "dass, sodass, damit",
+    "wortart": "Subjunktion"
+   },
+   {
+    "latein": "perspicere",
+    "deutsch": "erkennen, durchschauen, genau betrachten",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "perspiciō",
+     "infinitiv": "perspicere",
+     "perfekt": "perspexī",
+     "ppp": "perspectum"
+    }
+   },
+   {
+    "latein": "memorare",
+    "deutsch": "erwähnen, sagen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "memorō",
+     "infinitiv": "memorāre",
+     "perfekt": "memorāvī",
+     "ppp": "memorātum"
+    }
+   },
+   {
+    "latein": "brevis",
+    "deutsch": "kurz",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "brevis",
+     "f": "brevis",
+     "n": "breve"
+    }
+   },
+   {
+    "latein": "recitare",
+    "deutsch": "vorlesen, vortragen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "recitō",
+     "infinitiv": "recitāre",
+     "perfekt": "recitāvī",
+     "ppp": "recitātum"
+    }
+   },
+   {
+    "latein": "solvere",
+    "deutsch": "lösen, auflösen, bezahlen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "solvō",
+     "infinitiv": "solvere",
+     "perfekt": "solvī",
+     "ppp": "solūtum"
+    }
+   },
+   {
+    "latein": "universus",
+    "deutsch": "gesamt, ganz; Pl. alle zusammen",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "ūniversus",
+     "f": "ūniversa",
+     "n": "ūniversum"
+    }
+   },
+   {
+    "latein": "Asia",
+    "deutsch": "Asien, Kleinasien",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "Asia",
+     "genitiv": "Asiae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "appetere",
+    "deutsch": "streben (nach), haben wollen, angreifen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "appetō",
+     "infinitiv": "appetere",
+     "perfekt": "appetīvī",
+     "ppp": "appetītum"
+    }
+   },
+   {
+    "latein": "sui",
+    "deutsch": "die Seinen, die Ihren, seine/ihre Leute",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "suī",
+     "genitiv": "suōrum"
+    },
+    "genus": "m",
+    "deklination": 2,
+    "numerus": "Pl"
+   },
+   {
+    "latein": "ne",
+    "deutsch": "dass (nach Ausdrücken des Fürchtens und Hinderns) (m. Konj.)",
+    "wortart": "Subjunktion"
+   },
+   {
+    "latein": "timere, ne",
+    "deutsch": "fürchten, dass (m. Konj.)",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "optare",
+    "deutsch": "wünschen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "optō",
+     "infinitiv": "optāre",
+     "perfekt": "optāvī",
+     "ppp": "optātum"
+    }
+   },
+   {
+    "latein": "ne",
+    "deutsch": "dass nicht, damit nicht (m. Konj.)",
+    "wortart": "Subjunktion"
+   },
+   {
+    "latein": "difficilis",
+    "deutsch": "schwierig, schwer",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "difficilis",
+     "f": "difficilis",
+     "n": "difficile"
+    }
+   },
+   {
+    "latein": "subire",
+    "deutsch": "auf sich nehmen, herangehen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "subeō",
+     "infinitiv": "subīre",
+     "perfekt": "subiī",
+     "ppp": "subitum"
+    }
+   },
+   {
+    "latein": "adeo",
+    "deutsch": "so sehr",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "cupidus",
+    "deutsch": "gierig, begierig (nach) (m. Gen.)",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "cupidus",
+     "f": "cupida",
+     "n": "cupidum"
+    }
+   },
+   {
+    "latein": "manus",
+    "deutsch": "die Hand, die Schar (von Bewaffneten)",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "manus",
+     "genitiv": "manūs"
+    },
+    "genus": "f",
+    "deklination": 4
+   },
+   {
+    "latein": "tendere",
+    "deutsch": "sich anstrengen, ausstrecken",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "tendō",
+     "infinitiv": "tendere",
+     "perfekt": "tetendī",
+     "ppp": "tentum"
+    }
+   },
+   {
+    "latein": "ars",
+    "deutsch": "die Kunst, die Fertigkeit, die Eigenschaft",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "ars",
+     "genitiv": "artis",
+     "genitiv_pl": "-ium"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "fingere",
+    "deutsch": "gestalten, sich ausdenken",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "fingō",
+     "infinitiv": "fingere",
+     "perfekt": "fīnxī",
+     "ppp": "fictum"
+    }
+   },
+   {
+    "latein": "consuetudo",
+    "deutsch": "die Gewohnheit",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "cōnsuētūdō",
+     "genitiv": "cōnsuētūdinis"
+    },
+    "genus": "f",
+    "deklination": 3
+   },
+   {
+    "latein": "prius",
+    "deutsch": "früher, zuerst",
+    "wortart": "Adverb"
+   },
+   {
+    "latein": "sumere",
+    "deutsch": "nehmen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "sūmō",
+     "infinitiv": "sūmere",
+     "perfekt": "sūmpsī",
+     "ppp": "sūmptum"
+    }
+   },
+   {
+    "latein": "rumpere",
+    "deutsch": "zerbrechen, zerschlagen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "rumpō",
+     "infinitiv": "rumpere",
+     "perfekt": "rūpī",
+     "ppp": "ruptum"
+    }
+   },
+   {
+    "latein": "perterrere",
+    "deutsch": "einschüchtern, sehr erschrecken",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "perterreō",
+     "infinitiv": "perterrēre",
+     "perfekt": "perterruī",
+     "ppp": "perterritum"
+    }
+   },
+   {
+    "latein": "refert",
+    "deutsch": "es ist wichtig",
+    "wortart": "Wendung"
+   },
+   {
+    "latein": "inanis",
+    "deutsch": "leer, wertlos",
+    "wortart": "Adjektiv",
+    "formen": {
+     "m": "inānis",
+     "f": "inānis",
+     "n": "ināne"
+    }
+   },
+   {
+    "latein": "vertere",
+    "deutsch": "drehen, wenden",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "vertō",
+     "infinitiv": "vertere",
+     "perfekt": "vertī",
+     "ppp": "versum"
+    }
+   },
+   {
+    "latein": "usque ad",
+    "deutsch": "bis zu",
+    "wortart": "Präposition",
+    "kasus": "Akkusativ"
+   },
+   {
+    "latein": "res gestae",
+    "deutsch": "die Taten",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "rēs gestae",
+     "genitiv": "rērum gestārum"
+    },
+    "genus": "f",
+    "deklination": 5,
+    "numerus": "Pl"
+   },
+   {
+    "latein": "historia",
+    "deutsch": "die Erzählung, der Bericht, die Forschung",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "historia",
+     "genitiv": "historiae"
+    },
+    "genus": "f",
+    "deklination": 1
+   },
+   {
+    "latein": "carmen",
+    "deutsch": "das Lied, das Gedicht",
+    "wortart": "Substantiv",
+    "formen": {
+     "nominativ": "carmen",
+     "genitiv": "carminis"
+    },
+    "genus": "n",
+    "deklination": 3
+   },
+   {
+    "latein": "conscribere",
+    "deutsch": "aufschreiben, verfassen",
+    "wortart": "Verb",
+    "formen": {
+     "praesens": "cōnscrībō",
+     "infinitiv": "cōnscrībere",
+     "perfekt": "cōnscrīpsī",
+     "ppp": "cōnscrīptum"
+    }
+   }
+  ]
+ }
+}

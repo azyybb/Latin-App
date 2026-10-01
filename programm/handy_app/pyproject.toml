@@ -1,0 +1,30 @@
+# Briefcase-Projekt der Handy-App.  Nicht von Hand bauen, sondern mit
+# Apk_bauen.bat - das Skript kopiert Programm und Daten dazu.
+[tool.briefcase]
+project_name = "Latein Vokabeln"
+bundle = "de.bj"
+version = "1.0.0"
+url = "https://bj.de/latein_vokabeln"
+license = "LicenseRef-Proprietary"
+author = "bj"
+author_email = "bjarne.urban@gmail.com"
+
+[tool.briefcase.app.latein_vokabeln]
+formal_name = "Latein Vokabeln"
+description = "Lateinischer Vokabeltrainer"
+long_description = "Suche, Quiz, Fehlervokabeln, Grammatik und alle Vokabeln."
+sources = ["src/latein_vokabeln"]
+requires = []
+
+[tool.briefcase.app.latein_vokabeln.windows]
+requires = ["toga-winforms~=0.5.0"]
+
+[tool.briefcase.app.latein_vokabeln.android]
+requires = ["toga-android~=0.5.0"]
+base_theme = "Theme.MaterialComponents.DayNight.DarkActionBar"
+build_gradle_dependencies = ["com.google.android.material:material:1.13.0"]
+# Daten per Pfad lesen (Vokabeldatei, Buchseiten) geht nur, wenn das Paket
+# ausgepackt auf dem Speicher liegt.
+build_gradle_extra_content = """
+chaquopy.defaultConfig.extractPackages("latein_vokabeln")
+"""

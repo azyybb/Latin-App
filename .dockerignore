@@ -1,0 +1,8 @@
+# Ins Docker-Image kommt nur, was die Website braucht - nicht .exe, .apk,
+# Originalfotos, eigene Lernstaende oder OakenSolo.
+*
+!programm/*.py
+!programm/handy_oberflaeche.html
+!daten/vokabel_base.json
+!daten/grammatik_bilder/
+!webserver/
