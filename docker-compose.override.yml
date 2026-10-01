@@ -1,0 +1,6 @@
+# Wird von "docker compose up" lokal automatisch dazugenommen (Coolify nicht):
+# macht die Seite unter http://localhost:8080 erreichbar.
+services:
+  web:
+    ports:
+      - "${WEB_PORT:-8080}:80"
