@@ -409,6 +409,7 @@ h1 { font-size: 1.375rem; margin: 2px 0 4px; }
       <div class="beschriftung" id="a-spieler-titel">Spieler</div>
       <div class="liste" id="a-spieler"></div>
       <div class="leerbild" id="a-warten" hidden></div>
+      <button class="knopf breit gefahr" id="a-beenden-zuschauer" type="button" hidden>Runde beenden</button>
       <div id="a-host" hidden>
         <h1 style="margin-top:26px">Runde einstellen</h1>
         <div class="leise">Du hast die Arena erstellt – du entscheidest, wann es losgeht.</div>
@@ -417,6 +418,9 @@ h1 { font-size: 1.375rem; margin: 2px 0 4px; }
         <div id="a-felder"></div>
         <label class="haken-zeile" style="margin-top:14px" id="a-gleich-zeile">
           <input type="checkbox" id="a-gleich" checked><span>Alle bekommen die gleichen Fragen</span>
+        </label>
+        <label class="haken-zeile" style="margin-top:6px">
+          <input type="checkbox" id="a-mitspielen" checked><span>Ich spiele selbst mit</span>
         </label>
         <div class="fehlertext" id="a-start-fehler"></div>
         <button class="knopf haupt breit" id="a-start" type="button" style="margin-top:10px">Runde starten</button>
@@ -1075,8 +1079,10 @@ function arenaLobby(z) {
   const warten = $("a-warten");
   warten.hidden = z.host && z.phase !== "runde";
   warten.textContent = z.phase === "runde"
-    ? "Gerade läuft eine Runde – in der nächsten bist du dabei."
+    ? (z.host ? "Die Runde läuft – du schaust zu. Oben siehst du den Zwischenstand."
+              : "Gerade läuft eine Runde – in der nächsten bist du dabei.")
     : `Warte, bis ${z.hostname} die Runde startet …`;
+  $("a-beenden-zuschauer").hidden = !(z.host && z.phase === "runde");
   $("a-host").hidden = !z.host || z.phase === "runde";
   if (z.host && !arenaFormular) {
     arenaFormular = einstellungsFormular($("a-felder"), "arena-quiz");
@@ -1084,6 +1090,7 @@ function arenaLobby(z) {
     segmente($("a-quelle"), [["auswahl", "aus den Lektionen"], ["fehler", "eigene Fehlervokabeln"]],
              gemerkt.quelle || "auswahl", arenaQuelle);
     $("a-gleich").checked = gemerkt.gleich !== false;
+    $("a-mitspielen").checked = gemerkt.mitspielen !== false;
     arenaQuelle($("a-quelle").dataset.wert);
   }
 }
@@ -1195,12 +1202,13 @@ $("a-name-lobby").addEventListener("keydown", (e) => { if (e.key === "Enter") um
 $("a-start").onclick = async () => {
   arenaFormular.merken();
   const daten = Object.assign(arenaFormular.werte(),
-    { quelle: $("a-quelle").dataset.wert, gleich: $("a-gleich").checked });
+    { quelle: $("a-quelle").dataset.wert, gleich: $("a-gleich").checked,
+      mitspielen: $("a-mitspielen").checked });
   speicher.setzen("arena-quiz", daten);
   const z = await arenaAufruf("starten", daten);
   $("a-start-fehler").textContent = z.fehler || "";
 };
-$("a-beenden").onclick = () => rueckfrage("Runde beenden",
+$("a-beenden").onclick = $("a-beenden-zuschauer").onclick = () => rueckfrage("Runde beenden",
   "Die Runde für alle beenden? Wer noch nicht fertig ist, bekommt für die restlichen Fragen keine Punkte.",
   "Beenden", () => arenaAufruf("beenden"));
 

@@ -47,6 +47,8 @@ def modus_text(d, gleich, quelle, anzahl):
     teile.append("eigene Fehlervokabeln" if quelle == "fehler"
                  else f"Lektionen {d.get('lektionen') or 'alle'}")
     teile.append("alle die gleichen Fragen" if gleich else "jeder andere Fragen")
+    if not d.get("mitspielen", True):
+        teile.append("Ersteller schaut zu")
     return "  ·  ".join(teile)
 
 
@@ -217,7 +219,12 @@ class Arena:
                     aufgaben.append((gruppe, eintrag, frage))
             return aufgaben
 
-        teilnehmer = [s for s in raum.spieler.values() if s.online or s.code == code]
+        # Ohne Haken "Ich spiele mit" schaut der Ersteller nur zu (z. B. am Beamer)
+        mitspielen = bool(d.get("mitspielen", True))
+        teilnehmer = [s for s in raum.spieler.values()
+                      if (s.online and s.code != code) or (s.code == code and mitspielen)]
+        if not teilnehmer:
+            return {"fehler": "Es ist noch niemand zum Mitspielen in der Arena."}
         gemeinsam = bauen(auswahl["paare"], auswahl["anzahl"]) if gleich else None
         for s in raum.spieler.values():
             s.runde = None
@@ -319,7 +326,7 @@ class Arena:
             if raum.phase == "runde" and r:
                 status = "fertig" if r.fertig else f"{r.nummer}/{len(r.aufgaben)}"
             elif raum.phase == "runde":
-                status = "wartet auf die nächste Runde"
+                status = "schaut zu" if s.code == raum.host else "wartet auf die nächste Runde"
             else:
                 status = ""
             spieler.append({"name": s.name, "host": s.code == raum.host, "ich": s is ich,
