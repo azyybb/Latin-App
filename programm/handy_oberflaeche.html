@@ -105,7 +105,10 @@ h1 { font-size: 1.375rem; margin: 2px 0 4px; }
   min-height: 44px; padding: 8px 10px; border-radius: 10px; border: 1px solid var(--rand-stark);
   background: var(--karte); font-size: 0.9375rem;
 }
-#q-anzahl .seg { min-width: 0; padding: 8px 2px; }
+.anzahl { grid-template-columns: repeat(7, 1fr); gap: 4px; }
+.anzahl .seg { min-width: 0; padding: 8px 2px; }
+.anzahl-zeile { margin-top: 8px; }
+.anzahl-zeile .feld { width: 7.5em; flex: none; min-height: 44px; }
 .seg.an { background: var(--blau-hell); border-color: var(--blau); color: var(--blau); font-weight: 600; }
 .fehlertext { color: var(--rot); font-size: 0.875rem; margin-top: 12px; min-height: 1em; }
 
@@ -144,10 +147,10 @@ h1 { font-size: 1.375rem; margin: 2px 0 4px; }
 .balken > div { height: 100%; width: 0; background: var(--blau); transition: width .25s; }
 .zaehler { font-size: 0.875rem; color: var(--grau); }
 .zaehler b { font-weight: 600; }
-#q-frage-text { font-size: 1.875rem; font-weight: 700; color: var(--blau); margin: 4px 0 2px;
+#q-frage-text, #a-frage-text { font-size: 1.875rem; font-weight: 700; color: var(--blau); margin: 4px 0 2px;
   overflow-wrap: anywhere; line-height: 1.2; }
-#q-antwort { font-size: 1.1875rem; margin-top: 12px; }
-#q-antwort.fertig { background: var(--flaeche); caret-color: transparent; }
+#q-antwort, #a-antwort { font-size: 1.1875rem; margin-top: 12px; }
+#q-antwort.fertig, #a-antwort.fertig { background: var(--flaeche); caret-color: transparent; }
 .rueck { margin-top: 14px; }
 .urteil { font-size: 1.3125rem; font-weight: 700; }
 .urteil.gut { color: var(--gruen); } .urteil.schlecht { color: var(--rot); }
@@ -216,11 +219,51 @@ h1 { font-size: 1.375rem; margin: 2px 0 4px; }
 .warnband { background: var(--rot-hell); color: var(--rot); border-radius: 10px; padding: 10px 12px;
   margin-bottom: 12px; font-size: 0.875rem; }
 /* Hell/Dunkel-Knopf: am Handy nur das Symbol, am PC unten in der Seitenleiste */
-#leiste #thema-knopf { flex: 0 0 52px; }
+#leiste #thema-knopf { flex: 0 0 44px; }
 #thema-knopf .beschr { display: none; }
 #thema-knopf .sonne { display: none; }
 :root.dunkel-an #thema-knopf .sonne { display: inline; }
 :root.dunkel-an #thema-knopf .mond { display: none; }
+/* ---------- Grammatik-Haken ---------- */
+.haken { display: grid; gap: 6px; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+.haken-zeile {
+  display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 8px 12px;
+  border: 1px solid var(--rand-stark); border-radius: 10px; background: var(--karte);
+  font-size: 0.9375rem; cursor: pointer;
+}
+.haken-zeile input { width: 20px; height: 20px; margin: 0; flex: none; accent-color: var(--blau); }
+.haken-zeile:has(input:checked) { background: var(--blau-hell); border-color: var(--blau); color: var(--blau); }
+.haken-knoepfe { display: flex; gap: 14px; margin-top: 4px; }
+.haken-knoepfe .link { padding: 4px 0; font-size: 0.875rem; }
+
+/* ---------- Arena ---------- */
+.raumcode { font: 800 2.75rem/1.1 var(--mono); letter-spacing: .14em; color: var(--blau); }
+.code-feld { font: 700 1.25rem var(--mono); letter-spacing: .2em; }
+.spieler { display: flex; align-items: center; gap: 10px; }
+.spieler .nm { font-weight: 700; overflow-wrap: anywhere; }
+.spieler .chip {
+  font-size: 0.75rem; font-weight: 600; padding: 1px 8px; border-radius: 99px;
+  background: var(--blau-hell); color: var(--blau); white-space: nowrap;
+}
+.spieler .rechts { margin-left: auto; color: var(--grau); font-size: 0.875rem; white-space: nowrap; text-align: right; }
+.spieler .rechts b { color: var(--text); }
+.karte.weg { opacity: .5; }
+.karte.ich { border-color: var(--blau); }
+.scoreboard { margin-top: 16px; }
+.scoreboard h2 { font-size: 1.25rem; margin: 0 0 2px; color: var(--blau); }
+.rang {
+  display: grid; grid-template-columns: 2.4em 1fr auto; align-items: center; gap: 10px;
+  padding: 10px 4px; border-bottom: 1px solid var(--rand);
+}
+.rang:last-child { border-bottom: 0; }
+.rang .platz { font-size: 1.375rem; text-align: center; font-weight: 800; color: var(--grau); }
+.rang .nm { font-weight: 700; overflow-wrap: anywhere; }
+.rang .nm .leise { font-weight: 400; display: block; }
+.rang .pkt { font-weight: 800; font-size: 1.125rem; text-align: right; }
+.rang.erster .pkt { color: var(--gruen); }
+.rang.ich { background: var(--blau-hell); border-radius: 8px; }
+.plus { font-size: 1.125rem; font-weight: 800; color: var(--gruen); }
+
 .code { font: 700 1.5rem/1.2 var(--mono); letter-spacing: .08em; color: var(--blau); margin: 6px 0 8px;
   user-select: all; }
 
@@ -246,7 +289,7 @@ h1 { font-size: 1.375rem; margin: 2px 0 4px; }
   .seg, .liste .karte, .treffer .titel.tippbar, .link { cursor: pointer; }
   .seg:hover, .knopf:hover:not(:disabled), .liste .karte:hover { border-color: var(--blau); }
   .liste { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); }
-  #q-frage-text { font-size: 2.5rem; }
+  #q-frage-text, #a-frage-text { font-size: 2.5rem; }
   #blatt { align-items: center; padding: 24px; }
   #blatt .panel { border-radius: 18px; max-height: 85vh; padding: 20px 26px 26px; }
   #blatt .griff { display: none; }
@@ -283,29 +326,7 @@ h1 { font-size: 1.375rem; margin: 2px 0 4px; }
       <h1>Quiz einstellen</h1>
       <div class="leise" id="q-lernstand"></div>
 
-      <div class="beschriftung">Lektionen</div>
-      <input id="q-lektionen" class="feld" value="alle" autocomplete="off" autocapitalize="off"
-             spellcheck="false">
-      <div class="leise klein" id="q-lektionen-hinweis" style="margin-top:4px"></div>
-
-      <div class="beschriftung">Wortart</div>
-      <select id="q-wortart" class="feld"></select>
-
-      <div class="beschriftung">Modus</div>
-      <div class="segmente zwei" id="q-modus"></div>
-
-      <div id="q-formen-block">
-        <div class="beschriftung">Formen bis</div>
-        <select id="q-bis" class="feld"></select>
-        <div class="beschriftung">Grammatik</div>
-        <select id="q-bereich" class="feld"></select>
-        <div class="beschriftung">Abfrage</div>
-        <div class="segmente" id="q-art"></div>
-      </div>
-
-      <div class="beschriftung">Fragen</div>
-      <div class="segmente" id="q-anzahl" style="grid-template-columns:repeat(7,1fr);gap:4px"></div>
-      <div class="leise klein" style="margin-top:4px">„alle“ fragt jede Vokabel der Auswahl genau einmal ab</div>
+      <div id="q-felder"></div>
 
       <div class="fehlertext" id="q-einst-fehler"></div>
       <button class="knopf haupt breit" id="q-start" type="button" style="margin-top:10px">Quiz starten</button>
@@ -338,6 +359,89 @@ h1 { font-size: 1.375rem; margin: 2px 0 4px; }
         <button class="knopf haupt wachsen" id="q-nochmal" type="button">Nochmal</button>
         <button class="knopf wachsen" id="q-zurueck" type="button">Einstellungen</button>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= Arena (nur Website) ======================= -->
+<section class="view" id="v-arena" hidden>
+  <div class="innen">
+    <!-- Eingang -->
+    <div id="a-eingang">
+      <h1>Arena</h1>
+      <div class="leise">Quiz gegeneinander – jeder spielt auf seinem eigenen Gerät.
+        Wer schnell richtig antwortet, bekommt mehr Punkte.</div>
+      <div class="beschriftung">Dein Name</div>
+      <input id="a-name" class="feld" maxlength="20" placeholder="So sehen dich die anderen"
+             autocomplete="off" autocapitalize="words" spellcheck="false" enterkeyhint="next">
+      <div class="karte" style="margin-top:18px">
+        <div class="beschriftung" style="margin-top:0">Einer Arena beitreten</div>
+        <div class="zeile">
+          <input id="a-code" class="feld wachsen code-feld" inputmode="numeric" maxlength="4"
+                 placeholder="Code" autocomplete="off" enterkeyhint="go">
+          <button class="knopf haupt" id="a-beitreten" type="button">Beitreten</button>
+        </div>
+      </div>
+      <div class="karte" style="margin-top:10px">
+        <div class="beschriftung" style="margin-top:0">Selbst eine Arena eröffnen</div>
+        <div class="leise klein">Du bekommst einen vierstelligen Code für die anderen,
+          stellst die Fragen ein und startest, wann du willst.</div>
+        <button class="knopf breit" id="a-erstellen" type="button" style="margin-top:10px">Arena erstellen</button>
+      </div>
+      <div class="fehlertext" id="a-eingang-fehler"></div>
+    </div>
+
+    <!-- Lobby -->
+    <div id="a-lobby" hidden>
+      <div class="zeile">
+        <div class="wachsen">
+          <div class="leise klein">Code für die anderen</div>
+          <div class="raumcode" id="a-raumcode"></div>
+        </div>
+        <button class="knopf" id="a-verlassen" type="button" style="min-height:38px;padding:6px 12px">Verlassen</button>
+      </div>
+      <div class="zeile" style="margin-top:10px">
+        <input id="a-name-lobby" class="feld wachsen" maxlength="20" autocomplete="off"
+               autocapitalize="words" spellcheck="false" enterkeyhint="done" aria-label="Dein Name">
+        <button class="knopf" id="a-umbenennen" type="button">Umbenennen</button>
+      </div>
+      <div id="a-ergebnis"></div>
+      <div class="beschriftung" id="a-spieler-titel">Spieler</div>
+      <div class="liste" id="a-spieler"></div>
+      <div class="leerbild" id="a-warten" hidden></div>
+      <div id="a-host" hidden>
+        <h1 style="margin-top:26px">Runde einstellen</h1>
+        <div class="leise">Du hast die Arena erstellt – du entscheidest, wann es losgeht.</div>
+        <div class="beschriftung">Vokabeln</div>
+        <div class="segmente zwei" id="a-quelle"></div>
+        <div id="a-felder"></div>
+        <label class="haken-zeile" style="margin-top:14px" id="a-gleich-zeile">
+          <input type="checkbox" id="a-gleich" checked><span>Alle bekommen die gleichen Fragen</span>
+        </label>
+        <div class="fehlertext" id="a-start-fehler"></div>
+        <button class="knopf haupt breit" id="a-start" type="button" style="margin-top:10px">Runde starten</button>
+      </div>
+    </div>
+
+    <!-- Runde -->
+    <div id="a-spiel" hidden>
+      <div class="fortschritt">
+        <div class="zaehler" id="a-zaehler"></div>
+        <button class="knopf" id="a-beenden" type="button" style="min-height:38px;padding:6px 12px" hidden>Runde beenden</button>
+      </div>
+      <div class="balken"><div id="a-balken"></div></div>
+      <div id="a-frage-block">
+        <div class="leise" id="a-untertitel"></div>
+        <div id="a-frage-text"></div>
+        <div class="leise" id="a-zusatz"></div>
+        <input id="a-antwort" class="feld" autocomplete="off" autocapitalize="off" autocorrect="off"
+               spellcheck="false" enterkeyhint="done" placeholder="Deine Antwort">
+        <button class="knopf haupt breit" id="a-knopf" type="button" style="margin-top:10px">Prüfen</button>
+        <div class="rueck" id="a-rueck"></div>
+      </div>
+      <div class="leerbild" id="a-fertig" hidden></div>
+      <div class="beschriftung">Zwischenstand</div>
+      <div class="liste" id="a-stand"></div>
     </div>
   </div>
 </section>
@@ -404,6 +508,8 @@ h1 { font-size: 1.375rem; margin: 2px 0 4px; }
     <span class="symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></span>Suche</button>
   <button type="button" data-v="quiz">
     <span class="symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 12l3 3 5-6"/></svg></span>Quiz</button>
+  <button type="button" data-v="arena" id="arena-knopf" hidden>
+    <span class="symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4"/><path d="M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg></span>Arena</button>
   <button type="button" data-v="fehler">
     <span class="symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4"/><path d="M5 4h11l-2 4 2 4H5"/></svg><span class="zahl" id="fehler-zahl" hidden></span></span>Fehler</button>
   <button type="button" data-v="grammatik">
@@ -439,7 +545,7 @@ const speicher = {
   setzen(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} },
 };
 
-async function api(name, daten) {
+async function api(name, daten, leise) {
   let antwort;
   try {
     antwort = await fetch("/api/" + name, {
@@ -447,7 +553,7 @@ async function api(name, daten) {
       body: JSON.stringify(daten || {}),
     });
   } catch (e) {
-    zeigeAbsturz("Keine Verbindung zum Programm.\n\n" + e);
+    if (!leise) zeigeAbsturz("Keine Verbindung zum Programm.\n\n" + e);
     throw e;
   }
   let j;
@@ -522,6 +628,7 @@ function reiter(name) {
   if (name === "fehler") fehlerLaden();
   if (name === "grammatik" && !geladen.grammatik) grammatikLaden(speicher.holen("thema", 0));
   if (name === "vokabeln" && !geladen.vokabeln) vokabelnLaden();
+  if (name === "arena" && arena && arena.raum) arenaAufruf("zustand", {}, true).catch(() => {});
 }
 for (const b of document.querySelectorAll("#leiste button")) b.onclick = () => reiter(b.dataset.v);
 
@@ -629,36 +736,103 @@ async function formenZeigen(gid) {
 }
 
 // ------------------------------------------------------------------ Quiz
-let letzterStart = null;
-function quizEinstellungenAufbauen() {
+// Einstellungen für eine Runde - dasselbe Formular im Quiz und in der Arena.
+// schluessel: unter welchem Namen die Auswahl im Browser gemerkt wird.
+function einstellungsFormular(behaelter, schluessel) {
   const ls = info.lektionen;
-  $("q-lektionen-hinweis").textContent =
-    `z. B. 1-8 · 3,5 · alle   (vorhanden: ${ls[0]}–${ls[ls.length - 1]})`;
-  const gemerkt = speicher.holen("quiz", {});
-  $("q-lektionen").value = gemerkt.lektionen || "alle";
-  optionen($("q-wortart"), info.wortarten.map((w) => [w, w]), gemerkt.wortart);
-  if (!$("q-wortart").value) $("q-wortart").value = "alle";
-  segmente($("q-modus"), [["ld", "Latein → Deutsch"], ["dl", "Deutsch → Latein"],
-                          ["mix", "gemischt"], ["formen", "Formen-Quiz"]],
-           gemerkt.modus || "ld", modusGewechselt);
-  optionen($("q-bis"), [["passend", "passend zur Lektionsauswahl"],
-                        ["alle", "alle Formen (auch Konjunktiv usw.)"]]
-                        .concat(ls.map((n) => [String(n), "bis Lektion " + n])), gemerkt.bis);
-  if (!$("q-bis").value) $("q-bis").value = "passend";
-  optionen($("q-bereich"), info.bereiche.map((b) => [b, b]), gemerkt.bereich);
-  if (!$("q-bereich").value) $("q-bereich").selectedIndex = 0;
-  segmente($("q-art"), info.arten, gemerkt.art || "gemischt");
-  segmente($("q-anzahl"), ["alle", "5", "10", "20", "30", "50", "100"].map((a) => [a, a]),
-           gemerkt.anzahl || "10");
-  modusGewechselt($("q-modus").dataset.wert);
-}
-function modusGewechselt(modus) { $("q-formen-block").hidden = modus !== "formen"; }
-function quizEinstellungen() {
-  return {
-    lektionen: $("q-lektionen").value, wortart: $("q-wortart").value,
-    modus: $("q-modus").dataset.wert, bis: $("q-bis").value, bereich: $("q-bereich").value,
-    art: $("q-art").dataset.wert, anzahl: $("q-anzahl").dataset.wert,
+  const gemerkt = speicher.holen(schluessel, {});
+  behaelter.textContent = "";
+  const titel = (text, wo) => (wo || behaelter).appendChild(el("div", "beschriftung", text));
+  const ohneHilfen = (feld) => {
+    feld.autocomplete = "off"; feld.spellcheck = false; feld.setAttribute("autocapitalize", "off");
+    return feld;
   };
+
+  titel("Lektionen");
+  const lektionen = ohneHilfen(el("input", "feld"));
+  lektionen.value = gemerkt.lektionen || "alle";
+  behaelter.appendChild(lektionen);
+  const hinweis = el("div", "leise klein", `z. B. 1-8 · 3,5 · alle   (vorhanden: ${ls[0]}–${ls[ls.length - 1]})`);
+  hinweis.style.marginTop = "4px";
+  behaelter.appendChild(hinweis);
+
+  titel("Wortart");
+  const wortart = behaelter.appendChild(el("select", "feld"));
+  optionen(wortart, info.wortarten.map((w) => [w, w]), gemerkt.wortart);
+  if (!wortart.value) wortart.value = "alle";
+
+  titel("Modus");
+  const modus = behaelter.appendChild(el("div", "segmente zwei"));
+  const formen = behaelter.appendChild(el("div"));
+  segmente(modus, [["ld", "Latein → Deutsch"], ["dl", "Deutsch → Latein"],
+                   ["mix", "gemischt"], ["formen", "Formen-Quiz"]],
+           gemerkt.modus || "ld", (m) => { formen.hidden = m !== "formen"; });
+
+  titel("Formen bis", formen);
+  const bis = formen.appendChild(el("select", "feld"));
+  optionen(bis, [["passend", "passend zur Lektionsauswahl"],
+                 ["alle", "alle Formen (auch Konjunktiv usw.)"]]
+                 .concat(ls.map((n) => [String(n), "bis Lektion " + n])), gemerkt.bis);
+  if (!bis.value) bis.value = "passend";
+
+  titel("Grammatik", formen);
+  const haken = formen.appendChild(el("div", "haken"));
+  const an = new Set(Array.isArray(gemerkt.bereiche) ? gemerkt.bereiche : info.grammatik_standard);
+  for (const name of info.grammatik) {
+    const zeile = el("label", "haken-zeile");
+    const kasten = el("input"); kasten.type = "checkbox"; kasten.value = name; kasten.checked = an.has(name);
+    zeile.append(kasten, el("span", null, name));
+    haken.appendChild(zeile);
+  }
+  const knoepfe = formen.appendChild(el("div", "haken-knoepfe"));
+  const alleHaken = (pruefen) => () => {
+    for (const k of haken.querySelectorAll("input")) k.checked = pruefen(k.value);
+  };
+  const standard = el("button", "link", "Standard"); standard.type = "button";
+  standard.onclick = alleHaken((n) => info.grammatik_standard.includes(n));
+  const alle = el("button", "link", "Alle"); alle.type = "button";
+  alle.onclick = alleHaken(() => true);
+  knoepfe.append(standard, alle);
+
+  titel("Abfrage", formen);
+  const art = formen.appendChild(el("div", "segmente"));
+  segmente(art, info.arten, gemerkt.art || "gemischt");
+  formen.hidden = modus.dataset.wert !== "formen";
+
+  titel("Fragen");
+  const vorgaben = ["alle", "5", "10", "20", "30", "50", "100"];
+  const anzahl = behaelter.appendChild(el("div", "segmente anzahl"));
+  const zeile = behaelter.appendChild(el("div", "zeile anzahl-zeile"));
+  const eigene = ohneHilfen(el("input", "feld"));
+  eigene.type = "number"; eigene.min = "1"; eigene.max = "2000"; eigene.inputMode = "numeric";
+  eigene.placeholder = "z. B. 15";
+  zeile.append(el("span", "leise", "oder genau"), eigene, el("span", "leise", "Fragen"));
+  const gemerktZahl = String(gemerkt.anzahl || "10");
+  segmente(anzahl, vorgaben.map((a) => [a, a]), gemerktZahl, () => { eigene.value = ""; });
+  if (!vorgaben.includes(gemerktZahl)) eigene.value = gemerktZahl;
+  eigene.addEventListener("input", () => {
+    const zahl = eigene.value.trim();
+    for (const b of anzahl.children) b.classList.toggle("an", !zahl && b.textContent === "10");
+    anzahl.dataset.wert = zahl || "10";
+  });
+  const unter = behaelter.appendChild(el("div", "leise klein", "„alle“ fragt jede Vokabel der Auswahl genau einmal ab"));
+  unter.style.marginTop = "4px";
+
+  return {
+    werte() {
+      return {
+        lektionen: lektionen.value, wortart: wortart.value, modus: modus.dataset.wert,
+        bis: bis.value, art: art.dataset.wert, anzahl: anzahl.dataset.wert,
+        bereiche: [...haken.querySelectorAll("input:checked")].map((k) => k.value),
+      };
+    },
+    merken() { speicher.setzen(schluessel, this.werte()); },
+  };
+}
+
+let letzterStart = null, quizFormular = null;
+function quizEinstellungenAufbauen() {
+  quizFormular = einstellungsFormular($("q-felder"), "quiz");
 }
 async function quizStarten(art, daten) {
   const z = await api(art, daten);
@@ -673,9 +847,8 @@ async function quizStarten(art, daten) {
   quizZeigen(z);
 }
 $("q-start").onclick = () => {
-  const e = quizEinstellungen();
-  speicher.setzen("quiz", e);
-  quizStarten("quiz/start", e);
+  quizFormular.merken();
+  quizStarten("quiz/start", quizFormular.werte());
 };
 
 function zaehlerText(z, nummer) {
@@ -746,18 +919,23 @@ function quizZeigen(z) {
 // ins Bild - die Frage darüber rutscht dabei oben hinaus.  Darum die Ansicht
 // so rollen, dass sie direkt mit der Frage beginnt.
 function frageSichtbar() {
-  if (aktuell !== "quiz" || !document.body.classList.contains("tippen")) return;
-  const ansicht = $("v-quiz"), hoehe = ansicht.clientHeight;
+  if (!document.body.classList.contains("tippen")) return;
+  const teile = aktuell === "quiz"
+    ? { ansicht: "v-quiz", phase: quizPhase, p: "q" }
+    : aktuell === "arena" && arena && arena.mein
+      ? { ansicht: "v-arena", phase: arena.mein.phase, p: "a" } : null;
+  if (!teile) return;
+  const ansicht = $(teile.ansicht), hoehe = ansicht.clientHeight;
   const unterkante = (e) => e.offsetTop + e.offsetHeight + 12;
-  if (quizPhase === "frage") {
+  if (teile.phase === "frage") {
     // So wenig wie nötig: das Eingabefeld muss sichtbar sein, sonst bleibt
     // alles darüber (auch die Vokabel) stehen.
-    ansicht.scrollTop = Math.max(0, unterkante($("q-antwort")) - hoehe);
-  } else if (quizPhase === "antwort") {
+    ansicht.scrollTop = Math.max(0, unterkante($(teile.p + "-antwort")) - hoehe);
+  } else if (teile.phase === "antwort") {
     // Die Lösung zeigen, aber nie weiter rollen, als dass die Vokabel oben bleibt.
-    const loesung = document.querySelector("#q-rueck .loesung");
+    const loesung = document.querySelector(`#${teile.p}-rueck .loesung`);
     const bedarf = loesung ? unterkante(loesung) - hoehe : 0;
-    ansicht.scrollTop = Math.max(0, Math.min($("q-untertitel").offsetTop - 10, bedarf));
+    ansicht.scrollTop = Math.max(0, Math.min($(teile.p + "-untertitel").offsetTop - 10, bedarf));
   }
 }
 // Tastatur offen = ein Eingabefeld hat den Fokus UND das Fenster ist deutlich
@@ -809,6 +987,222 @@ $("q-zurueck").onclick = async () => quizZeigen(await api("quiz/beenden"));
 $("q-nochmal").onclick = () => {
   if (letzterStart) quizStarten(letzterStart[0], letzterStart[1]);
 };
+
+// ------------------------------------------------------------------ Arena
+// Nur auf der Website.  Der Zustand kommt vom Server; solange man in einer
+// Arena ist, fragt die Seite regelmäßig nach (auf dem Reiter öfter).
+let arena = null, arenaUhr = null, arenaFormular = null, arenaGezeigt = "";
+const MEDAILLEN = ["🥇", "🥈", "🥉"];
+
+function arenaName() {
+  const n = $("a-name").value.trim();
+  speicher.setzen("arena-name", n);
+  return n;
+}
+async function arenaAufruf(aktion, daten, leise) {
+  const z = await api("arena/" + aktion, daten || {}, leise);
+  if (!z.fehler) arenaZeigen(z);
+  return z;
+}
+function arenaNachfragen() {
+  clearTimeout(arenaUhr);
+  if (!arena || !arena.raum) return;
+  arenaUhr = setTimeout(async () => {
+    try { await arenaAufruf("zustand", {}, true); }
+    catch (e) { arenaNachfragen(); }            // kurz keine Verbindung - weiter versuchen
+  }, aktuell === "arena" && !document.hidden ? 1500 : 8000);
+}
+document.addEventListener("visibilitychange", () => {
+  if (!document.hidden && arena && arena.raum) arenaAufruf("zustand", {}, true).catch(() => {});
+});
+
+function spielerKarte(s, mitPunkten) {
+  const k = el("div", "karte spieler" + (s.ich ? " ich" : "") + (s.online ? "" : " weg"));
+  k.appendChild(el("span", "nm", s.name));
+  if (s.ich) k.appendChild(el("span", "leise", "(du)"));
+  if (s.host) k.appendChild(el("span", "chip", "Ersteller"));
+  const rechts = el("span", "rechts");
+  if (mitPunkten && s.punkte != null) {
+    rechts.appendChild(el("b", null, s.punkte + " P"));
+    rechts.appendChild(document.createTextNode("  ·  " + s.status));
+  } else {
+    rechts.textContent = s.status || (s.gesamt ? s.gesamt + " P gesamt" : "");
+  }
+  if (!s.online) rechts.textContent = "nicht da";
+  k.appendChild(rechts);
+  return k;
+}
+
+function scoreboard(e) {
+  const box = el("div", "karte scoreboard");
+  box.appendChild(el("h2", null, `Ergebnis – Runde ${e.runde}`));
+  if (e.beschreibung) box.appendChild(el("div", "leise klein", e.beschreibung));
+  for (const z of e.zeilen) {
+    const r = el("div", "rang" + (z.platz === 1 ? " erster" : "") + (z.ich ? " ich" : ""));
+    r.appendChild(el("div", "platz", MEDAILLEN[z.platz - 1] || z.platz + "."));
+    const nm = el("div", "nm", z.name + (z.ich ? "  (du)" : ""));
+    nm.appendChild(el("span", "leise klein", `${z.richtig} von ${z.fragen} richtig`
+      + (z.gestellt < z.fragen ? `  ·  ${z.fragen - z.gestellt} nicht beantwortet` : "")));
+    r.append(nm, el("div", "pkt", z.punkte + " P"));
+    box.appendChild(r);
+  }
+  return box;
+}
+
+function arenaZeigen(z) {
+  arena = z;
+  const imRaum = !!z.raum, spielt = imRaum && z.phase === "runde" && z.mein;
+  $("a-eingang").hidden = imRaum;
+  $("a-lobby").hidden = !imRaum || spielt;
+  $("a-spiel").hidden = !spielt;
+  if (!imRaum) { arenaGezeigt = ""; clearTimeout(arenaUhr); return; }
+  arenaNachfragen();
+  if (spielt) arenaSpiel(z); else arenaLobby(z);
+}
+
+function arenaLobby(z) {
+  arenaGezeigt = "";
+  $("a-raumcode").textContent = z.raum;
+  if (document.activeElement !== $("a-name-lobby")) $("a-name-lobby").value = z.name;
+  const erg = $("a-ergebnis");
+  erg.textContent = "";
+  if (z.ergebnis) erg.appendChild(scoreboard(z.ergebnis));
+  $("a-spieler-titel").textContent = `Spieler (${z.spieler.length})`;
+  const liste = $("a-spieler");
+  liste.textContent = "";
+  for (const s of z.spieler) liste.appendChild(spielerKarte(s, z.phase === "runde"));
+
+  const warten = $("a-warten");
+  warten.hidden = z.host && z.phase !== "runde";
+  warten.textContent = z.phase === "runde"
+    ? "Gerade läuft eine Runde – in der nächsten bist du dabei."
+    : `Warte, bis ${z.hostname} die Runde startet …`;
+  $("a-host").hidden = !z.host || z.phase === "runde";
+  if (z.host && !arenaFormular) {
+    arenaFormular = einstellungsFormular($("a-felder"), "arena-quiz");
+    const gemerkt = speicher.holen("arena-quiz", {});
+    segmente($("a-quelle"), [["auswahl", "aus den Lektionen"], ["fehler", "eigene Fehlervokabeln"]],
+             gemerkt.quelle || "auswahl", arenaQuelle);
+    $("a-gleich").checked = gemerkt.gleich !== false;
+    arenaQuelle($("a-quelle").dataset.wert);
+  }
+}
+function arenaQuelle(q) {
+  // Jeder hat seine eigene Fehlerliste - gleiche Fragen gehen dann nicht
+  $("a-gleich").disabled = q === "fehler";
+  $("a-gleich-zeile").style.opacity = q === "fehler" ? ".5" : "";
+}
+
+function arenaSpiel(z) {
+  const m = z.mein;
+  const nummer = m.phase === "frage" ? m.nummer + 1 : m.nummer;
+  $("a-zaehler").textContent = `Frage ${Math.min(nummer, m.gesamt)} von ${m.gesamt}  ·  `
+    + `${m.punkte} Punkte  ·  Platz ${m.platz} von ${m.von}`;
+  $("a-balken").style.width = (m.gesamt ? 100 * m.nummer / m.gesamt : 0) + "%";
+  $("a-beenden").hidden = !z.host;
+  const stand = $("a-stand");
+  stand.textContent = "";
+  for (const s of z.spieler) stand.appendChild(spielerKarte(s, true));
+
+  // Beim Nachfragen nichts neu aufbauen - sonst wäre die halbe Antwort weg
+  const schluessel = `${z.runde}-${m.phase}-${m.nummer}`;
+  if (schluessel === arenaGezeigt) return;
+  arenaGezeigt = schluessel;
+  $("v-arena").scrollTop = 0;
+  $("a-frage-block").hidden = m.phase === "fertig";
+  $("a-fertig").hidden = m.phase !== "fertig";
+  if (m.phase === "fertig") {
+    const f = $("a-fertig");
+    f.textContent = "";
+    f.appendChild(el("div", "gross", "🏁"));
+    f.appendChild(el("div", null, `Fertig! ${m.punkte} Punkte – ★ ${m.perfekt}  ✓ ${m.richtig}  ✗ ${m.falsch}`));
+    f.appendChild(el("div", "klein", z.host
+      ? "Warte auf die anderen – oder beende die Runde oben."
+      : "Warte auf die anderen … das Ergebnis kommt gleich."));
+    document.activeElement.blur && document.activeElement.blur();
+    return;
+  }
+  $("a-untertitel").textContent = m.untertitel;
+  $("a-frage-text").textContent = m.frage;
+  $("a-zusatz").textContent = m.zusatz || "";
+  const feld = $("a-antwort"), rueck = $("a-rueck");
+  rueck.textContent = "";
+  if (m.phase === "frage") {
+    feld.classList.remove("fertig");
+    feld.value = "";
+    $("a-knopf").textContent = "Prüfen";
+  } else {
+    feld.classList.add("fertig");
+    feld.value = m.antwort;
+    feld.dataset.antwort = m.antwort;
+    const gut = m.bewertung !== "falsch";
+    rueck.appendChild(el("div", "urteil " + (gut ? "gut" : "schlecht"),
+      m.bewertung === "perfekt" ? "★  Perfekt" : m.bewertung === "richtig" ? "✓  Richtig" : "✗  Falsch"));
+    if (gut) rueck.appendChild(el("div", "plus", `+${m.plus} Punkte`));
+    rueck.appendChild(el("div", "loesung", "Lösung:  " + m.loesung));
+    if (m.formen) rueck.appendChild(el("div", "formen", m.formen));
+    if (m.hinweis) rueck.appendChild(el("div", "leise", m.hinweis));
+    if (m.merker) rueck.appendChild(el("div", "merker", m.merker));
+    $("a-knopf").textContent = m.nummer >= m.gesamt ? "Fertig" : "Weiter";
+  }
+  feld.focus();
+  frageSichtbar();
+}
+
+async function arenaWeiter() {
+  const m = arena && arena.mein;
+  if (!m) return;
+  if (m.phase === "frage") await arenaAufruf("antworten", { antwort: $("a-antwort").value });
+  else if (m.phase === "antwort") await arenaAufruf("weiter");
+}
+$("a-knopf").onclick = arenaWeiter;
+$("a-knopf").addEventListener("pointerdown", (e) => {
+  if (document.activeElement === $("a-antwort")) e.preventDefault();
+});
+$("a-antwort").addEventListener("input", (e) => {
+  if (arena && arena.mein && arena.mein.phase === "antwort") e.target.value = e.target.dataset.antwort || "";
+});
+$("a-antwort").addEventListener("keydown", (e) => {
+  if (e.key === "Enter") { e.preventDefault(); arenaWeiter(); }
+});
+
+async function arenaBetreten(aktion, daten) {
+  const z = await arenaAufruf(aktion, Object.assign({ name: arenaName() }, daten));
+  $("a-eingang-fehler").textContent = z.fehler || "";
+}
+$("a-erstellen").onclick = () => arenaBetreten("erstellen");
+$("a-beitreten").onclick = () => {
+  const code = $("a-code").value.replace(/\D/g, "");
+  if (code.length !== 4) { $("a-eingang-fehler").textContent = "Der Code hat vier Ziffern."; return; }
+  arenaBetreten("beitreten", { code });
+};
+$("a-code").addEventListener("input", (e) => { e.target.value = e.target.value.replace(/\D/g, "").slice(0, 4); });
+$("a-code").addEventListener("keydown", (e) => { if (e.key === "Enter") $("a-beitreten").click(); });
+$("a-name").addEventListener("keydown", (e) => { if (e.key === "Enter") $("a-code").focus(); });
+$("a-verlassen").onclick = () => rueckfrage("Arena verlassen",
+  "Du verlässt die Arena. Mit dem Code kannst du jederzeit wieder beitreten.", "Verlassen",
+  () => { arenaFormular = null; arenaAufruf("verlassen"); });
+function umbenennen() {
+  const n = $("a-name-lobby").value.trim();
+  if (!n) return;
+  $("a-name").value = n;
+  speicher.setzen("arena-name", n);
+  arenaAufruf("name", { name: n });
+  $("a-name-lobby").blur();
+}
+$("a-umbenennen").onclick = umbenennen;
+$("a-name-lobby").addEventListener("keydown", (e) => { if (e.key === "Enter") umbenennen(); });
+$("a-start").onclick = async () => {
+  arenaFormular.merken();
+  const daten = Object.assign(arenaFormular.werte(),
+    { quelle: $("a-quelle").dataset.wert, gleich: $("a-gleich").checked });
+  speicher.setzen("arena-quiz", daten);
+  const z = await arenaAufruf("starten", daten);
+  $("a-start-fehler").textContent = z.fehler || "";
+};
+$("a-beenden").onclick = () => rueckfrage("Runde beenden",
+  "Die Runde für alle beenden? Wer noch nicht fertig ist, bekommt für die restlichen Fragen keine Punkte.",
+  "Beenden", () => arenaAufruf("beenden"));
 
 // ------------------------------------------------------------------ Fehlerliste
 let fehlerArchiv = false;
@@ -986,6 +1380,11 @@ $("v-richtung").onclick = () => {
   info = await api("start");
   $("laden").hidden = true;
   $("f-konto").hidden = !info.konto;
+  $("arena-knopf").hidden = !info.konto;
+  if (info.konto) {
+    $("a-name").value = speicher.holen("arena-name", "");
+    arenaAufruf("zustand", {}, true).catch(() => {});
+  }
   const warn = $("warnungen");
   for (const w of info.warnungen) warn.appendChild(el("div", "warnband", w));
   optionen($("g-wahl"), info.themen.map((t, i) => [String(i), t]));

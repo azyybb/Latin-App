@@ -27,7 +27,7 @@ COPY daten/vokabel_base.json /app/daten/
 COPY daten/grammatik_bilder/ /app/daten/grammatik_bilder/
 COPY programm/pfade.py programm/bettervokable_search.py programm/vokabel_search.py \
      programm/fehler_datenbank.py programm/grammatik.py programm/handy_server.py \
-     programm/web_server.py programm/handy_oberflaeche.html ./
+     programm/web_server.py programm/arena.py programm/handy_oberflaeche.html ./
 
 USER latein
 VOLUME /lernstand

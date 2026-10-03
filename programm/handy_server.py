@@ -32,6 +32,152 @@ SPALTEN_NAMEN = {"lektion": "Lektion", "latein": "Vokabel", "wortart": "Wortart"
                  "deutsch": "Bedeutung", "formen": "Formen"}
 
 
+# Grammatik im Formen-Quiz: standardmaessig angehakt.  Partizipien,
+# Konjunktiv usw. sind oft noch zu schwer - die lassen sich per Haken
+# dazunehmen.
+GRAMMATIK_STANDARD = ("Präsens", "Imperfekt", "Perfekt", "Plusquamperfekt", "Futur",
+                      "Passiv", "Imperativ und Infinitiv",
+                      "Deklination (Substantive, Adjektive)")
+GRAMMATIK_WAHL = [n for n, anfaenge in quiz.FORM_BEREICHE if anfaenge]
+
+
+def bereich_lesen(d):
+    """Angehakte Grammatik -> Tupel von Formanfaengen (None = alles).
+    Das alte Einzelfeld "bereich" geht weiterhin."""
+    namen = d.get("bereiche")
+    if isinstance(namen, list):
+        tabelle = dict(quiz.FORM_BEREICHE)
+        anfaenge = []
+        for n in namen:
+            for a in tabelle.get(n) or ():
+                if a not in anfaenge:
+                    anfaenge.append(a)
+        return tuple(anfaenge)
+    return dict(quiz.FORM_BEREICHE).get(d.get("bereich"))
+
+
+def anzahl_lesen(wunsch, vorhanden):
+    wunsch = str(wunsch).strip().lower()
+    if wunsch in ("alle", "all", "*", ""):
+        return vorhanden
+    try:
+        return max(1, min(2000, int(wunsch)))
+    except ValueError:
+        return min(10, vorhanden)
+
+
+def auswahl_lesen(t, d):
+    """Quiz-Einstellungen -> {"paare", "modus", "formen", "anzahl"}
+    oder {"fehler": ...}.  Benutzt vom Quiz und von der Arena."""
+    lektionen = quiz.lektionen_parsen(str(d.get("lektionen", "alle")), t.lektionen)
+    if not lektionen:
+        return {"fehler": f"Keine gültige Lektionsangabe. Es gibt die Lektionen "
+                          f"{t.lektionen[0]}–{t.lektionen[-1]}. "
+                          f"Beispiele: 1-8 · 3,5 · alle"}
+    wortart = d.get("wortart", "alle")
+    wortarten = None if wortart == "alle" else {wortart}
+    modus = d.get("modus", "ld")
+    if modus not in ("ld", "dl", "mix", "formen"):
+        modus = "ld"
+
+    bis = str(d.get("bis", "passend"))
+    if bis == "alle":
+        bis_lektion = None
+    elif bis.isdigit():
+        bis_lektion = int(bis)
+    else:
+        bis_lektion = max(lektionen)
+    bereich = bereich_lesen(d)
+    art = d.get("art", "gemischt")
+
+    paare = quiz.gruppen_waehlen(t.db, lektionen, wortarten)
+    if modus == "formen":
+        if bereich == ():
+            return {"fehler": "Bitte mindestens eine Grammatik ankreuzen."}
+        paare = [(g, e) for g, e in paare if quiz.formen_zeilen(g, bis_lektion, bereich)]
+    if not paare:
+        return {"fehler": "Zu dieser Auswahl gibt es keine Vokabeln. Bitte anders wählen."}
+    return {"paare": paare, "modus": modus, "formen": (bis_lektion, bereich, art),
+            "anzahl": anzahl_lesen(d.get("anzahl", "10"), len(paare))}
+
+
+def aufgaben_ziehen(paare, anzahl):
+    return (random.sample(paare, anzahl) if anzahl <= len(paare)
+            else random.choices(paare, k=anzahl))
+
+
+def aufgabe_bauen(db, gruppe, eintrag, modus, formen):
+    """Eine Frage samt Pruefer - None, wenn die Vokabel keine passende Form hat."""
+    if modus == "formen":
+        bis_lektion, bereich, art = formen
+        zeilen = quiz.formen_zeilen(gruppe, bis_lektion, bereich)
+        if not zeilen:
+            return None
+        label, person, alts = random.choice(zeilen)
+        bestimmung = label + (", " + person if person else "")
+        bilden = art == "bilden" or (art == "gemischt" and random.random() < 0.5)
+        if bilden:
+            erlaubt = {norm(a) for a in alts if norm(a)}
+
+            def pruefe_form(antwort, erlaubt=erlaubt):
+                ok, _t, exakt = quiz._passt(norm(antwort), erlaubt)
+                return (quiz.PERFEKT if exakt else
+                        quiz.RICHTIG if ok else quiz.FALSCH), None
+
+            return {"frage": gruppe["lemma"],
+                    "untertitel": f"Bilde die Form:  {bestimmung}",
+                    "zusatz": eintrag["deutsch"],
+                    "loesung": " / ".join(alts),
+                    "pruefer": pruefe_form}
+        return {"frage": alts[0],
+                "untertitel": "Von welcher Vokabel stammt diese Form?",
+                "zusatz": "",
+                "loesung": f"{gruppe['lemma']}   ({bestimmung})   –   {eintrag['deutsch']}",
+                "pruefer": lambda a: (quiz.pruefe_latein(a, gruppe, db)[0], None)}
+
+    richtung = 1 if modus == "ld" else 2 if modus == "dl" else random.choice((1, 2))
+    kopf = f"Lektion {eintrag['lektion']}  ·  {gruppe['wortart']}"
+    if richtung == 1:
+        return {"frage": eintrag["latein"],
+                "untertitel": f"{kopf}  ·  ins Deutsche",
+                "zusatz": "",
+                "loesung": eintrag["deutsch"],
+                "pruefer": lambda a: (quiz.pruefe_deutsch(a, eintrag, db, gruppe)[0], None)}
+
+    def pruefe(antwort):
+        bewertung, _treffer, form = quiz.pruefe_latein(antwort, gruppe, db)
+        hinweis = (f"Das ist {form} – die Grundform heißt {eintrag['latein']}."
+                   if form else None)
+        return bewertung, hinweis
+
+    return {"frage": eintrag["deutsch"],
+            "untertitel": f"{kopf}  ·  ins Lateinische",
+            "zusatz": "",
+            "loesung": eintrag["latein"],
+            "pruefer": pruefe}
+
+
+def antwort_bewerten(t, gruppe, eintrag, frage, antwort):
+    """Prueft, bucht Statistik und Fehlerliste und liefert die Rueckmeldung."""
+    bewertung, hinweis = frage["pruefer"](antwort)
+    t.statistik.buchen(gruppe, eintrag, bewertung)
+    merker = ""
+    if bewertung == quiz.FALSCH:
+        v = t.fehler.falsch(gruppe, eintrag)
+        merker = (f"Kommt in die Fehlerliste: {t.fehler.fortschritt(v)}  "
+                  f"({v['falsch']}× falsch)")
+    else:
+        v, geschafft = t.fehler.richtig(gruppe, eintrag)
+        if geschafft:
+            merker = "Geschafft – diese Vokabel ist jetzt aus der Fehlerliste raus."
+        elif v:
+            merker = (f"Fehlerliste: {t.fehler.fortschritt(v)}  "
+                      f"noch {FD.ZIEL_PUNKTE - v['punkte']}× richtig")
+    return {"bewertung": bewertung, "antwort": antwort, "loesung": frage["loesung"],
+            "formen": quiz.stammformen(gruppe, eintrag), "hinweis": hinweis or "",
+            "merker": merker, "nachschlagen": eintrag["latein"]}
+
+
 class Quiz:
     """Einstellungen -> Frage -> Antwort -> ... -> Ergebnis."""
 
@@ -46,41 +192,10 @@ class Quiz:
 
     # -------------------------------------------------- Start
     def starten(self, d):
-        t = self.t
-        lektionen = quiz.lektionen_parsen(str(d.get("lektionen", "alle")), t.lektionen)
-        if not lektionen:
-            return {"fehler": f"Keine gültige Lektionsangabe. Es gibt die Lektionen "
-                              f"{t.lektionen[0]}–{t.lektionen[-1]}. "
-                              f"Beispiele: 1-8 · 3,5 · alle"}
-        wortart = d.get("wortart", "alle")
-        wortarten = None if wortart == "alle" else {wortart}
-        modus = d.get("modus", "ld")
-
-        bis = str(d.get("bis", "passend"))
-        if bis == "alle":
-            bis_lektion = None
-        elif bis.isdigit():
-            bis_lektion = int(bis)
-        else:
-            bis_lektion = max(lektionen)
-        bereich = dict(quiz.FORM_BEREICHE).get(d.get("bereich"))
-        art = d.get("art", "gemischt")
-
-        paare = quiz.gruppen_waehlen(t.db, lektionen, wortarten)
-        if modus == "formen":
-            paare = [(g, e) for g, e in paare if quiz.formen_zeilen(g, bis_lektion, bereich)]
-        if not paare:
-            return {"fehler": "Zu dieser Auswahl gibt es keine Vokabeln. Bitte anders wählen."}
-
-        wunsch = str(d.get("anzahl", "10")).strip().lower()
-        if wunsch in ("alle", "all", "*", ""):
-            anzahl = len(paare)
-        else:
-            try:
-                anzahl = max(1, min(2000, int(wunsch)))
-            except ValueError:
-                anzahl = min(10, len(paare))
-        self._beginnen(paare, modus, (bis_lektion, bereich, art), anzahl)
+        a = auswahl_lesen(self.t, d)
+        if "fehler" in a:
+            return a
+        self._beginnen(a["paare"], a["modus"], a["formen"], a["anzahl"])
         return self.zustand()
 
     def fehlerliste_ueben(self, d):
@@ -92,8 +207,7 @@ class Quiz:
         return self.zustand()
 
     def _beginnen(self, paare, modus, formen, anzahl):
-        self.aufgaben = (random.sample(paare, anzahl) if anzahl <= len(paare)
-                         else random.choices(paare, k=anzahl))
+        self.aufgaben = aufgaben_ziehen(paare, anzahl)
         self.einstellung = (modus, formen)
         self.nummer, self.punkte = 0, 0
         self.zaehler = {quiz.PERFEKT: 0, quiz.RICHTIG: 0, quiz.FALSCH: 0}
@@ -105,7 +219,7 @@ class Quiz:
         while self.nummer < len(self.aufgaben):
             gruppe, eintrag = self.aufgaben[self.nummer]
             modus, formen = self.einstellung
-            self.frage = self._baue_aufgabe(gruppe, eintrag, modus, formen)
+            self.frage = aufgabe_bauen(self.t.db, gruppe, eintrag, modus, formen)
             if self.frage is not None:
                 self.rueckmeldung = {}
                 self.phase = "frage"
@@ -113,84 +227,18 @@ class Quiz:
             self.aufgaben.pop(self.nummer)       # keine Formen -> ueberspringen
         self._ergebnis()
 
-    def _baue_aufgabe(self, gruppe, eintrag, modus, formen):
-        db = self.t.db
-        if modus == "formen":
-            bis_lektion, bereich, art = formen
-            zeilen = quiz.formen_zeilen(gruppe, bis_lektion, bereich)
-            if not zeilen:
-                return None
-            label, person, alts = random.choice(zeilen)
-            bestimmung = label + (", " + person if person else "")
-            bilden = art == "bilden" or (art == "gemischt" and random.random() < 0.5)
-            if bilden:
-                erlaubt = {norm(a) for a in alts if norm(a)}
-
-                def pruefe_form(antwort, erlaubt=erlaubt):
-                    ok, _t, exakt = quiz._passt(norm(antwort), erlaubt)
-                    return (quiz.PERFEKT if exakt else
-                            quiz.RICHTIG if ok else quiz.FALSCH), None
-
-                return {"frage": gruppe["lemma"],
-                        "untertitel": f"Bilde die Form:  {bestimmung}",
-                        "zusatz": eintrag["deutsch"],
-                        "loesung": " / ".join(alts),
-                        "pruefer": pruefe_form}
-            return {"frage": alts[0],
-                    "untertitel": "Von welcher Vokabel stammt diese Form?",
-                    "zusatz": "",
-                    "loesung": f"{gruppe['lemma']}   ({bestimmung})   –   {eintrag['deutsch']}",
-                    "pruefer": lambda a: (quiz.pruefe_latein(a, gruppe, db)[0], None)}
-
-        richtung = 1 if modus == "ld" else 2 if modus == "dl" else random.choice((1, 2))
-        kopf = f"Lektion {eintrag['lektion']}  ·  {gruppe['wortart']}"
-        if richtung == 1:
-            return {"frage": eintrag["latein"],
-                    "untertitel": f"{kopf}  ·  ins Deutsche",
-                    "zusatz": "",
-                    "loesung": eintrag["deutsch"],
-                    "pruefer": lambda a: (quiz.pruefe_deutsch(a, eintrag, db, gruppe)[0], None)}
-
-        def pruefe(antwort):
-            bewertung, _treffer, form = quiz.pruefe_latein(antwort, gruppe, db)
-            hinweis = (f"Das ist {form} – die Grundform heißt {eintrag['latein']}."
-                       if form else None)
-            return bewertung, hinweis
-
-        return {"frage": eintrag["deutsch"],
-                "untertitel": f"{kopf}  ·  ins Lateinische",
-                "zusatz": "",
-                "loesung": eintrag["latein"],
-                "pruefer": pruefe}
-
     def pruefen(self, d):
         if self.phase != "frage":
             return self.zustand()
-        t = self.t
         antwort = str(d.get("antwort", "")).strip()
-        bewertung, hinweis = self.frage["pruefer"](antwort)
         gruppe, eintrag = self.aufgaben[self.nummer]
+        self.rueckmeldung = antwort_bewerten(self.t, gruppe, eintrag, self.frage, antwort)
+        bewertung = self.rueckmeldung["bewertung"]
         self.zaehler[bewertung] += 1
-        t.statistik.buchen(gruppe, eintrag, bewertung)
-        merker = ""
         if bewertung == quiz.FALSCH:
             self.fehler_eintraege.append(eintrag)
-            v = t.fehler.falsch(gruppe, eintrag)
-            merker = (f"Kommt in die Fehlerliste: {t.fehler.fortschritt(v)}  "
-                      f"({v['falsch']}× falsch)")
         else:
             self.punkte += 1
-            v, geschafft = t.fehler.richtig(gruppe, eintrag)
-            if geschafft:
-                merker = "Geschafft – diese Vokabel ist jetzt aus der Fehlerliste raus."
-            elif v:
-                merker = (f"Fehlerliste: {t.fehler.fortschritt(v)}  "
-                          f"noch {FD.ZIEL_PUNKTE - v['punkte']}× richtig")
-        self.rueckmeldung = {"bewertung": bewertung, "antwort": antwort,
-                             "loesung": self.frage["loesung"],
-                             "formen": quiz.stammformen(gruppe, eintrag),
-                             "hinweis": hinweis or "", "merker": merker,
-                             "nachschlagen": eintrag["latein"]}
         self.nummer += 1
         self.phase = "antwort"
         return self.zustand()
@@ -283,6 +331,7 @@ class Trainer:
                             if any(g["wortart"] == w for g in self.db.groups)]
         return {"lektionen": self.lektionen, "wortarten": arten,
                 "bereiche": [n for n, _p in quiz.FORM_BEREICHE],
+                "grammatik": GRAMMATIK_WAHL, "grammatik_standard": list(GRAMMATIK_STANDARD),
                 "arten": [list(a) for a in quiz.ARTEN],
                 "themen": [n for n, _s in self.themen],
                 "ziel": FD.ZIEL_PUNKTE, "fuss": self.fuss(),

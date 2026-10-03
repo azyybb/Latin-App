@@ -8,6 +8,7 @@ und damit seine eigene Fehlerliste und Statistik unter
     lernstand/nutzer/<lerncode>/
 
 Wer auf einem anderen Geraet weiterlernen will, gibt dort den Lerncode ein.
+Dazu kommt die Arena (arena.py): Online-Quiz gegeneinander mit Raumcode.
 
     py -3 web_server.py            ->  http://127.0.0.1:8765
 
@@ -30,6 +31,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import unquote, urlparse
 
+import arena
 import handy_server as HS
 import pfade
 
@@ -111,6 +113,11 @@ def konto_wechseln(code, _t, d):
 
 
 EXTRA = {"konto": konto, "konto/wechseln": konto_wechseln}
+
+# Online-Quiz gegeneinander (arena.py)
+ARENA = arena.Arena(trainer_fuer)
+for _name, _aktion in ARENA.aktionen.items():
+    EXTRA["arena/" + _name] = lambda code, t, d, _a=_aktion: (_a(code, t, d), None)
 
 
 # --------------------------------------------------------------------------
