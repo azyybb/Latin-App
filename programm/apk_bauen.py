@@ -29,7 +29,7 @@ NAME = "Latein_Vokabeltrainer.apk"
 MINDESTENS_GB = 6
 
 PROGRAMMDATEIEN = ["pfade.py", "bettervokable_search.py", "vokabel_search.py",
-                   "fehler_datenbank.py", "grammatik.py", "handy_server.py", "saetze.py",
+                   "fehler_datenbank.py", "grammatik.py", "handy_server.py", "saetze.py", "tabellen.py",
                    "handy_oberflaeche.html"]
 
 

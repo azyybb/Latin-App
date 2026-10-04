@@ -25,6 +25,7 @@ import fehler_datenbank as FD
 import grammatik as GR
 import pfade
 import saetze as SA
+import tabellen as TB
 import vokabel_search as quiz
 from bettervokable_search import CONJ_NAMES, FORMEN_LABEL, WORTART_ORDER, VokabelBase, norm
 
@@ -317,6 +318,7 @@ class Trainer:
             "grammatik": self.grammatik, "vokabeln": self.vokabeln,
             "saetze/start": self.saetze_start, "saetze/pruefen": self.saetze_pruefen,
             "saetze/wort": self.saetze_wort,
+            "tabelle/start": self.tabelle_start, "tabelle/pruefen": self.tabelle_pruefen,
         }
 
     # -------------------------------------------------- Allgemein
@@ -344,6 +346,7 @@ class Trainer:
                 "lernstand": self.lernstand_text(),
                 "warnungen": [w for w in (self.fehler.warnung, self.statistik.warnung) if w],
                 "saetze": {str(k): v for k, v in sorted(self.saetze.zahlen().items())},
+                "tabellen": [list(t) for t in TB.verfuegbar(99)],
                 "quiz": self.quiz.zustand()}
 
     # -------------------------------------------------- Suche
@@ -486,6 +489,31 @@ class Trainer:
                        "weil die Formen aus dem Wortstamm gebildet werden.")
         return {"i": i, "name": name, "hinweis": hinweis, "ungeprueft": ungeprueft,
                 "tafeln": tafeln, "seiten": [f"/bild/{p.name}" for p in seiten]}
+
+    # -------------------------------------------------- Formtabellen
+    def tabelle_start(self, d):
+        lektionen = quiz.lektionen_parsen(str(d.get("lektionen", "alle")), self.lektionen)
+        if not lektionen:
+            return {"fehler": f"Keine gültige Lektionsangabe. Es gibt die Lektionen "
+                              f"{self.lektionen[0]}–{self.lektionen[-1]}. "
+                              f"Beispiele: 1-8 · 3,5 · alle"}
+        bis = max(lektionen)
+        moeglich = [k for k, _t, _l in TB.verfuegbar(bis)]
+        if not moeglich:
+            return {"fehler": f"Bis Lektion {bis} gibt es noch keine Formtabelle zum Abfragen – "
+                              f"die erste kommt in Lektion "
+                              f"{min(l for _k, _t, l in TB.verfuegbar(99))}."}
+        key = d.get("tabelle")
+        if key not in moeglich:
+            key = random.choice(moeglich)
+        return {"tabelle": TB.aufbauen(key, bis, d.get("tabart") == "luecken"), "bis": bis}
+
+    def tabelle_pruefen(self, d):
+        if d.get("key") not in TB.TABELLEN or not isinstance(d.get("antworten"), dict):
+            return {"fehler": "Diese Tabelle gibt es nicht."}
+        ergebnis = TB.pruefen(d["key"], d["antworten"])
+        ergebnis["hinweis"] = TB.TABELLEN[d["key"]]["hinweis"]
+        return ergebnis
 
     # -------------------------------------------------- Sätze (Beta)
     def saetze_start(self, d):

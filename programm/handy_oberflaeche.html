@@ -237,6 +237,23 @@ h1 { font-size: 1.375rem; margin: 2px 0 4px; }
 .haken-knoepfe { display: flex; gap: 14px; margin-top: 4px; }
 .haken-knoepfe .link { padding: 4px 0; font-size: 0.875rem; }
 
+/* ---------- Formtabellen ---------- */
+.formtab { border-collapse: separate; border-spacing: 4px; margin: 6px -4px 0; }
+.formtab th { font-size: 0.8125rem; color: var(--grau); text-align: left; font-weight: 600; padding: 2px 4px; }
+.formtab th.zeile { white-space: nowrap; padding-right: 8px; }
+.formtab td { padding: 0; vertical-align: top; }
+.formtab .leer { text-align: center; color: var(--rand-stark); padding-top: 10px; }
+.tab-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+input.zelle { width: 100%; min-width: 5.2em; min-height: 42px; padding: 8px 10px; font-size: 1rem; }
+input.zelle[readonly] { background: var(--flaeche); color: var(--grau); }
+input.zelle.ok { border-color: var(--gruen); background: var(--gruen-hell); }
+input.zelle.falsch { border-color: var(--rot); background: var(--rot-hell); }
+.zelle-loesung { font-size: 0.8125rem; color: var(--rot); font-weight: 600; padding: 2px 4px 0; }
+.tab-block { margin-top: 14px; }
+.tab-block h3 { margin: 0 0 4px; font-size: 1rem; color: var(--blau); }
+.tab-block .formtab { width: 100%; }
+.tab-block .formtab th.zeile { width: 1%; }
+
 /* ---------- Sätze ---------- */
 .beta {
   font-size: 0.75rem; font-weight: 700; vertical-align: middle; padding: 2px 8px; border-radius: 99px;
@@ -352,6 +369,23 @@ textarea.feld { resize: vertical; min-height: 84px; font-size: 1.0625rem; line-h
 
       <div class="fehlertext" id="q-einst-fehler"></div>
       <button class="knopf haupt breit" id="q-start" type="button" style="margin-top:10px">Quiz starten</button>
+    </div>
+
+    <!-- Formtabelle -->
+    <div id="q-tabelle" hidden>
+      <div class="zeile">
+        <h1 class="wachsen" id="t-titel"></h1>
+        <button class="knopf" id="t-zurueck" type="button" style="min-height:38px;padding:6px 12px">Einstellungen</button>
+      </div>
+      <div class="leise" id="t-unter"></div>
+      <div id="t-raster"></div>
+      <div class="fehlertext" id="t-fehler"></div>
+      <button class="knopf haupt breit" id="t-knopf" type="button" style="margin-top:12px">Prüfen</button>
+      <div class="rueck" id="t-rueck"></div>
+      <div class="zeile" id="t-weiter" style="margin-top:12px" hidden>
+        <button class="knopf haupt wachsen" id="t-nochmal" type="button">Nochmal</button>
+        <button class="knopf wachsen" id="t-andere" type="button">Andere Tabelle</button>
+      </div>
     </div>
 
     <!-- Frage -->
@@ -798,7 +832,13 @@ async function formenZeigen(gid) {
 // ------------------------------------------------------------------ Quiz
 // Einstellungen für eine Runde - dasselbe Formular im Quiz und in der Arena.
 // schluessel: unter welchem Namen die Auswahl im Browser gemerkt wird.
-function einstellungsFormular(behaelter, schluessel) {
+function lektionenBis(text) {
+  // "1-8" -> 8, "3,5" -> 5, "alle" -> letzte Lektion (der Server prüft genauer)
+  const zahlen = (String(text).match(/\d+/g) || []).map(Number);
+  const ls = info.lektionen;
+  return zahlen.length ? Math.min(Math.max(...zahlen), ls[ls.length - 1]) : ls[ls.length - 1];
+}
+function einstellungsFormular(behaelter, schluessel, mitTabellen) {
   const ls = info.lektionen;
   const gemerkt = speicher.holen(schluessel, {});
   behaelter.textContent = "";
@@ -816,17 +856,28 @@ function einstellungsFormular(behaelter, schluessel) {
   hinweis.style.marginTop = "4px";
   behaelter.appendChild(hinweis);
 
-  titel("Wortart");
-  const wortart = behaelter.appendChild(el("select", "feld"));
+  const wortartBlock = behaelter.appendChild(el("div"));
+  titel("Wortart", wortartBlock);
+  const wortart = wortartBlock.appendChild(el("select", "feld"));
   optionen(wortart, info.wortarten.map((w) => [w, w]), gemerkt.wortart);
   if (!wortart.value) wortart.value = "alle";
 
   titel("Modus");
   const modus = behaelter.appendChild(el("div", "segmente zwei"));
   const formen = behaelter.appendChild(el("div"));
-  segmente(modus, [["ld", "Latein → Deutsch"], ["dl", "Deutsch → Latein"],
-                   ["mix", "gemischt"], ["formen", "Formen-Quiz"]],
-           gemerkt.modus || "ld", (m) => { formen.hidden = m !== "formen"; });
+  const tabBlock = behaelter.appendChild(el("div"));
+  const anzahlBlock = el("div");
+  const modi = [["ld", "Latein → Deutsch"], ["dl", "Deutsch → Latein"],
+                ["mix", "gemischt"], ["formen", "Formen-Quiz"]];
+  if (mitTabellen) modi.push(["tabellen", "Tabellen"]);
+  const sichtbar = (m) => {
+    formen.hidden = m !== "formen";
+    tabBlock.hidden = m !== "tabellen";
+    wortartBlock.hidden = anzahlBlock.hidden = m === "tabellen";
+  };
+  const gemerktModus = gemerkt.modus === "tabellen" && !mitTabellen ? "ld" : gemerkt.modus || "ld";
+  segmente(modus, modi, gemerktModus, sichtbar);
+  modus.classList.toggle("zwei", !mitTabellen);
 
   titel("Formen bis", formen);
   const bis = formen.appendChild(el("select", "feld"));
@@ -857,12 +908,34 @@ function einstellungsFormular(behaelter, schluessel) {
   titel("Abfrage", formen);
   const art = formen.appendChild(el("div", "segmente"));
   segmente(art, info.arten, gemerkt.art || "gemischt");
-  formen.hidden = modus.dataset.wert !== "formen";
 
-  titel("Fragen");
+  // Formtabellen: nur die, die bis zur gewählten Lektion drankamen
+  titel("Tabelle", tabBlock);
+  const tabelle = tabBlock.appendChild(el("select", "feld"));
+  const tabHinweis = tabBlock.appendChild(el("div", "leise klein"));
+  tabHinweis.style.marginTop = "4px";
+  const tabellenListe = () => {
+    const bis = lektionenBis(lektionen.value);
+    const da = (info.tabellen || []).filter(([, , l]) => l <= bis);
+    const vorher = tabelle.value || gemerkt.tabelle;
+    optionen(tabelle, [["zufall", "zufällige Tabelle"]].concat(da.map(([k, t, l]) => [k, `${t}  (L${l})`])));
+    tabelle.value = da.some(([k]) => k === vorher) ? vorher : "zufall";
+    tabHinweis.textContent = da.length
+      ? `${da.length} Tabellen bis Lektion ${bis} – vor allem die unregelmäßigen, die man auswendig lernen muss.`
+      : `Bis Lektion ${bis} gibt es noch keine Formtabelle.`;
+  };
+  tabellenListe();
+  lektionen.addEventListener("input", tabellenListe);
+  titel("Abfrage", tabBlock);
+  const tabart = tabBlock.appendChild(el("div", "segmente zwei"));
+  segmente(tabart, [["alle", "alle Felder ausfüllen"], ["luecken", "Lücken (Hälfte vorgegeben)"]],
+           gemerkt.tabart || "alle");
+
+  behaelter.appendChild(anzahlBlock);
+  titel("Fragen", anzahlBlock);
   const vorgaben = ["alle", "5", "10", "20", "30", "50", "100"];
-  const anzahl = behaelter.appendChild(el("div", "segmente anzahl"));
-  const zeile = behaelter.appendChild(el("div", "zeile anzahl-zeile"));
+  const anzahl = anzahlBlock.appendChild(el("div", "segmente anzahl"));
+  const zeile = anzahlBlock.appendChild(el("div", "zeile anzahl-zeile"));
   const eigene = ohneHilfen(el("input", "feld"));
   eigene.type = "number"; eigene.min = "1"; eigene.max = "2000"; eigene.inputMode = "numeric";
   eigene.placeholder = "z. B. 15";
@@ -875,8 +948,9 @@ function einstellungsFormular(behaelter, schluessel) {
     for (const b of anzahl.children) b.classList.toggle("an", !zahl && b.textContent === "10");
     anzahl.dataset.wert = zahl || "10";
   });
-  const unter = behaelter.appendChild(el("div", "leise klein", "„alle“ fragt jede Vokabel der Auswahl genau einmal ab"));
+  const unter = anzahlBlock.appendChild(el("div", "leise klein", "„alle“ fragt jede Vokabel der Auswahl genau einmal ab"));
   unter.style.marginTop = "4px";
+  sichtbar(modus.dataset.wert);
 
   return {
     werte() {
@@ -884,6 +958,7 @@ function einstellungsFormular(behaelter, schluessel) {
         lektionen: lektionen.value, wortart: wortart.value, modus: modus.dataset.wert,
         bis: bis.value, art: art.dataset.wert, anzahl: anzahl.dataset.wert,
         bereiche: [...haken.querySelectorAll("input:checked")].map((k) => k.value),
+        tabelle: tabelle.value, tabart: tabart.dataset.wert,
       };
     },
     merken() { speicher.setzen(schluessel, this.werte()); },
@@ -892,7 +967,7 @@ function einstellungsFormular(behaelter, schluessel) {
 
 let letzterStart = null, quizFormular = null;
 function quizEinstellungenAufbauen() {
-  quizFormular = einstellungsFormular($("q-felder"), "quiz");
+  quizFormular = einstellungsFormular($("q-felder"), "quiz", true);
 }
 async function quizStarten(art, daten) {
   const z = await api(art, daten);
@@ -908,8 +983,128 @@ async function quizStarten(art, daten) {
 }
 $("q-start").onclick = () => {
   quizFormular.merken();
-  quizStarten("quiz/start", quizFormular.werte());
+  const werte = quizFormular.werte();
+  if (werte.modus === "tabellen") tabelleStarten(werte);
+  else quizStarten("quiz/start", werte);
 };
+
+// ------------------------------------------------------------------ Formtabellen
+// Eine ganze Tabelle ausfüllen (is, ea, id; esse; ...) und Feld für Feld prüfen.
+let tabDaten = null, tabWerte = null, tabGeprueft = false;
+function quizAnsicht(welche) {
+  $("q-einst").hidden = welche !== "einst";
+  $("q-tabelle").hidden = welche !== "tabelle";
+  $("q-frage").hidden = $("q-ende").hidden = true;
+  $("v-quiz").scrollTop = 0;
+}
+async function tabelleStarten(werte, gleicheTabelle) {
+  tabWerte = werte;
+  const daten = Object.assign({}, werte, gleicheTabelle ? { tabelle: tabDaten.key } : {});
+  const r = await api("tabelle/start", daten);
+  if (r.fehler) { $("q-einst-fehler").textContent = r.fehler; quizAnsicht("einst"); return; }
+  $("q-einst-fehler").textContent = "";
+  tabDaten = r.tabelle;
+  tabGeprueft = false;
+  reiter("quiz");
+  quizAnsicht("tabelle");
+  $("t-titel").textContent = tabDaten.titel;
+  $("t-unter").textContent = (tabDaten.zusatz ? "Zusatz – im Buch bis Lektion 20 nicht systematisch behandelt. " : "")
+    + (werte.tabart === "luecken" ? "Die grauen Felder sind vorgegeben – fülle die übrigen aus."
+                                  : "Fülle alle Felder aus. Mehrere richtige Formen? Eine reicht.");
+  $("t-rueck").textContent = "";
+  $("t-fehler").textContent = "";
+  $("t-weiter").hidden = true;
+  $("t-knopf").hidden = false;
+  $("t-knopf").textContent = "Prüfen";
+  tabelleZeichnen();
+  const erstes = document.querySelector("#t-raster input:not([readonly])");
+  if (erstes && !beruehrung) erstes.focus();
+}
+function zellenFeld(zelle) {
+  const f = el("input", "feld zelle");
+  f.autocomplete = "off"; f.spellcheck = false;
+  f.setAttribute("autocapitalize", "off"); f.setAttribute("autocorrect", "off");
+  f.dataset.id = zelle.id;
+  if (zelle.vorgabe != null) { f.value = zelle.vorgabe; f.readOnly = true; f.tabIndex = -1; }
+  f.addEventListener("keydown", (e) => {
+    if (e.key !== "Enter") return;
+    e.preventDefault();
+    const alle = [...document.querySelectorAll("#t-raster input:not([readonly])")];
+    const i = alle.indexOf(f);
+    if (i >= 0 && i < alle.length - 1) alle[i + 1].focus();
+    else tabellePruefen();
+  });
+  const td = el("td");
+  td.appendChild(f);
+  return td;
+}
+function tabelleZeichnen() {
+  const t = tabDaten, raster = $("t-raster");
+  raster.textContent = "";
+  // Am Handy werden breite Tabellen (Verben mit fünf Zeiten) Spalte für Spalte gezeigt
+  const gestapelt = t.spalten.length > 3 && window.innerWidth < 700;
+  if (gestapelt) {
+    t.spalten.forEach((spalte, c) => {
+      const block = el("div", "tab-block");
+      block.appendChild(el("h3", null, spalte));
+      const tab = el("table", "formtab");
+      for (const z of t.zeilen) {
+        const tr = el("tr");
+        tr.appendChild(el("th", "zeile", z.label));
+        const zelle = z.zellen[c];
+        tr.appendChild(zelle ? zellenFeld(zelle) : el("td", "leer", "–"));
+        tab.appendChild(tr);
+      }
+      block.appendChild(tab);
+      raster.appendChild(block);
+    });
+    return;
+  }
+  const huelle = el("div", "tab-scroll");
+  const tab = el("table", "formtab");
+  const kopf = el("tr");
+  kopf.appendChild(el("th"));
+  for (const spalte of t.spalten) kopf.appendChild(el("th", null, spalte));
+  tab.appendChild(kopf);
+  for (const z of t.zeilen) {
+    const tr = el("tr");
+    tr.appendChild(el("th", "zeile", z.label));
+    for (const zelle of z.zellen) tr.appendChild(zelle ? zellenFeld(zelle) : el("td", "leer", "–"));
+    tab.appendChild(tr);
+  }
+  huelle.appendChild(tab);
+  raster.appendChild(huelle);
+}
+async function tabellePruefen() {
+  if (tabGeprueft) return;
+  const felder = [...document.querySelectorAll("#t-raster input:not([readonly])")];
+  const antworten = {};
+  for (const f of felder) antworten[f.dataset.id] = f.value;
+  const r = await api("tabelle/pruefen", { key: tabDaten.key, antworten });
+  if (r.fehler) { $("t-fehler").textContent = r.fehler; return; }
+  tabGeprueft = true;
+  for (const f of felder) {
+    const e = r.felder[f.dataset.id];
+    if (!e) continue;
+    f.readOnly = true;
+    f.classList.add(e.ok ? "ok" : "falsch");
+    if (!e.ok) f.parentNode.appendChild(el("div", "zelle-loesung", e.loesung));
+  }
+  const rueck = $("t-rueck");
+  rueck.textContent = "";
+  const prozent = r.gesamt ? Math.round(100 * r.richtig / r.gesamt) : 0;
+  const gut = r.richtig === r.gesamt;
+  rueck.appendChild(el("div", "urteil " + (gut ? "gut" : prozent >= 50 ? "mittel" : "schlecht"),
+    gut ? "★  Alles richtig!" : `${r.richtig} von ${r.gesamt} Feldern richtig (${prozent} %)`));
+  if (!gut) rueck.appendChild(el("div", "leise", "Rot markiert: darunter steht die richtige Form."));
+  if (r.hinweis) rueck.appendChild(el("div", "merker", "Merke: " + r.hinweis));
+  $("t-knopf").hidden = true;
+  $("t-weiter").hidden = false;
+}
+$("t-knopf").onclick = tabellePruefen;
+$("t-nochmal").onclick = () => tabelleStarten(tabWerte, true);
+$("t-andere").onclick = () => tabelleStarten(Object.assign({}, tabWerte, { tabelle: "zufall" }));
+$("t-zurueck").onclick = () => quizAnsicht("einst");
 
 function zaehlerText(z, nummer) {
   return `Frage ${nummer} von ${z.gesamt}  ·  ★ ${z.perfekt}  ✓ ${z.richtig}  ✗ ${z.falsch}`;
@@ -919,6 +1114,7 @@ function quizZeigen(z) {
   quizPhase = z.phase;
   $("q-lernstand").textContent = z.lernstand;
   $("q-einst").hidden = z.phase !== null;
+  $("q-tabelle").hidden = true;
   $("q-frage").hidden = !(z.phase === "frage" || z.phase === "antwort");
   $("q-ende").hidden = z.phase !== "ende";
   $("v-quiz").scrollTop = 0;
