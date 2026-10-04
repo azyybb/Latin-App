@@ -41,7 +41,7 @@ body {
   font: 1rem/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   overflow: hidden;
 }
-button, input, select { font: inherit; color: inherit; }
+button, input, select, textarea { font: inherit; color: inherit; }
 [hidden] { display: none !important; }
 /* Beim Tippen braucht die Tastatur den Platz - die Reiterleiste darf weg */
 body.tippen #leiste { display: none; }
@@ -219,7 +219,8 @@ h1 { font-size: 1.375rem; margin: 2px 0 4px; }
 .warnband { background: var(--rot-hell); color: var(--rot); border-radius: 10px; padding: 10px 12px;
   margin-bottom: 12px; font-size: 0.875rem; }
 /* Hell/Dunkel-Knopf: am Handy nur das Symbol, am PC unten in der Seitenleiste */
-#leiste #thema-knopf { flex: 0 0 44px; }
+#leiste #thema-knopf { flex: 0 0 40px; }
+@media (max-width: 480px) { #leiste button { font-size: 0.625rem; letter-spacing: -.01em; } }
 #thema-knopf .beschr { display: none; }
 #thema-knopf .sonne { display: none; }
 :root.dunkel-an #thema-knopf .sonne { display: inline; }
@@ -235,6 +236,27 @@ h1 { font-size: 1.375rem; margin: 2px 0 4px; }
 .haken-zeile:has(input:checked) { background: var(--blau-hell); border-color: var(--blau); color: var(--blau); }
 .haken-knoepfe { display: flex; gap: 14px; margin-top: 4px; }
 .haken-knoepfe .link { padding: 4px 0; font-size: 0.875rem; }
+
+/* ---------- Sätze ---------- */
+.beta {
+  font-size: 0.75rem; font-weight: 700; vertical-align: middle; padding: 2px 8px; border-radius: 99px;
+  background: var(--blau-hell); color: var(--blau); letter-spacing: .04em;
+}
+.satz-text { font-size: 1.375rem; line-height: 1.6; }
+.satz { display: block; padding: 6px 10px; margin: 2px -10px; border-radius: 10px; }
+.satz.aktiv { background: var(--blau-hell); }
+.satz.spaeter { color: var(--grau); }
+.satz .de { display: block; font-size: 0.9375rem; color: var(--gruen); line-height: 1.4; }
+.wort { cursor: pointer; border-bottom: 1px dotted var(--rand-stark); }
+.wort:hover { color: var(--blau); border-bottom-color: var(--blau); }
+.satz.aktiv .wort { font-weight: 600; }
+textarea.feld { resize: vertical; min-height: 84px; font-size: 1.0625rem; line-height: 1.45; }
+.wfw { width: 100%; border-collapse: collapse; font-size: 0.9375rem; margin-top: 6px; }
+.wfw td { padding: 6px 8px 6px 0; border-bottom: 1px solid var(--rand); vertical-align: top; }
+.wfw td:first-child { font-weight: 700; white-space: nowrap; }
+.wfw .leise { font-size: 0.8125rem; }
+.urteil.mittel { color: #b26a00; }
+.fehlend { color: var(--rot); font-size: 0.9375rem; margin-top: 6px; }
 
 /* ---------- Arena ---------- */
 .raumcode { font: 800 2.75rem/1.1 var(--mono); letter-spacing: .14em; color: var(--blau); }
@@ -359,6 +381,38 @@ h1 { font-size: 1.375rem; margin: 2px 0 4px; }
         <button class="knopf haupt wachsen" id="q-nochmal" type="button">Nochmal</button>
         <button class="knopf wachsen" id="q-zurueck" type="button">Einstellungen</button>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= Sätze (Beta) ======================= -->
+<section class="view" id="v-saetze" hidden>
+  <div class="innen">
+    <div id="s-einst">
+      <h1>Sätze übersetzen <span class="beta">BETA</span></h1>
+      <div class="leise">Lateinische Sätze und kurze Texte – nur mit Wörtern und Grammatik bis zu den
+        gewählten Lektionen. Tippe auf ein lateinisches Wort, um es nachzuschlagen.</div>
+      <div class="beschriftung">Lektionen</div>
+      <input id="s-lektionen" class="feld" value="alle" autocomplete="off" autocapitalize="off" spellcheck="false">
+      <div class="leise klein" id="s-hinweis" style="margin-top:4px"></div>
+      <div class="beschriftung">Was üben?</div>
+      <div class="segmente" id="s-art"></div>
+      <div class="fehlertext" id="s-fehler"></div>
+      <button class="knopf haupt breit" id="s-start" type="button" style="margin-top:10px">Los geht's</button>
+    </div>
+
+    <div id="s-arbeit" hidden>
+      <div class="fortschritt">
+        <div class="zaehler" id="s-kopf"></div>
+        <button class="knopf" id="s-zurueck" type="button" style="min-height:38px;padding:6px 12px">Einstellungen</button>
+      </div>
+      <h1 id="s-titel" style="margin-top:12px"></h1>
+      <div class="karte satz-text" id="s-text" style="margin-top:10px"></div>
+      <div class="beschriftung" id="s-frage"></div>
+      <textarea id="s-antwort" class="feld" rows="3" autocomplete="off" autocapitalize="sentences"
+                spellcheck="false" enterkeyhint="done" placeholder="Deine Übersetzung …"></textarea>
+      <button class="knopf haupt breit" id="s-knopf" type="button" style="margin-top:10px">Prüfen</button>
+      <div class="rueck" id="s-rueck"></div>
     </div>
   </div>
 </section>
@@ -512,6 +566,8 @@ h1 { font-size: 1.375rem; margin: 2px 0 4px; }
     <span class="symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></span>Suche</button>
   <button type="button" data-v="quiz">
     <span class="symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 12l3 3 5-6"/></svg></span>Quiz</button>
+  <button type="button" data-v="saetze">
+    <span class="symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg></span>Sätze</button>
   <button type="button" data-v="arena" id="arena-knopf" hidden>
     <span class="symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4"/><path d="M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg></span>Arena</button>
   <button type="button" data-v="fehler">
@@ -992,6 +1048,156 @@ $("q-nochmal").onclick = () => {
   if (letzterStart) quizStarten(letzterStart[0], letzterStart[1]);
 };
 
+// ------------------------------------------------------------------ Sätze (Beta)
+// Ein Stück ist ein Einzelsatz oder ein kurzer Text; übersetzt wird Satz für
+// Satz.  Der Server bewertet grob über einen Wortvergleich mit den Musterlösungen.
+let satzStueck = null, satzNr = 0, satzGeprueft = false, satzWertungen = [];
+const URTEILE = {
+  perfekt: ["★  Perfekt", "gut"], richtig: ["✓  Richtig", "gut"], fast: ["≈  Fast richtig", "mittel"],
+  teilweise: ["½  Teilweise", "mittel"], falsch: ["✗  Noch nicht", "schlecht"],
+};
+function saetzeEinstellungen() {
+  const gemerkt = speicher.holen("saetze", {});
+  const ls = info.lektionen;
+  $("s-lektionen").value = gemerkt.lektionen || "alle";
+  const je = info.saetze || {};
+  const gesamt = Object.values(je).reduce((a, b) => a + b, 0);
+  $("s-hinweis").textContent = `z. B. 5 · 1-8 · alle   (${gesamt} Sätze und Texte für die Lektionen ${ls[0]}–${ls[ls.length - 1]})`;
+  segmente($("s-art"), [["einzel", "Einzelsätze"], ["text", "kurze Texte"], ["gemischt", "gemischt"]],
+           gemerkt.art || "gemischt");
+}
+async function saetzeStarten() {
+  const daten = { lektionen: $("s-lektionen").value, art: $("s-art").dataset.wert };
+  speicher.setzen("saetze", daten);
+  const r = await api("saetze/start", daten);
+  if (r.fehler) { $("s-fehler").textContent = r.fehler; return; }
+  $("s-fehler").textContent = "";
+  satzStueck = r.stueck; satzNr = 0; satzWertungen = [];
+  $("s-einst").hidden = true;
+  $("s-arbeit").hidden = false;
+  satzZeigen(r.anzahl);
+}
+function lateinMitWoertern(text) {
+  // Jedes Wort antippbar machen; Satzzeichen bleiben Text
+  const f = document.createDocumentFragment();
+  for (const teil of text.split(/([A-Za-zÀ-ÖØ-öø-ÿĀ-ſ]+)/)) {
+    if (!teil) continue;
+    if (/^[A-Za-zÀ-ÖØ-öø-ÿĀ-ſ]+$/.test(teil)) {
+      const w = el("span", "wort", teil);
+      w.onclick = () => wortZeigen(teil);
+      f.appendChild(w);
+    } else f.appendChild(document.createTextNode(teil));
+  }
+  return f;
+}
+let satzAnzahl = 0;
+function satzZeigen(anzahl) {
+  if (anzahl != null) satzAnzahl = anzahl;
+  const st = satzStueck, n = st.saetze.length;
+  $("s-kopf").textContent = (st.text ? `Text · Satz ${satzNr + 1} von ${n}` : "Einzelsatz")
+    + `  ·  Lektion ${st.lektion}  ·  ${satzAnzahl} zur Auswahl`;
+  $("s-titel").textContent = st.titel || "";
+  $("s-titel").hidden = !st.titel;
+  const box = $("s-text");
+  box.textContent = "";
+  st.saetze.forEach((satz, i) => {
+    const z = el("span", "satz" + (i === satzNr ? " aktiv" : i > satzNr ? " spaeter" : ""));
+    z.appendChild(lateinMitWoertern(satz.la));
+    if (i < satzNr && satzWertungen[i]) z.appendChild(el("span", "de", satzWertungen[i].loesung));
+    box.appendChild(z);
+  });
+  $("s-frage").textContent = st.text ? `Übersetze Satz ${satzNr + 1}:` : "Deine Übersetzung";
+  $("s-antwort").value = "";
+  $("s-antwort").readOnly = false;
+  $("s-rueck").textContent = "";
+  $("s-knopf").textContent = "Prüfen";
+  satzGeprueft = false;
+  $("v-saetze").scrollTop = 0;
+}
+async function satzPruefen() {
+  const r = await api("saetze/pruefen", { id: satzStueck.id, satz: satzNr, antwort: $("s-antwort").value });
+  if (r.fehler) { rueckfrage("Sätze", r.fehler, "OK", () => {}); return; }
+  satzWertungen[satzNr] = r;
+  satzGeprueft = true;
+  $("s-antwort").readOnly = true;
+  const rueck = $("s-rueck");
+  rueck.textContent = "";
+  const [text, art] = URTEILE[r.bewertung] || URTEILE.falsch;
+  rueck.appendChild(el("div", "urteil " + art, text));
+  rueck.appendChild(el("div", "loesung", "Musterlösung:  " + r.loesung));
+  if (r.varianten.length) rueck.appendChild(el("div", "leise", "Auch richtig:  " + r.varianten.join("  ·  ")));
+  if (r.fehlend.length && r.bewertung !== "perfekt" && r.bewertung !== "richtig") {
+    rueck.appendChild(el("div", "fehlend", "Nicht gefunden:  " + r.fehlend.join(", ")));
+  }
+  rueck.appendChild(el("div", "leise klein",
+    "Automatische Bewertung (Beta): verglichen werden nur die Wörter, nicht der Satzbau – " +
+    "schau selbst, ob deine Übersetzung dasselbe sagt wie die Musterlösung.")).style.marginTop = "8px";
+  rueck.appendChild(el("div", "beschriftung", "Wort für Wort"));
+  const t = el("table", "wfw");
+  for (const w of r.woerter) {
+    const tr = el("tr");
+    const lat = el("td"); lat.appendChild(lateinMitWoertern(w.t));
+    const rechts = el("td");
+    if (!w.deutungen.length) rechts.textContent = "–";
+    w.deutungen.forEach((d, i) => {
+      if (i) rechts.appendChild(el("div", "leise", "oder:"));
+      rechts.appendChild(el("div", null, `${d.lemma} – ${d.deutsch}`));
+      if (d.bestimmung) rechts.appendChild(el("div", "leise", d.bestimmung));
+    });
+    tr.append(lat, rechts);
+    t.appendChild(tr);
+  }
+  rueck.appendChild(t);
+  const letzter = satzNr >= satzStueck.saetze.length - 1;
+  $("s-knopf").textContent = !letzter ? "Nächster Satz" : satzStueck.text ? "Nächster Text" : "Nächster Satz";
+  if (letzter && satzStueck.text) {
+    const gut = satzWertungen.filter((w) => w && (w.bewertung === "perfekt" || w.bewertung === "richtig")).length;
+    rueck.appendChild(el("div", "merker", `Text geschafft: ${gut} von ${satzStueck.saetze.length} Sätzen richtig.`));
+  }
+}
+async function satzWeiter() {
+  if (!satzGeprueft) return satzPruefen();
+  if (satzNr < satzStueck.saetze.length - 1) { satzNr++; satzZeigen(); $("s-antwort").focus(); return; }
+  await saetzeStarten();
+}
+async function wortZeigen(wort) {
+  const r = await api("saetze/wort", { wort });
+  blattOeffnen((p) => {
+    const kopf = el("div", "zeile");
+    const h = el("h2", "wachsen", wort); h.style.margin = "0";
+    const zu = el("button", "knopf", "Schließen"); zu.type = "button"; zu.onclick = blattZu;
+    kopf.append(h, zu);
+    p.appendChild(kopf);
+    if (!r.deutungen.length) p.appendChild(el("div", "leise", "Dieses Wort kennt das Programm nicht."));
+    for (const d of r.deutungen) {
+      const k = el("div", "karte"); k.style.marginTop = "10px";
+      const oben = el("div", "vokabel");
+      const zeile = el("div", "oben");
+      zeile.append(el("span", "lat", d.lemma), el("span", "art", d.wortart), el("span", "rechts", "Lektion " + d.lektion));
+      oben.append(zeile, el("div", "de", d.deutsch));
+      if (d.bestimmung && d.bestimmung !== "Grundform") oben.appendChild(el("div", "fm", d.bestimmung));
+      if (d.angehaengt) oben.appendChild(el("div", "fm", `angehängtes ${d.angehaengt}`));
+      k.appendChild(oben);
+      if (d.gid != null) {
+        const b = el("button", "link", "Alle Formen ›"); b.type = "button";
+        b.onclick = () => formenZeigen(d.gid);
+        k.appendChild(b);
+      }
+      p.appendChild(k);
+    }
+  });
+}
+$("s-start").onclick = saetzeStarten;
+$("s-lektionen").addEventListener("keydown", (e) => { if (e.key === "Enter") saetzeStarten(); });
+$("s-knopf").onclick = satzWeiter;
+$("s-knopf").addEventListener("pointerdown", (e) => {
+  if (document.activeElement === $("s-antwort")) e.preventDefault();
+});
+$("s-antwort").addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); satzWeiter(); }
+});
+$("s-zurueck").onclick = () => { $("s-arbeit").hidden = true; $("s-einst").hidden = false; };
+
 // ------------------------------------------------------------------ Arena
 // Nur auf der Website.  Der Zustand kommt vom Server; solange man in einer
 // Arena ist, fragt die Seite regelmäßig nach (auf dem Reiter öfter).
@@ -1398,6 +1604,7 @@ $("v-richtung").onclick = () => {
   optionen($("g-wahl"), info.themen.map((t, i) => [String(i), t]));
   optionen($("v-lektion"), [["alle", "alle Lektionen"]].concat(info.lektionen.map((n) => [String(n), "Lektion " + n])));
   quizEinstellungenAufbauen();
+  saetzeEinstellungen();
   segmente($("f-richtung"), [["ld", "La → De"], ["dl", "De → La"], ["mix", "gemischt"]], "ld");
   quizZeigen(info.quiz);
   api("fehler").then((r) => fehlerZahl(r.offen));

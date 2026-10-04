@@ -1,0 +1,1178 @@
+# Übersetzungssätze für den Reiter „Sätze“
+# ==========================================================================
+# Nur Wörter aus vokabel_base.json.  Die Lektion eines Satzes berechnet
+# saetze.py selbst (spätestes Wort / spätere Form, z. B. Perfekt ab L8);
+# die Zahl hinter L ist nur die Mindestlektion für die GRAMMATIK, die sich
+# nicht an einzelnen Formen ablesen lässt (Dativ L3, Ablativ L4, Genitiv L5,
+# AcI L9, Relativsatz L11, Reflexivpronomen L12 ...).
+#
+#   -- L3            die folgenden Satzpaare sind EINZELSÄTZE
+#   == L4 Titel      die folgenden Satzpaare bilden EINEN TEXT
+#   la: lateinischer Satz
+#   de: deutsche Übersetzung | weitere richtige Übersetzung | ...
+#       Wörter in (Klammern) sind erlaubt, aber nicht nötig.
+#
+# Prüfen:  py -3 programm/saetze.py
+# ==========================================================================
+
+
+# ------------------------------------------------------------- Lektion 1
+-- L1
+la: Servus et serva stant.
+de: Der Sklave und die Sklavin stehen (da).
+
+la: Dominus venit, sed servus nondum adest.
+de: Der Herr kommt, aber der Sklave ist noch nicht da.
+
+la: Cur domina ridet?
+de: Warum lacht die Herrin?
+
+la: Populus clamat et gaudet.
+de: Das Volk schreit und freut sich. | Das Volk ruft laut und freut sich.
+
+la: Ecce, medicus iam adest!
+de: Schau, der Arzt ist schon da! | Schaut, der Arzt ist schon da! | Sieh, der Arzt ist schon da!
+
+la: Servi dubitant, tum tandem veniunt.
+de: Die Sklaven zögern, dann kommen sie endlich.
+
+la: Equi ibi stant.
+de: Die Pferde stehen dort.
+
+la: Domina cogitat, servae spectant.
+de: Die Herrin denkt nach, die Sklavinnen schauen zu.
+
+la: Medicus venire debet.
+de: Der Arzt muss kommen.
+
+la: Servus non ridet, sed orat.
+de: Der Sklave lacht nicht, sondern betet. | Der Sklave lacht nicht, sondern bittet.
+
+la: Victoria adest, itaque populus gaudet.
+de: Der Sieg ist da, deshalb freut sich das Volk.
+
+la: Servae huc veniunt et clamant.
+de: Die Sklavinnen kommen hierher und schreien. | Die Dienerinnen kommen hierher und rufen laut.
+
+la: Postremo etiam dominus ridet.
+de: Schließlich lacht auch der Herr. | Schließlich lacht sogar der Herr.
+
+
+== L1 Der Arzt kommt
+la: Domina clamat.
+de: Die Herrin schreit. | Die Herrin ruft laut.
+la: Servus et serva veniunt.
+de: Der Sklave und die Sklavin kommen.
+la: Sed medicus nondum adest.
+de: Aber der Arzt ist noch nicht da.
+la: Tandem medicus venit; itaque domina gaudet.
+de: Endlich kommt der Arzt; deshalb freut sich die Herrin.
+
+
+# ------------------------------------------------------------- Lektion 2
+-- L2
+la: Servus per viam properat.
+de: Der Sklave eilt durch die Straße. | Der Sklave eilt über die Straße. | Der Sklave eilt den Weg entlang.
+
+la: Dominus amicum diu exspectat.
+de: Der Herr wartet lange auf den Freund. | Der Herr erwartet den Freund lange.
+
+la: Subito turba undique venit.
+de: Plötzlich kommt von allen Seiten eine Menschenmenge. | Plötzlich kommt von überallher eine Menge.
+
+la: Serva portam aperit et tabernam intrat.
+de: Die Sklavin öffnet die Tür und betritt den Laden. | Die Sklavin öffnet die Tür und betritt das Gasthaus. | Die Sklavin öffnet das Tor und geht in das Gasthaus hinein.
+
+la: Cur pecuniam postulas?
+de: Warum forderst du Geld? | Warum verlangst du Geld?
+
+la: Amicum desidero.
+de: Ich vermisse den Freund. | Ich vermisse meinen Freund. | Ich sehne mich nach dem Freund.
+
+la: Ubi equus est? Servus equum non reperit.
+de: Wo ist das Pferd? Der Sklave findet das Pferd nicht.
+
+la: Quid rogas? Nondum scio.
+de: Was fragst du? Ich weiß (es) noch nicht.
+
+la: Mox servi pecuniam dant.
+de: Bald geben die Sklaven Geld.
+
+la: Amici semper equos spectant.
+de: Die Freunde betrachten immer die Pferde. | Die Freunde schauen immer die Pferde an.
+
+la: Tu dominum non iam exspectas.
+de: Du wartest nicht mehr auf den Herrn. | Du erwartest den Herrn nicht mehr.
+
+la: Servus ante tabernam sedet.
+de: Der Sklave sitzt vor dem Gasthaus. | Der Sklave sitzt vor dem Laden.
+
+la: Nunc amicos servare debemus.
+de: Jetzt müssen wir die Freunde retten. | Nun müssen wir die Freunde retten.
+
+la: Medicus servum servat.
+de: Der Arzt rettet den Sklaven.
+
+la: Ego clamo, sed tu non audis.
+de: Ich rufe laut, aber du hörst nicht. | Ich schreie, aber du hörst nicht.
+
+la: Dominus servum tenet et pecuniam postulat.
+de: Der Herr hält den Sklaven fest und fordert Geld. | Der Herr hält den Sklaven fest und verlangt Geld.
+
+la: Primo servi dubitant, sed mox properant.
+de: Zuerst zögern die Sklaven, aber bald eilen sie. | Zuerst zögern die Sklaven, aber bald beeilen sie sich.
+
+
+== L2 Im Gasthaus
+la: Servus diu amicum exspectat.
+de: Der Sklave wartet lange auf den Freund. | Der Sklave erwartet lange den Freund.
+la: Subito amicus venit.
+de: Plötzlich kommt der Freund.
+la: Servus portam aperit et tabernam intrat.
+de: Der Sklave öffnet die Tür und betritt das Gasthaus. | Der Sklave öffnet die Tür und geht in das Gasthaus hinein.
+la: Ibi amici sedent et rident.
+de: Dort sitzen die Freunde und lachen.
+
+
+== L2 Das Geld
+la: Dominus servum videt.
+de: Der Herr sieht den Sklaven.
+la: Pecuniam postulat.
+de: Er fordert Geld. | Er verlangt Geld.
+la: Sed servus pecuniam non reperit.
+de: Aber der Sklave findet das Geld nicht. | Aber der Sklave findet kein Geld.
+la: Itaque dominus clamat.
+de: Deshalb schreit der Herr. | Deshalb ruft der Herr laut.
+
+
+# ------------------------------------------------------------- Lektion 3
+-- L3
+la: Servus dominae statim respondet.
+de: Der Sklave antwortet der Herrin sofort.
+
+la: Servi domino parent.
+de: Die Sklaven gehorchen dem Herrn.
+
+la: Domina servis bene providet.
+de: Die Herrin sorgt gut für die Sklaven.
+
+la: Puellae equi placent.
+de: Den Mädchen gefallen die Pferde. | Die Pferde gefallen den Mädchen. | Dem Mädchen gefallen die Pferde. | Die Pferde gefallen dem Mädchen.
+
+la: Voca servos!
+de: Rufe die Sklaven! | Ruf die Sklaven!
+
+la: Cave gladium!
+de: Hüte dich vor dem Schwert! | Nimm dich vor dem Schwert in Acht!
+
+la: Poena servo instat.
+de: Dem Sklaven droht eine Strafe. | Dem Sklaven steht eine Strafe bevor.
+
+la: Servus culpam negat.
+de: Der Sklave leugnet die Schuld. | Der Sklave bestreitet die Schuld.
+
+la: Domino gratiam debemus.
+de: Wir schulden dem Herrn Dank. | Wir sind dem Herrn Dank schuldig.
+
+la: Dum puella narrat, servi paulum rident.
+de: Während das Mädchen erzählt, lachen die Sklaven ein wenig.
+
+la: Et dominus et domina veniunt.
+de: Sowohl der Herr als auch die Herrin kommen.
+
+la: Servi iniuriam diu sustinent.
+de: Die Sklaven ertragen das Unrecht lange.
+
+la: Servo gladius deest.
+de: Dem Sklaven fehlt ein Schwert. | Dem Sklaven fehlt das Schwert.
+
+la: Salvete! Statim respondete!
+de: Seid gegrüßt! Antwortet sofort!
+
+la: Paulo post socii iterum veniunt.
+de: Kurz darauf kommen die Gefährten wieder. | Wenig später kommen die Gefährten wieder.
+
+la: Dominus servo pecuniam mandat.
+de: Der Herr übergibt dem Sklaven das Geld. | Der Herr vertraut dem Sklaven das Geld an.
+
+
+== L3 Im Circus Maximus
+la: Turba ad Circum Maximum properat.
+de: Die Menge eilt zum Circus Maximus. | Die Menschenmenge eilt zum Circus Maximus.
+la: Etiam puella venit.
+de: Auch das Mädchen kommt.
+la: Equi iam stant.
+de: Die Pferde stehen schon da. | Die Pferde stehen bereits.
+la: Subito populus clamat, nam victoria adest.
+de: Plötzlich schreit das Volk, denn der Sieg ist da.
+la: Puella gaudet et amicis narrat.
+de: Das Mädchen freut sich und erzählt es den Freunden. | Das Mädchen freut sich und erzählt den Freunden davon.
+
+
+# ------------------------------------------------------------- Lektion 4
+-- L4
+la: Diana cum amica per silvam properat.
+de: Diana eilt mit der Freundin durch den Wald.
+
+la: Puellae de victoria cogitant.
+de: Die Mädchen denken an den Sieg. | Die Mädchen denken über den Sieg nach.
+
+la: Equi in campo stant.
+de: Die Pferde stehen auf dem Feld.
+
+la: Servus e silva venit.
+de: Der Sklave kommt aus dem Wald.
+
+la: Dea ira ardet.
+de: Die Göttin brennt vor Zorn. | Die Göttin brennt vor Wut.
+
+la: Servi iram timent et in silvam properant.
+de: Die Sklaven fürchten den Zorn und eilen in den Wald.
+
+la: Dominus servos gladio terret.
+de: Der Herr erschreckt die Sklaven mit dem Schwert.
+
+la: Nolo in silvam venire.
+de: Ich will nicht in den Wald kommen.
+
+la: Servi dominam circumveniunt.
+de: Die Sklaven umringen die Herrin. | Die Sklaven umzingeln die Herrin.
+
+la: Servus servaque e silva veniunt.
+de: Der Sklave und die Sklavin kommen aus dem Wald.
+
+la: Tibi gratiam debeo.
+de: Ich schulde dir Dank. | Ich bin dir Dank schuldig.
+
+la: Quid de amica sentis?
+de: Was denkst du über die Freundin? | Was hältst du von der Freundin?
+
+la: Amicae in campum veniunt atque equos spectant.
+de: Die Freundinnen kommen auf das Feld und betrachten die Pferde. | Die Freundinnen kommen auf das Feld und schauen die Pferde an.
+
+la: Cum amicis in campo sedemus.
+de: Wir sitzen mit den Freunden auf dem Feld. | Wir sitzen mit den Freundinnen auf dem Feld.
+
+
+== L4 Diana im Wald
+la: Diana cum amicis per silvam properat.
+de: Diana eilt mit den Freundinnen durch den Wald. | Diana eilt mit den Freunden durch den Wald.
+la: Subito dea servum in campo videt.
+de: Plötzlich sieht die Göttin einen Sklaven auf dem Feld. | Plötzlich sieht die Göttin auf dem Feld einen Sklaven.
+la: Dea ira ardet.
+de: Die Göttin brennt vor Zorn.
+la: Servus deam timet et e campo in silvam properat.
+de: Der Sklave fürchtet die Göttin und eilt vom Feld in den Wald. | Der Sklave hat Angst vor der Göttin und eilt vom Feld in den Wald.
+
+
+# ------------------------------------------------------------- Lektion 5
+-- L5
+la: Prometheus creaturis vitam donat.
+de: Prometheus schenkt den Geschöpfen das Leben.
+
+la: Minerva naturam terrae et caeli ostendit.
+de: Minerva zeigt die Natur der Erde und des Himmels. | Minerva erklärt das Wesen der Erde und des Himmels.
+
+la: Populus deos colit.
+de: Das Volk verehrt die Götter.
+
+la: Creaturae sine flamma vivunt.
+de: Die Geschöpfe leben ohne Feuer. | Die Geschöpfe leben ohne Flamme.
+
+la: Prometheus dolo deos superat.
+de: Prometheus besiegt die Götter durch eine List. | Prometheus besiegt die Götter mit List. | Prometheus überwindet die Götter durch List.
+
+la: Iuppiter dolum Promethei cognoscit.
+de: Jupiter erkennt die List des Prometheus.
+
+la: Servus verba dominae audit.
+de: Der Sklave hört die Worte der Herrin.
+
+la: Puella litteras legit et scribit.
+de: Das Mädchen liest und schreibt Buchstaben. | Das Mädchen liest Buchstaben und schreibt (sie). | Das Mädchen liest und schreibt Briefe.
+
+la: Consilium amici dominae placet.
+de: Der Plan des Freundes gefällt der Herrin. | Der Rat des Freundes gefällt der Herrin.
+
+la: Populus oppidum constituit.
+de: Das Volk gründet eine Stadt.
+
+la: Turba servorum in oppidum venit.
+de: Eine Menge Sklaven kommt in die Stadt. | Die Menge der Sklaven kommt in die Stadt.
+
+la: Cur deos non colitis?
+de: Warum verehrt ihr die Götter nicht?
+
+la: Prometheus flammam accendit.
+de: Prometheus zündet ein Feuer an. | Prometheus zündet eine Flamme an.
+
+la: Prometheus imperio Iovis resistit.
+de: Prometheus widersetzt sich dem Befehl Jupiters. | Prometheus leistet dem Befehl Jupiters Widerstand.
+
+la: Dona deorum petimus.
+de: Wir erbitten die Geschenke der Götter. | Wir bitten um die Geschenke der Götter.
+
+
+== L5 Prometheus
+la: Prometheus creaturis vitam donat.
+de: Prometheus schenkt den Geschöpfen das Leben.
+la: Minerva creaturis naturam terrae et caeli ostendit.
+de: Minerva zeigt den Geschöpfen die Natur der Erde und des Himmels.
+la: Iuppiter autem sacra postulat.
+de: Jupiter aber verlangt Opfer. | Jupiter aber fordert Opfer.
+la: Prometheus dolo Iovem superat.
+de: Prometheus besiegt Jupiter durch eine List. | Prometheus überwindet Jupiter mit List.
+
+
+# ------------------------------------------------------------- Lektion 6
+-- L6
+la: Domina bona servis bene providet.
+de: Eine gute Herrin sorgt gut für die Sklaven. | Die gute Herrin sorgt gut für die Sklaven.
+
+la: Mercurius parvus est, sed contentus non est.
+de: Merkur ist klein, aber er ist nicht zufrieden. | Merkur ist klein, aber nicht zufrieden.
+
+la: Puer magnam gloriam cupit.
+de: Der Junge wünscht sich großen Ruhm. | Der Junge will großen Ruhm.
+
+la: Quis me vocat?
+de: Wer ruft mich?
+
+la: Num templum magnum est?
+de: Ist der Tempel etwa groß?
+
+la: Nonne Apollo deus bonus est?
+de: Ist Apollo nicht ein guter Gott? | Ist Apollo etwa kein guter Gott?
+
+la: Liberi miseri in via sedent.
+de: Die armen Kinder sitzen auf der Straße. | Die unglücklichen Kinder sitzen auf der Straße.
+
+la: Viri feminaeque deos laudant.
+de: Die Männer und Frauen loben die Götter. | Die Männer und die Frauen loben die Götter.
+
+la: Musae me docent.
+de: Die Musen unterrichten mich. | Die Musen lehren mich.
+
+la: Habesne equum?
+de: Hast du ein Pferd?
+
+la: Multi viri magnam gloriam cupiunt.
+de: Viele Männer wünschen sich großen Ruhm. | Viele Männer wollen großen Ruhm.
+
+la: Puer donum capit et ridet.
+de: Der Junge nimmt das Geschenk und lacht.
+
+la: Fortuna non semper bona est.
+de: Das Glück ist nicht immer gut. | Das Schicksal ist nicht immer gut.
+
+la: Ceteri pueri templum spectant.
+de: Die übrigen Jungen betrachten den Tempel. | Die anderen Jungen schauen den Tempel an.
+
+la: Amicus meus nullam pecuniam habet.
+de: Mein Freund hat kein Geld.
+
+la: Non solum viri, sed etiam feminae veniunt.
+de: Nicht nur die Männer, sondern auch die Frauen kommen.
+
+
+== L6 Der kleine Merkur
+la: Mercurius parvus est, sed contentus non est.
+de: Merkur ist klein, aber er ist nicht zufrieden.
+la: Magnam gloriam cupit.
+de: Er wünscht sich großen Ruhm. | Er will großen Ruhm.
+la: Itaque Apollinem dolo superat.
+de: Deshalb besiegt er Apollo durch eine List. | Deshalb überwindet er Apollo mit List.
+la: Apollo ira ardet et clamat: „Quis me dolo superat?“
+de: Apollo brennt vor Zorn und ruft: „Wer besiegt mich durch eine List?“ | Apollo brennt vor Wut und schreit: „Wer überwindet mich mit List?“
+
+
+# ------------------------------------------------------------- Lektion 7
+-- L7
+la: Mercator in foro multa vendit.
+de: Der Händler verkauft auf dem Forum vieles. | Der Kaufmann verkauft auf dem Marktplatz viel.
+
+la: Clamor mercatorum magnus est.
+de: Der Lärm der Händler ist groß. | Das Geschrei der Kaufleute ist groß.
+
+la: Libertatem amamus.
+de: Wir lieben die Freiheit.
+
+la: Si auxilio venis, servos servare possumus.
+de: Wenn du zu Hilfe kommst, können wir die Sklaven retten.
+
+la: Puer cibum emere non potest, nam pecunia deest.
+de: Der Junge kann kein Essen kaufen, denn das Geld fehlt. | Der Junge kann das Essen nicht kaufen, denn es fehlt Geld.
+
+la: Celeritas equi magna est.
+de: Die Schnelligkeit des Pferdes ist groß.
+
+la: Puella sola in arbore alta sedet.
+de: Das Mädchen sitzt allein auf dem hohen Baum.
+
+la: Periculum magnum est; fugere debemus.
+de: Die Gefahr ist groß; wir müssen fliehen.
+
+la: Mercatores in forum conveniunt.
+de: Die Händler kommen auf dem Forum zusammen. | Die Kaufleute kommen auf dem Marktplatz zusammen.
+
+la: Tacete et audite!
+de: Schweigt und hört zu! | Schweigt und hört!
+
+la: Labor servorum magnus est.
+de: Die Arbeit der Sklaven ist groß. | Die Mühe der Sklaven ist groß.
+
+la: Num amorem pecunia emere potes?
+de: Kannst du etwa Liebe mit Geld kaufen?
+
+la: Puer umeros servi attingit.
+de: Der Junge berührt die Schultern des Sklaven.
+
+la: Saepe laeti sumus.
+de: Oft sind wir froh. | Wir sind oft fröhlich.
+
+la: Mercator pecuniam postulat, sed puer nihil dat.
+de: Der Händler fordert Geld, aber der Junge gibt nichts.
+
+la: Servi celeritate equorum gaudent.
+de: Die Sklaven freuen sich über die Schnelligkeit der Pferde.
+
+
+== L7 Auf dem Forum
+la: Multi mercatores in forum conveniunt.
+de: Viele Händler kommen auf dem Forum zusammen. | Viele Kaufleute kommen auf dem Marktplatz zusammen.
+la: Clamor magnus est.
+de: Der Lärm ist groß. | Das Geschrei ist groß.
+la: Mercator cibum varium vendit.
+de: Ein Händler verkauft verschiedene Speisen. | Ein Kaufmann verkauft vielfältiges Essen.
+la: Puer cibum emere cupit, sed pecuniam non habet.
+de: Ein Junge will Essen kaufen, aber er hat kein Geld. | Der Junge möchte Essen kaufen, aber er hat kein Geld.
+la: Itaque puer solus et miser in foro stat.
+de: Deshalb steht der Junge allein und unglücklich auf dem Forum. | Deshalb steht der Junge allein und traurig auf dem Marktplatz.
+
+
+# ------------------------------------------------------------- Lektion 8
+-- L8
+la: Quondam gladiatores in amphitheatro pugnabant.
+de: Einst kämpften Gladiatoren im Amphitheater.
+
+la: Populus magna voce clamavit.
+de: Das Volk schrie laut. | Das Volk rief mit lauter Stimme. | Das Volk hat laut geschrien. | Das Volk rief laut.
+
+la: Gladiator cum leone pugnavit.
+de: Der Gladiator kämpfte mit dem Löwen. | Der Gladiator kämpfte gegen den Löwen. | Der Gladiator hat mit dem Löwen gekämpft.
+
+la: Postquam gladiatores arenam intraverunt, Pompeiani clamaverunt.
+de: Nachdem die Gladiatoren die Arena betreten hatten, schrien die Pompejaner. | Nachdem die Gladiatoren den Kampfplatz betreten hatten, schrien die Einwohner von Pompeji.
+
+la: Gladiatores, quia arma secum habebant, non timebant.
+de: Die Gladiatoren hatten keine Angst, weil sie Waffen bei sich hatten. | Weil die Gladiatoren Waffen bei sich hatten, fürchteten sie sich nicht.
+
+la: Quamquam leo magnus erat, gladiator non timebat.
+de: Obwohl der Löwe groß war, hatte der Gladiator keine Angst. | Obwohl der Löwe groß war, fürchtete sich der Gladiator nicht.
+
+la: Nihil facere poteramus.
+de: Wir konnten nichts tun. | Wir konnten nichts machen.
+
+la: Denique gladiator saxum iactavit.
+de: Schließlich warf der Gladiator einen Stein. | Schließlich schleuderte der Gladiator einen Felsen.
+
+la: Pompeiani pacem desiderabant.
+de: Die Pompejaner sehnten sich nach Frieden. | Die Pompejaner vermissten den Frieden.
+
+la: Fuistisne in amphitheatro?
+de: Wart ihr im Amphitheater? | Seid ihr im Amphitheater gewesen?
+
+la: Unus e gladiatoribus in arena iacebat.
+de: Einer der Gladiatoren lag in der Arena. | Einer von den Gladiatoren lag auf dem Kampfplatz.
+
+la: Nisi gladiatores pugnant, populus clamat.
+de: Wenn die Gladiatoren nicht kämpfen, schreit das Volk.
+
+la: Ego quoque adfui.
+de: Auch ich war da. | Ich war auch da. | Auch ich bin da gewesen.
+
+la: Paucis gladiatoribus parcere volebant.
+de: Sie wollten wenige Gladiatoren schonen. | Sie wollten nur wenige Gladiatoren verschonen.
+
+la: Optimus gladiator leonem superavit.
+de: Der beste Gladiator besiegte den Löwen. | Der beste Gladiator hat den Löwen besiegt.
+
+la: Cuncti spectabant, nemo dubitabat.
+de: Alle schauten zu, niemand zögerte.
+
+
+== L8 Im Amphitheater
+la: Quondam Pompeiani in amphitheatro erant.
+de: Einst waren die Pompejaner im Amphitheater. | Einmal waren die Einwohner von Pompeji im Amphitheater.
+la: Gladiatores arenam intraverunt.
+de: Die Gladiatoren betraten die Arena. | Die Gladiatoren haben den Kampfplatz betreten.
+la: Populus magna voce clamavit.
+de: Das Volk schrie laut. | Das Volk rief mit lauter Stimme. | Das Volk rief laut.
+la: Unus e gladiatoribus cum leone pugnavit.
+de: Einer der Gladiatoren kämpfte mit dem Löwen. | Einer von den Gladiatoren kämpfte gegen den Löwen.
+la: Denique leo in arena iacebat.
+de: Schließlich lag der Löwe in der Arena. | Schließlich lag der Löwe auf dem Kampfplatz.
+
+
+# ------------------------------------------------------------- Lektion 9
+-- L9
+la: Parentes liberos monuerunt.
+de: Die Eltern ermahnten die Kinder. | Die Eltern haben die Kinder ermahnt.
+
+la: Homines Vesuvium montem ardere viderunt.
+de: Die Menschen sahen, dass der Berg Vesuv brannte. | Die Menschen sahen den Berg Vesuv brennen. | Die Menschen sahen, dass der Vesuv brannte. | Die Menschen sahen den Vesuv brennen.
+
+la: Pater dixit periculum magnum esse.
+de: Der Vater sagte, dass die Gefahr groß sei. | Der Vater sagte, dass die Gefahr groß ist. | Der Vater sagte, die Gefahr sei groß.
+
+la: Mater flebat.
+de: Die Mutter weinte.
+
+la: Multitudo hominum ex urbe fugit.
+de: Eine Menge Menschen floh aus der Stadt. | Eine große Zahl von Menschen floh aus der Stadt. | Die Menschenmenge floh aus der Stadt. | Eine Menge Menschen flieht aus der Stadt. | Die Menschenmenge flieht aus der Stadt.
+
+la: In tenebris viam vix repperimus.
+de: In der Dunkelheit fanden wir den Weg kaum. | In der Finsternis fanden wir den Weg nur mit Mühe.
+
+la: Scimus vos nobiscum manere.
+de: Wir wissen, dass ihr bei uns bleibt. | Wir wissen, dass ihr mit uns bleibt.
+
+la: Pater consilium cepit.
+de: Der Vater fasste einen Plan. | Der Vater fasste einen Entschluss.
+
+la: Alii fugerunt, alii manserunt.
+de: Die einen flohen, die anderen blieben.
+
+la: Saxa de monte ceciderunt.
+de: Steine fielen vom Berg (herab). | Felsen fielen vom Berg herab.
+
+la: Mater liberos e periculo duxit.
+de: Die Mutter führte die Kinder aus der Gefahr.
+
+la: Timor mortis magnus erat.
+de: Die Angst vor dem Tod war groß. | Die Todesangst war groß.
+
+la: Homines magnam partem pecuniae perdiderunt.
+de: Die Menschen verloren einen großen Teil des Geldes. | Die Menschen haben einen großen Teil des Geldes verloren.
+
+la: Video patrem rursus currere.
+de: Ich sehe, dass der Vater wieder läuft. | Ich sehe den Vater wieder laufen.
+
+la: Puto vos fugere debere.
+de: Ich glaube, dass ihr fliehen müsst. | Ich meine, dass ihr fliehen müsst.
+
+la: Subito amico in via occurri.
+de: Plötzlich begegnete ich dem Freund auf der Straße. | Plötzlich bin ich dem Freund auf der Straße begegnet.
+
+
+== L9 Der Vesuv
+la: Homines Vesuvium montem ardere viderunt.
+de: Die Menschen sahen, dass der Berg Vesuv brannte. | Die Menschen sahen den Berg Vesuv brennen. | Die Menschen sahen, dass der Vesuv brannte. | Die Menschen sahen den Vesuv brennen.
+la: Saxa de monte ceciderunt.
+de: Steine fielen vom Berg (herab).
+la: Pater dixit periculum magnum esse.
+de: Der Vater sagte, dass die Gefahr groß sei. | Der Vater sagte, dass die Gefahr groß ist.
+la: Itaque familia urbem reliquit.
+de: Deshalb verließ die Familie die Stadt. | Deshalb hat die Familie die Stadt verlassen.
+la: Alii fugerunt, alii manserunt.
+de: Die einen flohen, die anderen blieben.
+
+
+# ------------------------------------------------------------- Lektion 10
+-- L10
+la: Romulus et Remus fratres erant.
+de: Romulus und Remus waren Brüder.
+
+la: Romulus fratrem interfecit.
+de: Romulus tötete den Bruder. | Romulus tötete seinen Bruder. | Romulus hat seinen Bruder getötet.
+
+la: Eo anno Romulus urbem constituit.
+de: In diesem Jahr gründete Romulus die Stadt. | In diesem Jahr hat Romulus die Stadt gegründet. | In diesem Jahr gründet Romulus die Stadt.
+
+la: Nocte rex copias in agrum misit.
+de: In der Nacht schickte der König die Truppen auf das Feld. | Nachts schickte der König die Truppen in das Gebiet.
+
+la: Romani filias Sabinorum ceperunt.
+de: Die Römer ergriffen die Töchter der Sabiner. | Die Römer nahmen die Töchter der Sabiner. | Die Römer raubten die Töchter der Sabiner.
+
+la: Rex servos vocavit et eos laudavit.
+de: Der König rief die Sklaven und lobte sie.
+
+la: Remus moenia riserat; itaque Romulus eum interfecit.
+de: Remus hatte die Mauern ausgelacht; deshalb tötete Romulus ihn.
+
+la: Nemo regi credidit.
+de: Niemand glaubte dem König.
+
+la: Is vir frater meus est.
+de: Dieser Mann ist mein Bruder.
+
+la: Mater nos ante monuerat.
+de: Die Mutter hatte uns vorher ermahnt. | Die Mutter hatte uns vorher gemahnt.
+
+la: Romulus filius Martis erat.
+de: Romulus war ein Sohn des Mars. | Romulus war der Sohn des Mars.
+
+la: Civitas Romana parva erat.
+de: Der römische Staat war klein. | Die römische Gemeinde war klein.
+
+la: Eius consilium regi placebat.
+de: Sein Plan gefiel dem König. | Ihr Plan gefiel dem König.
+
+la: Frater fratri insidias paraverat.
+de: Der Bruder hatte dem Bruder eine Falle gestellt. | Der Bruder hatte dem Bruder einen Hinterhalt vorbereitet.
+
+la: Hic diu sedebamus.
+de: Hier saßen wir lange.
+
+la: Rex servos portas aperire iussit.
+de: Der König befahl den Sklaven, die Tore zu öffnen. | Der König ordnete an, dass die Sklaven die Tore öffnen sollten.
+
+
+== L10 Romulus und Remus
+la: Romulus et Remus fratres erant.
+de: Romulus und Remus waren Brüder.
+la: Romulus urbem novam constituerat.
+de: Romulus hatte eine neue Stadt gegründet.
+la: Remus autem moenia riserat.
+de: Remus aber hatte die Mauern ausgelacht.
+la: Itaque Romulus fratrem interfecit.
+de: Deshalb tötete Romulus den Bruder. | Deshalb tötete Romulus seinen Bruder.
+la: Postea Romulus rex Romanorum erat.
+de: Später war Romulus König der Römer. | Danach war Romulus der König der Römer.
+
+
+# ------------------------------------------------------------- Lektion 11
+-- L11
+la: Cloelia, quae obses erat, e castris Etruscorum fugit.
+de: Cloelia, die eine Geisel war, floh aus dem Lager der Etrusker. | Cloelia, die eine Geisel war, flieht aus dem Lager der Etrusker.
+
+la: Milites patriam defendent.
+de: Die Soldaten werden die Heimat verteidigen.
+
+la: Mox in pace vivemus.
+de: Bald werden wir in Frieden leben.
+
+la: Porsenna castra in Ianiculo posuit.
+de: Porsenna schlug auf dem Janikulus ein Lager auf. | Porsenna schlug das Lager auf dem Janikulus auf.
+
+la: Virgines, quas Cloelia servavit, gaudebant.
+de: Die Mädchen, die Cloelia gerettet hatte, freuten sich. | Die Mädchen, die Cloelia rettete, freuten sich.
+
+la: Hostes urbem non capient.
+de: Die Feinde werden die Stadt nicht erobern.
+
+la: Romani Cloeliae statuam posuerunt.
+de: Die Römer stellten der Cloelia eine Statue auf. | Die Römer stellten für Cloelia ein Standbild auf.
+
+la: Victor obsides postulabit.
+de: Der Sieger wird Geiseln fordern. | Der Sieger wird Geiseln verlangen.
+
+la: Prima luce milites castra relinquent.
+de: Bei Tagesanbruch werden die Soldaten das Lager verlassen.
+
+la: Puella lacrimas tenere non potuit.
+de: Das Mädchen konnte die Tränen nicht zurückhalten. | Das Mädchen konnte die Tränen nicht halten.
+
+la: Is est miles, quem in foro vidi.
+de: Das ist der Soldat, den ich auf dem Forum gesehen habe. | Das ist der Soldat, den ich auf dem Marktplatz sah.
+
+la: Exemplum Cloeliae clarum est.
+de: Das Beispiel Cloelias ist berühmt. | Das Vorbild der Cloelia ist berühmt.
+
+la: Virtus militum magna erit.
+de: Die Tapferkeit der Soldaten wird groß sein.
+
+la: Pater liberos suos amat.
+de: Der Vater liebt seine Kinder.
+
+la: Cloelia virgines per aquam Tiberis duxit.
+de: Cloelia führte die Mädchen durch das Wasser des Tibers.
+
+la: Ea, quae dicis, vera non sunt.
+de: Das, was du sagst, ist nicht wahr.
+
+
+== L11 Cloelia
+la: Porsenna, rex Etruscorum, castra in Ianiculo posuerat.
+de: Porsenna, der König der Etrusker, hatte auf dem Janikulus ein Lager aufgeschlagen.
+la: Romani ei obsides miserant.
+de: Die Römer hatten ihm Geiseln geschickt.
+la: Cloelia, quae obses erat, cum virginibus fugit.
+de: Cloelia, die eine Geisel war, floh mit den Mädchen. | Cloelia, die eine Geisel war, flieht mit den Mädchen.
+la: Virgines per aquam Tiberis in patriam pervenerunt.
+de: Die Mädchen kamen durch das Wasser des Tibers in die Heimat. | Die Mädchen gelangten durch das Wasser des Tibers in die Heimat.
+la: Postea Romani Cloeliae statuam posuerunt.
+de: Später stellten die Römer der Cloelia eine Statue auf. | Später stellten die Römer für Cloelia ein Standbild auf.
+
+
+# ------------------------------------------------------------- Lektion 12
+-- L12
+la: Hannibal imperator fortis erat.
+de: Hannibal war ein tapferer Feldherr.
+
+la: Milites se defendunt.
+de: Die Soldaten verteidigen sich.
+
+la: Romani bellum cum Hannibale gerebant.
+de: Die Römer führten Krieg mit Hannibal. | Die Römer führten Krieg gegen Hannibal.
+
+la: Imperator milites secum duxit.
+de: Der Feldherr führte die Soldaten mit sich.
+
+la: Hostes ingentes copias habebant.
+de: Die Feinde hatten gewaltige Truppen. | Die Feinde hatten riesige Truppen.
+
+la: Omnes cives in forum ierunt.
+de: Alle Bürger gingen auf das Forum. | Alle Bürger gingen auf den Marktplatz.
+
+la: Hannibal numquam dubitavit.
+de: Hannibal zögerte nie. | Hannibal hat niemals gezögert.
+
+la: Proelium acre erat.
+de: Die Schlacht war heftig. | Der Kampf war heftig.
+
+la: Bellum gerere facile non est.
+de: Krieg zu führen ist nicht leicht. | Es ist nicht leicht, Krieg zu führen.
+
+la: Hannibal multas legiones superavit.
+de: Hannibal besiegte viele Legionen.
+
+la: Cives putant se tutos esse.
+de: Die Bürger glauben, dass sie sicher sind. | Die Bürger meinen, dass sie sicher seien.
+
+la: Plurimi milites perierunt.
+de: Sehr viele Soldaten kamen um. | Die meisten Soldaten kamen um.
+
+la: Cum amicis in urbem redii.
+de: Ich kehrte mit den Freunden in die Stadt zurück. | Ich bin mit den Freunden in die Stadt zurückgekehrt. | Ich kehrte mit den Freundinnen in die Stadt zurück.
+
+la: Vires hostium magnae erant.
+de: Die Kräfte der Feinde waren groß. | Die Streitkräfte der Feinde waren groß.
+
+la: Milites sibi cibum parant.
+de: Die Soldaten bereiten sich Essen. | Die Soldaten bereiten sich Essen zu.
+
+la: Celeres equi ex urbe abierunt.
+de: Die schnellen Pferde liefen aus der Stadt weg. | Die schnellen Pferde gingen aus der Stadt weg.
+
+
+== L12 Hannibal
+la: Hannibal imperator fortis erat.
+de: Hannibal war ein tapferer Feldherr.
+la: Cum ingentibus copiis contra Romanos bellum gessit.
+de: Mit gewaltigen Truppen führte er Krieg gegen die Römer. | Er führte mit riesigen Truppen Krieg gegen die Römer.
+la: Multas legiones superavit.
+de: Er besiegte viele Legionen.
+la: Plurimi milites Romani perierunt.
+de: Sehr viele römische Soldaten kamen um. | Die meisten römischen Soldaten kamen um.
+la: Sed cives urbem Romam defenderunt.
+de: Aber die Bürger verteidigten die Stadt Rom.
+
+
+# ------------------------------------------------------------- Lektion 13
+-- L13
+la: Phaethon a patre amabatur.
+de: Phaethon wurde vom Vater geliebt. | Phaethon wurde von seinem Vater geliebt.
+
+la: Spes magna erat.
+de: Die Hoffnung war groß.
+
+la: Equi a Phaethonte non regebantur.
+de: Die Pferde wurden von Phaethon nicht gelenkt.
+
+la: Terra flammis premitur.
+de: Die Erde wird von den Flammen bedrängt. | Die Erde wird durch die Flammen bedrängt.
+
+la: Res publica a civibus defenditur.
+de: Der Staat wird von den Bürgern verteidigt.
+
+la: Fidem servare debemus.
+de: Wir müssen (unser) Wort halten. | Wir müssen die Treue bewahren. | Wir müssen die Treue halten.
+
+la: Mi fili, cave!
+de: Mein Sohn, sei vorsichtig! | Mein Sohn, hüte dich!
+
+la: Sol omnia videt.
+de: Die Sonne sieht alles.
+
+la: Phaethon verba patris non intellegebat.
+de: Phaethon verstand die Worte des Vaters nicht.
+
+la: Ne pater quidem filium servare potuit.
+de: Nicht einmal der Vater konnte den Sohn retten. | Nicht einmal der Vater konnte seinen Sohn retten.
+
+la: Iuvenis signum certum petivit.
+de: Der junge Mann verlangte ein sicheres Zeichen. | Der junge Mann erbat ein sicheres Zeichen.
+
+la: Urbs ab hostibus capitur.
+de: Die Stadt wird von den Feinden erobert.
+
+la: Clamor militum audiebatur.
+de: Das Geschrei der Soldaten wurde gehört. | Der Lärm der Soldaten wurde gehört.
+
+la: Nunc res publica bene regitur.
+de: Jetzt wird der Staat gut gelenkt. | Jetzt wird der Staat gut geleitet. | Nun wird der Staat gut regiert.
+
+la: Neque honor neque opes me movent.
+de: Weder Ehre noch Reichtum bewegen mich. | Weder Ehre noch Macht beeindrucken mich.
+
+la: Multos dies in aedibus mansimus.
+de: Viele Tage blieben wir im Haus. | Wir blieben viele Tage im Haus. | Wir sind viele Tage im Haus geblieben.
+
+
+== L13 Phaethon
+la: Phaethon filius Solis erat.
+de: Phaethon war der Sohn des Sol. | Phaethon war der Sohn des Sonnengottes.
+la: Iuvenis a patre signum certum petivit.
+de: Der junge Mann verlangte vom Vater ein sicheres Zeichen. | Der junge Mann erbat von seinem Vater ein sicheres Zeichen.
+la: Pater ei equos dedit.
+de: Der Vater gab ihm die Pferde.
+la: Sed equi a Phaethonte non regebantur.
+de: Aber die Pferde wurden von Phaethon nicht gelenkt.
+la: Terra flammis premebatur.
+de: Die Erde wurde von den Flammen bedrängt. | Die Erde wurde durch die Flammen bedrängt.
+
+
+# ------------------------------------------------------------- Lektion 14
+-- L14
+la: Troia a Graecis capta est.
+de: Troja wurde von den Griechen erobert. | Troja ist von den Griechen erobert worden.
+
+la: Aeneas cum patre et filio ex urbe fugit.
+de: Äneas floh mit dem Vater und dem Sohn aus der Stadt. | Äneas floh mit seinem Vater und seinem Sohn aus der Stadt. | Äneas flieht mit dem Vater und dem Sohn aus der Stadt. | Äneas flieht mit seinem Vater und seinem Sohn aus der Stadt.
+
+la: Troiani ventis vehementibus territi sunt.
+de: Die Trojaner wurden von heftigen Winden erschreckt. | Die Trojaner wurden durch heftige Winde erschreckt.
+
+la: Aeneas a Iunone Italia prohibitus est.
+de: Äneas wurde von Juno von Italien abgehalten. | Äneas wurde von Juno von Italien ferngehalten.
+
+la: Aeneas uxorem amiserat.
+de: Äneas hatte seine Ehefrau verloren. | Äneas hatte die Ehefrau verloren.
+
+la: Roma a Romulo condita est.
+de: Rom wurde von Romulus gegründet. | Rom ist von Romulus gegründet worden.
+
+la: Iter longum suscepimus.
+de: Wir haben eine lange Reise unternommen. | Wir unternahmen eine lange Reise.
+
+la: Graeci a Troianis non victi sunt.
+de: Die Griechen wurden von den Trojanern nicht besiegt.
+
+la: Scimus Troiam captam esse.
+de: Wir wissen, dass Troja erobert worden ist. | Wir wissen, dass Troja erobert wurde.
+
+la: Aeneas pius deos coluit.
+de: Der fromme Äneas verehrte die Götter. | Der pflichtbewusste Äneas verehrte die Götter.
+
+la: Quo itis, Troiani?
+de: Wohin geht ihr, Trojaner?
+
+la: Scelus magnum commissum est.
+de: Ein großes Verbrechen wurde begangen. | Ein großes Verbrechen ist begangen worden.
+
+la: Nomen Aeneae clarum est.
+de: Der Name des Äneas ist berühmt.
+
+la: Troiani a duce in Italiam ducti sunt.
+de: Die Trojaner wurden von ihrem Anführer nach Italien geführt. | Die Trojaner wurden vom Anführer nach Italien geführt.
+
+la: Tempus fugit.
+de: Die Zeit flieht. | Die Zeit vergeht. | Die Zeit ist geflohen.
+
+la: Fato in Italiam venimus.
+de: Durch das Schicksal sind wir nach Italien gekommen. | Durch das Schicksal kamen wir nach Italien. | Durch das Schicksal kommen wir nach Italien.
+
+
+== L14 Äneas
+la: Troia a Graecis capta est.
+de: Troja wurde von den Griechen erobert.
+la: Aeneas cum patre et filio ex urbe fugit.
+de: Äneas floh mit dem Vater und dem Sohn aus der Stadt. | Äneas floh mit seinem Vater und seinem Sohn aus der Stadt. | Äneas flieht mit dem Vater und dem Sohn aus der Stadt. | Äneas flieht mit seinem Vater und seinem Sohn aus der Stadt.
+la: Uxorem autem amiserat.
+de: Seine Ehefrau aber hatte er verloren. | Die Ehefrau aber hatte er verloren.
+la: Troiani iter longum susceperunt.
+de: Die Trojaner unternahmen eine lange Reise. | Die Trojaner nahmen eine lange Reise auf sich.
+la: Tandem fato in Italiam ducti sunt.
+de: Endlich wurden sie vom Schicksal nach Italien geführt. | Schließlich wurden sie durch das Schicksal nach Italien geführt.
+
+
+# ------------------------------------------------------------- Lektion 15
+-- L15
+la: Hercules multos labores confecit.
+de: Herkules vollbrachte viele Arbeiten. | Herkules bewältigte viele Mühen. | Herkules bestand viele Mühen. | Herkules hat viele Arbeiten vollbracht.
+
+la: Augias Herculi munus grave imposuit.
+de: Augias erlegte Herkules eine schwere Aufgabe auf. | Augias hat dem Herkules eine schwere Aufgabe auferlegt.
+
+la: Mulier vestem pulchram emit.
+de: Die Frau kauft ein schönes Kleid. | Die Frau kaufte ein schönes Kleid. | Die Frau hat ein schönes Kleid gekauft.
+
+la: Iuppiter duos deos in terram misit.
+de: Jupiter schickte zwei Götter auf die Erde.
+
+la: Laus Herculis magna erat.
+de: Der Ruhm des Herkules war groß. | Das Lob des Herkules war groß.
+
+la: Numquam me fefellisti.
+de: Du hast mich nie getäuscht. | Niemals hast du mich getäuscht.
+
+la: Corpus eius in mari inventum est.
+de: Sein Leichnam wurde im Meer gefunden. | Ihr Körper wurde im Meer gefunden.
+
+la: Beneficium tuum memoria tenebo.
+de: Ich werde deine Wohltat im Gedächtnis behalten.
+
+la: Vir honestus vitam beatam agit.
+de: Ein ehrenhafter Mann führt ein glückliches Leben. | Ein angesehener Mann führt ein glückliches Leben.
+
+la: Adulescens mulierem conspexit.
+de: Der junge Mann erblickte die Frau.
+
+la: Talia verba me moverunt.
+de: Solche Worte bewegten mich. | Solche Worte haben mich beeindruckt.
+
+la: Num umquam leonem vivum vidisti?
+de: Hast du etwa jemals einen lebenden Löwen gesehen? | Hast du jemals einen lebendigen Löwen gesehen?
+
+la: Naves in mari videmus.
+de: Wir sehen Schiffe auf dem Meer.
+
+la: Hercules opus turpe confecit.
+de: Herkules erledigte eine schändliche Arbeit. | Herkules erledigte eine hässliche Arbeit. | Herkules vollbrachte ein schändliches Werk.
+
+
+== L15 Herkules beim König Augias
+la: Hercules multos labores confecit.
+de: Herkules vollbrachte viele Arbeiten. | Herkules bewältigte viele Mühen. | Herkules bestand viele Mühen.
+la: Rex Augias Herculi munus turpe imposuit.
+de: König Augias erlegte Herkules eine schändliche Aufgabe auf. | Der König Augias erlegte dem Herkules eine hässliche Aufgabe auf.
+la: Hercules aqua duorum fluminum opus confecit.
+de: Herkules erledigte die Arbeit mit dem Wasser zweier Flüsse. | Herkules vollbrachte das Werk mit dem Wasser von zwei Flüssen.
+la: Augias autem eum fefellit.
+de: Augias aber täuschte ihn. | Augias aber betrog ihn.
+
+
+# ------------------------------------------------------------- Lektion 16
+-- L16
+la: Exercitus Romanus magnus erat.
+de: Das römische Heer war groß.
+
+la: Senatores consulem metuebant.
+de: Die Senatoren fürchteten den Konsul.
+
+la: Cornelia liberos bene docuit.
+de: Cornelia unterrichtete die Kinder gut. | Cornelia hat ihre Kinder gut unterrichtet.
+
+la: Nuntius tristis Romam allatus est.
+de: Eine traurige Nachricht wurde nach Rom gebracht.
+
+la: Plebs aere alieno premebatur.
+de: Das Volk wurde von Schulden bedrückt. | Das einfache Volk wurde durch Schulden bedrängt.
+
+la: Fer mihi auxilium!
+de: Bring mir Hilfe! | Bringe mir Hilfe!
+
+la: Milites arma ferunt.
+de: Die Soldaten tragen Waffen. | Die Soldaten tragen die Waffen.
+
+la: Tiberius Gracchus a senatoribus interfectus est.
+de: Tiberius Gracchus wurde von Senatoren getötet. | Tiberius Gracchus wurde von den Senatoren getötet.
+
+la: Metus civium magnus erat.
+de: Die Angst der Bürger war groß. | Die Furcht der Bürger war groß.
+
+la: Senatores mores maiorum non neglegebant.
+de: Die Senatoren vernachlässigten die Sitten der Vorfahren nicht. | Die Senatoren missachteten die Sitten der Vorfahren nicht.
+
+la: Nuntius consuli epistulam tulit.
+de: Der Bote brachte dem Konsul einen Brief.
+
+
+== L16 Cornelia und die Gracchen
+la: Cornelia mater Tiberii Gracchi erat.
+de: Cornelia war die Mutter des Tiberius Gracchus.
+la: Liberos bene docuit.
+de: Sie unterrichtete die Kinder gut. | Sie hat ihre Kinder gut unterrichtet.
+la: Plebs aere alieno premebatur.
+de: Das einfache Volk wurde von Schulden bedrückt. | Das Volk wurde durch Schulden bedrängt.
+la: Tiberius Gracchus a senatoribus interfectus est.
+de: Tiberius Gracchus wurde von Senatoren getötet.
+la: Nuntius tristis matri allatus est.
+de: Eine traurige Nachricht wurde der Mutter gebracht. | Der Mutter wurde eine traurige Nachricht überbracht.
+
+
+# ------------------------------------------------------------- Lektion 17
+-- L17
+la: Caesar in Aegyptum venit.
+de: Caesar kam nach Ägypten. | Cäsar kam nach Ägypten. | Caesar kommt nach Ägypten. | Cäsar kommt nach Ägypten.
+
+la: Constat Cleopatram feminam pulchram fuisse.
+de: Es steht fest, dass Kleopatra eine schöne Frau war. | Es ist bekannt, dass Kleopatra eine schöne Frau gewesen ist.
+
+la: Haec domus pulchra est.
+de: Dieses Haus ist schön.
+
+la: Ille vir potens erat.
+de: Jener Mann war mächtig.
+
+la: Pompeius nuper interfectus erat.
+de: Pompejus war vor kurzem getötet worden. | Pompeius war neulich getötet worden.
+
+la: Cleopatra soror regis erat.
+de: Kleopatra war die Schwester des Königs.
+
+la: Cohortes regiam obtinebant.
+de: Die Kohorten hielten den Palast besetzt.
+
+la: Caesar huic feminae confidebat.
+de: Caesar vertraute dieser Frau. | Cäsar vertraute dieser Frau.
+
+la: Hoc consilium idoneum non est.
+de: Dieser Plan ist nicht geeignet. | Dieser Plan ist nicht passend.
+
+la: Illo tempore Caesar in Aegypto erat.
+de: Zu jener Zeit war Caesar in Ägypten. | Damals war Cäsar in Ägypten.
+
+la: Custodes portas regiae tenebant.
+de: Die Wächter hielten die Tore des Palastes besetzt. | Die Wächter bewachten die Tore des Palastes.
+
+la: Haec res mihi usui est.
+de: Diese Sache ist mir nützlich. | Diese Sache ist für mich von Nutzen.
+
+
+== L17 Caesar in Ägypten
+la: Caesar in Aegyptum venit.
+de: Caesar kam nach Ägypten. | Cäsar kam nach Ägypten. | Caesar kommt nach Ägypten. | Cäsar kommt nach Ägypten.
+la: Pompeius nuper interfectus erat.
+de: Pompejus war vor kurzem getötet worden.
+la: Cleopatra soror regis erat.
+de: Kleopatra war die Schwester des Königs.
+la: Haec femina Caesari placebat.
+de: Diese Frau gefiel Caesar. | Diese Frau gefiel Cäsar.
+la: Caesar ei confidebat.
+de: Caesar vertraute ihr. | Cäsar vertraute ihr.
+
+
+# ------------------------------------------------------------- Lektion 18
+-- L18
+la: Milites Titi templum incenderunt.
+de: Die Soldaten des Titus zündeten den Tempel an. | Die Soldaten des Titus steckten den Tempel in Brand.
+
+la: Eodem loco murum restituerunt.
+de: Am selben Ort errichteten sie die Mauer wieder. | Am selben Ort stellten sie die Mauer wieder her.
+
+la: Hostes intra muros se receperunt.
+de: Die Feinde zogen sich innerhalb der Mauern zurück. | Die Feinde zogen sich hinter die Mauern zurück.
+
+la: Isti barbari portas clauserunt.
+de: Diese Barbaren schlossen die Tore. | Diese Barbaren da haben die Tore geschlossen.
+
+la: Idem vir iterum venit.
+de: Derselbe Mann kommt wieder. | Derselbe Mann kam wieder. | Derselbe Mann ist wieder gekommen.
+
+la: Caedes saeva erat.
+de: Das Blutbad war schrecklich. | Der Mord war schrecklich.
+
+la: Oportet deos colere.
+de: Es gehört sich, die Götter zu verehren. | Man muss die Götter verehren.
+
+la: Condiciones durae erant.
+de: Die Bedingungen waren hart.
+
+la: Milites incendium exstinguere non potuerunt.
+de: Die Soldaten konnten den Brand nicht löschen. | Die Soldaten konnten das Feuer nicht auslöschen.
+
+la: Titus templo parcere voluit.
+de: Titus wollte den Tempel schonen. | Titus wollte den Tempel verschonen.
+
+
+== L18 Der Tempel in Jerusalem
+la: Titus templo parcere voluit.
+de: Titus wollte den Tempel schonen. | Titus wollte den Tempel verschonen.
+la: Milites autem templum incenderunt.
+de: Die Soldaten aber zündeten den Tempel an. | Die Soldaten aber steckten den Tempel in Brand.
+la: Incendium exstinguere non potuerunt.
+de: Sie konnten den Brand nicht löschen. | Sie konnten das Feuer nicht auslöschen.
+la: Caedes saeva erat.
+de: Das Blutbad war schrecklich. | Das Morden war schrecklich.
+
+
+# ------------------------------------------------------------- Lektion 19
+-- L19
+la: Christiani in vincula coniecti sunt.
+de: Die Christen wurden ins Gefängnis geworfen. | Die Christen wurden gefesselt.
+
+la: Nuntius nuntiavit hostes provinciam occupavisse.
+de: Der Bote meldete, dass die Feinde die Provinz besetzt hätten. | Der Bote meldete, dass die Feinde die Provinz besetzt hatten. | Der Bote meldete, die Feinde hätten die Provinz besetzt. | Der Bote meldete, dass die Feinde die Provinz besetzt haben.
+
+la: Ius civium servare debemus.
+de: Wir müssen das Recht der Bürger bewahren.
+
+la: Epistulam accepi.
+de: Ich habe einen Brief erhalten. | Ich erhielt einen Brief.
+
+la: Deos immortales colimus.
+de: Wir verehren die unsterblichen Götter.
+
+la: Imperator Christianos dimisit.
+de: Der Kaiser entließ die Christen. | Der Kaiser hat die Christen freigelassen.
+
+la: Mora longa non erat.
+de: Der Aufenthalt war nicht lang. | Die Verzögerung war nicht lang.
+
+la: Sua sponte venerunt.
+de: Sie kamen freiwillig. | Sie sind freiwillig gekommen. | Sie kamen von selbst.
+
+la: Vale, amice!
+de: Leb wohl, Freund! | Lebe wohl, Freund!
+
+la: Auctor illam epistulam conscripsit.
+de: Der Verfasser schrieb jenen Brief. | Der Schriftsteller hat jenen Brief geschrieben. | Der Verfasser verfasste jenen Brief.
+
+
+# ------------------------------------------------------------- Lektion 20
+-- L20
+la: Alexander multas gentes vicit.
+de: Alexander besiegte viele Völker. | Alexander hat viele Völker besiegt.
+
+la: Alexander forte currum antiquum vidit.
+de: Alexander sah zufällig einen alten Wagen.
+
+la: Alexander vincula gladio rupit.
+de: Alexander zerschlug die Fesseln mit dem Schwert. | Alexander zerschlug das Band mit dem Schwert.
+
+la: Res gestae Alexandri clarae sunt.
+de: Die Taten Alexanders sind berühmt. | Die Taten des Alexander sind berühmt.
+
+la: Carmen breve recitavit.
+de: Er trug ein kurzes Gedicht vor. | Sie trug ein kurzes Lied vor.
+
+la: Alexander Asiam appetivit.
+de: Alexander strebte nach Asien.
+
+la: Hoc difficile non est.
+de: Das ist nicht schwierig. | Dies ist nicht schwer.
+
+la: Historiam Alexandri legimus.
+de: Wir lesen die Geschichte Alexanders. | Wir lesen die Erzählung über Alexander. | Wir haben die Geschichte Alexanders gelesen. | Wir lasen die Geschichte Alexanders.
+
+la: Alexander exercitum usque ad fines Asiae duxit.
+de: Alexander führte das Heer bis zu den Grenzen Asiens.
+
+la: Tunc caput regis vidimus.
+de: Damals sahen wir den Kopf des Königs. | Dann sahen wir den Kopf des Königs.
+
+
+== L20 Alexander der Große
+la: Alexander rex magnus erat.
+de: Alexander war ein großer König.
+la: Multas gentes vicit.
+de: Er besiegte viele Völker. | Er hat viele Völker besiegt.
+la: Forte currum antiquum vidit.
+de: Zufällig sah er einen alten Wagen.
+la: Vincula gladio rupit.
+de: Er zerschlug die Fesseln mit dem Schwert. | Er zerschlug das Band mit dem Schwert.
+la: Res gestae Alexandri clarae sunt.
+de: Die Taten Alexanders sind berühmt.

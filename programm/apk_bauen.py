@@ -29,7 +29,7 @@ NAME = "Latein_Vokabeltrainer.apk"
 MINDESTENS_GB = 6
 
 PROGRAMMDATEIEN = ["pfade.py", "bettervokable_search.py", "vokabel_search.py",
-                   "fehler_datenbank.py", "grammatik.py", "handy_server.py",
+                   "fehler_datenbank.py", "grammatik.py", "handy_server.py", "saetze.py",
                    "handy_oberflaeche.html"]
 
 
@@ -72,6 +72,7 @@ def projekt_fuellen():
     shutil.rmtree(ziel, ignore_errors=True)
     ziel.mkdir()
     shutil.copy2(BASIS / "daten" / "vokabel_base.json", ziel / "vokabel_base.json")
+    shutil.copy2(BASIS / "daten" / "saetze.txt", ziel / "saetze.txt")
     shutil.copytree(BASIS / "daten" / "grammatik_bilder", ziel / "grammatik_bilder")
 
 

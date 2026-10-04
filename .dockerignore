@@ -4,5 +4,6 @@
 !programm/*.py
 !programm/handy_oberflaeche.html
 !daten/vokabel_base.json
+!daten/saetze.txt
 !daten/grammatik_bilder/
 !webserver/

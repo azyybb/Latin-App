@@ -24,6 +24,7 @@ from urllib.parse import parse_qs, unquote, urlparse
 import fehler_datenbank as FD
 import grammatik as GR
 import pfade
+import saetze as SA
 import vokabel_search as quiz
 from bettervokable_search import CONJ_NAMES, FORMEN_LABEL, WORTART_ORDER, VokabelBase, norm
 
@@ -287,6 +288,7 @@ class Grundlage:
         self.lektionen = sorted({e["lektion"] for e in self.db.entries})
         self.neu = GR.neu_je_lektion(self.db)
         self.themen = GR.themen(self.db)
+        self.saetze = SA.Saetze(self.db)
 
 
 class Trainer:
@@ -296,6 +298,8 @@ class Trainer:
     def __init__(self, grundlage=None, lernstand=None):
         g = grundlage or Grundlage()
         self.db, self.lektionen, self.neu, self.themen = g.db, g.lektionen, g.neu, g.themen
+        self.saetze = g.saetze
+        self.saetze_zuletzt = []
         if lernstand is None:
             self.fehler = FD.FehlerListe()
             self.statistik = FD.Statistik()
@@ -311,6 +315,8 @@ class Trainer:
             "fehler": self.fehlerliste, "fehler/zuruecksetzen": self.fehler_zuruecksetzen,
             "fehler/entfernen": self.fehler_entfernen,
             "grammatik": self.grammatik, "vokabeln": self.vokabeln,
+            "saetze/start": self.saetze_start, "saetze/pruefen": self.saetze_pruefen,
+            "saetze/wort": self.saetze_wort,
         }
 
     # -------------------------------------------------- Allgemein
@@ -337,6 +343,7 @@ class Trainer:
                 "ziel": FD.ZIEL_PUNKTE, "fuss": self.fuss(),
                 "lernstand": self.lernstand_text(),
                 "warnungen": [w for w in (self.fehler.warnung, self.statistik.warnung) if w],
+                "saetze": {str(k): v for k, v in sorted(self.saetze.zahlen().items())},
                 "quiz": self.quiz.zustand()}
 
     # -------------------------------------------------- Suche
@@ -479,6 +486,34 @@ class Trainer:
                        "weil die Formen aus dem Wortstamm gebildet werden.")
         return {"i": i, "name": name, "hinweis": hinweis, "ungeprueft": ungeprueft,
                 "tafeln": tafeln, "seiten": [f"/bild/{p.name}" for p in seiten]}
+
+    # -------------------------------------------------- Sätze (Beta)
+    def saetze_start(self, d):
+        lektionen = quiz.lektionen_parsen(str(d.get("lektionen", "alle")), self.lektionen)
+        if not lektionen:
+            return {"fehler": f"Keine gültige Lektionsangabe. Es gibt die Lektionen "
+                              f"{self.lektionen[0]}–{self.lektionen[-1]}. "
+                              f"Beispiele: 1-8 · 3,5 · alle"}
+        art = d.get("art", "gemischt")
+        if art not in ("einzel", "text", "gemischt"):
+            art = "gemischt"
+        st = self.saetze.ziehen(lektionen, art, self.saetze_zuletzt)
+        if st is None:
+            return {"fehler": "Zu dieser Auswahl gibt es (noch) keine Sätze. "
+                              "Bitte andere Lektionen oder „gemischt“ wählen."}
+        return {"stueck": st.daten(),
+                "anzahl": len(self.saetze.auswahl(lektionen, art))}
+
+    def saetze_pruefen(self, d):
+        try:
+            nummer, satz = int(d["id"]), int(d["satz"])
+            self.saetze.stuecke[nummer].saetze[satz]
+        except (KeyError, ValueError, IndexError):
+            return {"fehler": "Diesen Satz gibt es nicht mehr – bitte neu starten."}
+        return self.saetze.pruefen(nummer, satz, str(d.get("antwort", ""))[:500])
+
+    def saetze_wort(self, d):
+        return self.saetze.wort(str(d.get("wort", ""))[:60])
 
     # -------------------------------------------------- Alle Vokabeln
     def vokabeln(self, d):
