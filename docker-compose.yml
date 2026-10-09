@@ -22,7 +22,8 @@ services:
       - lernstand:/lernstand
     expose:
       - "8765"
-
+    ports:
+      - "8765:8765"
   web:
     build:
       context: .
